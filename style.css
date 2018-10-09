@@ -15,3 +15,13 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
+
+/* ----------------------------------------------- */
+/* HOMEPAGE */
+/* ----------------------------------------------- */
+
+.header {
+  padding: 10px;
+  width: 100%;
+  background-color: #f5f5f5;
+}
