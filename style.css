@@ -21,10 +21,8 @@ body {
 /* ----------------------------------------------- */
 
 .header {
-  margin: 50px;
   text-align: center;
   padding-top: 50%;
   height: 100%;
   width: 100%;
-  background-color: #f5f5f5;
 }
