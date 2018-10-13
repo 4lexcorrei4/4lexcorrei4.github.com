@@ -67,7 +67,7 @@ header .menu li:first-child:hover {
 header .welcome {
     text-align: center;
     width: 100%;
-    padding-top: 13vh;
+    padding-top: 11vh;
 }
 
 header .welcome h1,
@@ -84,7 +84,7 @@ header .welcome img {
 }
 
 header .arrow {
-    padding-top: 8vh;
+    padding-top: 10vh;
     text-align: center;
 }
 
