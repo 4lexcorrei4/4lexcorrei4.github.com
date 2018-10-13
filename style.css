@@ -37,22 +37,31 @@ header .menu img {
     border-radius: 50%;
 }
 
-header .menu li:hover {
-    opacity: 0.7;
-}
-
-header .menu li {
+header .menu li,
+header .menu li a {
+    text-decoration: none;
+    border-bottom: solid 2px rgba(255, 255, 255, 0);
+    padding-bottom: 5px;
     color: white;
     list-style: none;
     display: inline-block;
-    padding-left: 2%;
+    margin-left: 2%;
     font-size: 100%;
     vertical-align: middle;
-    transition: opacity 0.2s;
+    transition: border-bottom 0.2s;
 }
 
 header .menu li:first-child {
     padding-left: 0;
+}
+
+header .menu li:hover {
+    border-bottom: solid 2px white;
+    padding-bottom: 5px;
+}
+
+header .menu li:first-child:hover {
+    border-bottom: solid 2px rgba(255, 255, 255, 0);
 }
 
 header .welcome {
@@ -84,48 +93,65 @@ header .arrow ion-icon {
     font-size: 7vh;
 }
 
-.homepage-experience-section {
-    background-color: #f5f5f5;
+.homepage-experience-section,
+.homepage-education-section {
     padding: 60px 10%;
 }
 
-.homepage-experience-section h1 {
+.homepage-experience-section {
+    background-color: #f5f5f5;
+}
+
+.homepage-education-section {
+    background-color: #f0f0f0;
+}
+
+.homepage-experience-section h1,
+.homepage-education-section h1 {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
+    color: #305ea8;
 }
 
-.homepage-experience-section .col {
+.homepage-experience-section .col,
+.homepage-education-section .col {
     padding: 10px 0;
     box-shadow: 0 2px 2px #efefef;
     border-radius: 20px;
     background-color: #fff;
 }
 
-.homepage-experience-section ul {
+.homepage-experience-section ul,
+.homepage-education-section ul {
     list-style: none;
 }
 
-.homepage-experience-section ul li:first-child {
+.homepage-experience-section ul li:first-child,
+.homepage-education-section ul li:first-child {
     margin: 0 20px;
     float: left;
 }
 
-.homepage-experience-section img {
+.homepage-experience-section img,
+.homepage-education-section img {
     border-radius: 15px;
     height: 20vh;
     width: auto;
 }
 
 .homepage-experience-section .time::before,
-.homepage-experience-section .role::before {
+.homepage-experience-section .role::before,
+.homepage-education-section .time::before,
+.homepage-education-section .degree::before {
     color: #0000aa;
     letter-spacing: 2px;
     font-size: 17px;
     font-style: normal;
 }
 
-.homepage-experience-section .time::before {
+.homepage-experience-section .time::before,
+.homepage-education-section .time::before {
     content: "time";
 }
 
@@ -133,12 +159,19 @@ header .arrow ion-icon {
     content: "role(s)";
 }
 
+.homepage-education-section .degree::before {
+    content: "degree";
+}
+
 .homepage-experience-section .time p,
-.homepage-experience-section .role p {
+.homepage-experience-section .role p,
+.homepage-education-section .time p,
+.homepage-education-section .degree p {
     font-weight: bold;
 }
 
-.homepage-experience-section .btn {
+.homepage-experience-section .btn,
+.homepage-education-section .btn {
     color: #5f5f5f;
     text-transform: uppercase;
     font-weight: bold;
@@ -149,6 +182,12 @@ header .arrow ion-icon {
     background-color: #f5f5f5;
     border-radius: 25px;
     text-align: center;
+    transition: background-color 0.5s;
+}
+
+.homepage-experience-section .btn:hover,
+.homepage-education-section .btn:hover {
+    background-color: #eaeaea;
 }
 
 @media only screen and (max-width: 480px) {
@@ -157,85 +196,30 @@ header .arrow ion-icon {
     }
     
     .homepage-experience-section .time,
-    .homepage-experience-section .role {
+    .homepage-education-section .time,
+    .homepage-experience-section .role,
+    .homepage-education-section .degree {
         margin-left: 10px;
     }
     
-    .homepage-experience-section .col:first-child {
+    .homepage-experience-section .col:first-child,
+    .homepage-education-section .col:first-child {
         margin-top: 0;
     }
     
-    .homepage-experience-section .col {
+    .homepage-experience-section .col,
+    .homepage-education-section .col {
         margin-top: 10px;
     }
     
-    .homepage-experience-section img {
+    .homepage-experience-section img,
+    .homepage-education-section img {
         width: 100%;
         height: auto;
     }
     
-    .homepage-experience-section .btn {
+    .homepage-experience-section .btn,
+    .homepage-education-section .btn {
         margin-top: 5%;
     }
-    
-    /*.sub-header {
-        display: none;
-    }*/
 }
-
-/*.sub-header {
-    width: 100%;
-}
-
-.sub-header .about-me,
-.sub-header .about-studies,
-.sub-header .about-work,
-.sub-header .more {
-    width: 25%;
-}
-
-.sub-header,
-.sub-header .about-me,
-.sub-header .about-studies,
-.sub-header .about-work,
-.sub-header .more {
-    margin: 0;
-    height: 20vh;
-}
-
-.sub-header .about-me,
-.sub-header .about-work {
-    background-color: #f5f5f5;
-}
-
-.sub-header .about-studies,
-.sub-header .more {
-    background-color: #f0f0f0;
-}
-
-.sub-header .about-me img {
-    height: 15vh;
-    border-radius: 50%;
-    margin-top: 2.5vh;
-    margin-left: 5vh;
-}
-
-.sub-header .about-me .infos {
-    font-weight: bold;
-    margin-left: 4%;
-    margin-top: 7vh;
-}
-
-.sub-header .about-me .infos h2,
-.sub-header .more h2 {
-    color: #48821d;
-}
-
-.sub-header .about-me .infos p {
-    color:#0000aa;
-}
-
-.sub-header .more h2 {
-    padding-top: 19%;
-    text-align: center;
-}*/
