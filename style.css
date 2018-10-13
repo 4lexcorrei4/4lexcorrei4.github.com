@@ -84,8 +84,14 @@ header .welcome img {
 }
 
 header .arrow {
-    padding-top: 12vh;
+    padding-top: 8vh;
     text-align: center;
+}
+
+header .arrow p {
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
 }
 
 header .arrow ion-icon {
