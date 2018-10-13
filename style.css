@@ -197,10 +197,6 @@ header .arrow ion-icon {
 }
 
 @media only screen and (max-width: 480px) {
-    header {
-       height: 100vh;
-    }
-    
     .homepage-experience-section .time,
     .homepage-education-section .time,
     .homepage-experience-section .role,
