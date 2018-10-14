@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style-education.css"/>
+        <link rel="stylesheet" type="text/css" href="grid.css"/>
+        <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href="/logo.png"/>
+        <title>Alexandre Correia | Online Curriculum</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127322788-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-127322788-1');
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                <ul>
+                    <li><a href="/"><img src="/logo.png"></a></li>
+                    <li><a href="/experience.html">Experience</a></li>
+                    <li><a href="/education.html">Education</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="page">
+            <div class="row title">
+                <h1>Education</h1>
+            </div>
+            <div class="row fct-section">
+                <div class="col span-2-of-2">
+                    <div class="row">
+                        <!--<ul>
+                            <li>
+                                <img src="happycode.png">
+                            </li>
+                            <li>
+                                <div class="time"><p>11/2016 - Present</p></div>
+                            </li>
+                            <li>
+                                <div class="role"><p>Webmaster</p></div>
+                            </li>
+                        </ul>-->
+                        <p>WILL SOON HAVE INFORMATIONS HERE :)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="education-section" id="education-section">
+            <div class="row">
+                <h1>Homepage Informations</h1>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <div class="row">
+                        <ul>
+                            <li>
+                                <img src="fct.png">
+                            </li>
+                            <li>
+                                <div class="time"><p>2017 - Present</p></div>
+                            </li>
+                            <li>
+                                <div class="degree"><p>Integrated Master in Computer Engeneering</p></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col span-1-of-2">
+                    <div class="row">
+                        <ul>
+                            <li>
+                                <img src="colegio.png">
+                            </li>
+                            <li>
+                                <div class="time"><p>2014 - 2017</p></div>
+                            </li>
+                            <li>
+                                <div class="degree"><p>High School in the Area of Sciences and Tecnologies</p></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- scripts -->
+        <script>
+            $(function() {
+                $('a[href*=#]:not([href=#])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000); // The number here represents the speed of the scroll in milliseconds
+                            return false;
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
