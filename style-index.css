@@ -31,6 +31,7 @@ header {
 
 header .menu {
     padding: 2% 10% 0 10%;
+    width: 100%;
 }
 
 header .menu img {
@@ -66,10 +67,20 @@ header .menu li:first-child:hover {
     border-bottom: solid 2px rgba(255, 255, 255, 0);
 }
 
+header .menu ion-icon {
+    display: none;
+}
+
 header .welcome {
-    text-align: center;
+    /*text-align: center;
     width: 100%;
-    padding-top: 9vh;
+    padding-top: 9vh;*/
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
 }
 
 header .welcome h1,
@@ -86,8 +97,14 @@ header .welcome img {
 }
 
 header .arrow {
-    padding-top: 12vh;
+    /*padding-top: 12vh;
+    text-align: center;*/
     text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
 }
 
 header .arrow p {
@@ -202,6 +219,23 @@ header .arrow ion-icon {
 }
 
 @media only screen and (max-width: 480px) {
+    /*header .menu li {
+        display: none;
+    }
+    
+    header .menu li:first-child {
+        display: block;
+    }
+    
+    header .menu ion-icon {
+        display: block;
+        position: fixed;
+        top: 2.5%;
+        right: 10%;
+        font-size: 5vh;
+        color: #fff;
+    }*/
+    
     .experience-section .time,
     .education-section .time,
     .experience-section .role,
