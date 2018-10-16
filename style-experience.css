@@ -85,10 +85,46 @@ header .menu li:first-child:hover {
 }
 
 .page .col {
-    padding: 10px 0;
+    padding: 10px 10px;
     box-shadow: 0 2px 2px #efefef;
     border-radius: 20px;
     background-color: #fff;
+}
+
+.page .col .col {
+    padding: 0;
+    box-shadow: 0 0 0 0;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+}
+
+.happycode-section .span-1-of-3 {
+    text-align: center;
+}
+
+.happycode-section .span-2-of-3 li {
+    width: 100%;
+}
+
+.happycode-section .time::before,
+.happycode-section .role::before {
+    color: #0000aa;
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-style: normal;
+}
+
+.happycode-section .time::before {
+    content: "time";
+}
+
+.happycode-section .role::before {
+    content: "role(s)";
+}
+
+.happycode-section .time p,
+.happycode-section .role p {
+    font-weight: bold;
 }
 
 .happycode-section p {
@@ -108,7 +144,7 @@ header .menu li:first-child:hover {
 
 .happycode-section img {
     border-radius: 15px;
-    height: 40vh;
+    height: 30vh;
     width: auto;
 }
 
