@@ -29,98 +29,71 @@
                 </ul>
             </div>
         </header>
-        <div class="page">
+        <div class="page change-menu">
             <div class="row title">
                 <h1>Experience</h1>
             </div>
-            <div class="row happycode-section">
+            <div class="row forallphones-section" id="forallphones-section">
                 <div class="col span-2-of-2">
                     <div class="row">
-                        <div class="col span-1-of-3">
+                        <div class="col span-1-of-2">
+                            <img src="/forallphones.jpg">
+                        </div>
+                        <div class="col span-1-of-2">
+                            <div class="row info">
+                                <p>Overall Time</p>
+                                <p>03/2018 - Present</p>
+                            </div>
+                            <div class="row info">
+                                <p>Role(s)</p>
+                                <p>Alumni / Freelancer<span>,</span><br>IT Team Member <span>&</span><br>Shaper / Ambassador</p>
+                            </div>
+                            <div class="row info">
+                                <p>Website</p>
+                                <p><a href="https://forallphones.com/" target="_blank">Forall Phones</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row roles">
+                        <p>WILL SOON HAVE INFORMATIONS HERE :)</p>
+                        <!--<div class="col span-1-of-3 roles-info">
+                            
+                        </div>
+                        <div class="col span-1-of-3 roles-info">
+                            
+                        </div>
+                        <div class="col span-1-of-3 roles-info">
+                            
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="row happycode-section" id="happycode-section">
+                <div class="col span-2-of-2">
+                    <div class="row">
+                        <div class="col span-1-of-2">
                             <img src="/happycode.png">
                         </div>
-                        <div class="col span-2-of-3">
-                            <div class="row">
-                                <ul>
-                                    <li>
-                                        <div class="time"><p>11/2016 - Present</p></div>
-                                    </li>
-                                    <li>
-                                        <div class="role"><p>Webmaster</p></div>
-                                    </li>
-                                </ul>
+                        <div class="col span-1-of-2">
+                            <div class="row info">
+                                <p>Overall Time</p>
+                                <p>11/2016 - Present</p>
                             </div>
-                            <p>WILL SOON HAVE INFORMATIONS HERE :)</p>
+                            <div class="row info">
+                                <p>Role(s)</p>
+                                <p>Webmaster</p>
+                            </div>
+                            <div class="row info">
+                                <p>Website</p>
+                                <p><a href="https://www.happycode.pt/" target="_blank">Happy Code Portugal</a></p>
+                            </div>
                         </div>
-                        <!--<ul>
-                            <li>
-                                <img src="happycode.png">
-                            </li>
-                            <li>
-                                <div class="time"><p>11/2016 - Present</p></div>
-                            </li>
-                            <li>
-                                <div class="role"><p>Webmaster</p></div>
-                            </li>
-                        </ul>-->
-                        <p>WILL SOON HAVE INFORMATIONS HERE :)</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="experience-section" id="experience-section">
-                <div class="row">
-                    <h1>Homepage Informations</h1>
-                </div>
-                <div class="row">
-                    <div class="col span-1-of-2">
-                        <div class="row">
-                            <ul>
-                                <li>
-                                    <img src="/happycode.png">
-                                </li>
-                                <li>
-                                    <div class="time"><p>11/2016 - Present</p></div>
-                                </li>
-                                <li>
-                                    <div class="role"><p>Webmaster</p></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col span-1-of-2">
-                        <div class="row">
-                            <ul>
-                                <li>
-                                    <img src="/forallphones.jpg">
-                                </li>
-                                <li>
-                                    <div class="time"><p>03/2018 - Present</p></div>
-                                </li>
-                                <li>
-                                    <div class="role"><p>Ambassador, Freelancer & IT Team Member</p></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
         <!-- scripts -->
-        <script>
-            $(function() {
-                $('a[href*=#]:not([href=#])').click(function() {
-                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                        if (target.length) {
-                            $('html,body').animate({
-                                scrollTop: target.offset().top
-                            }, 1000); // The number here represents the speed of the scroll in milliseconds
-                            return false;
-                        }
-                    }
-                });
-            });
-        </script>
+        <script src="/script.js"></script>
+        <script src="/jquery-waypoints-min.js"></script>
     </body>
 </html>
