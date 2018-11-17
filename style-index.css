@@ -1,74 +1,39 @@
 /* ----------------------------------------------- */
-/* BASIC SETUP */
-/* ----------------------------------------------- */
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html,
-body {
-    background-color: #fff;
-    font-weight: 300;
-    font-size: 20px;
-    text-rendering: optimizeLegibility;
-    overflow-x: hidden;
-    font-family: 'Lato', sans-serif;
-}
-
-/* ----------------------------------------------- */
 /* HOMEPAGE */
 /* ----------------------------------------------- */
 
 header {
     height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/capa.png");
-    background-size: cover;
-    background-position: center;
+    /*style-common.css*/
 }
 
 header .menu {
-    padding: 2% 10% 0 10%;
-    width: 100%;
+    /*style-common.css*/
 }
 
 header .menu img {
-    height: 7vh;
-    border-radius: 50%;
+    /*style-common.css*/
 }
 
 header .menu li,
 header .menu li a {
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: solid 2px rgba(255, 255, 255, 0);
-    padding-bottom: 5px;
-    color: white;
-    list-style: none;
-    display: inline-block;
-    margin-left: 2%;
-    font-size: 100%;
-    vertical-align: middle;
-    transition: border-bottom 0.2s;
+    /*style-common.css*/
 }
 
 header .menu li:first-child {
-    padding-left: 0;
+    /*style-common.css*/
 }
 
 header .menu li:hover {
-    border-bottom: solid 2px white;
-    padding-bottom: 5px;
+    /*style-common.css*/
 }
 
 header .menu li:first-child:hover {
-    border-bottom: solid 2px rgba(255, 255, 255, 0);
+    /*style-common.css*/
 }
 
 header .menu ion-icon {
-    display: none;
+    /*style-common.css*/
 }
 
 header .welcome {
@@ -197,6 +162,14 @@ header .arrow ion-icon {
 .education-section .degree p {
     font-weight: bold;
 }
+
+.experience-section .time p span,
+.experience-section .role p span,
+.education-section .time p span,
+.education-section .degree p span {
+    font-weight: normal;
+}
+
 
 .experience-section .btn,
 .education-section .btn {
