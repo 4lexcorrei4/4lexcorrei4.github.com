@@ -116,31 +116,29 @@ header .menu ion-icon {
 }
 
 @media only screen and (max-width: 480px) {
-    .experience-section .time,
-    .education-section .time,
-    .experience-section .role,
-    .education-section .degree {
-        margin-left: 10px;
+    .happycode-section {
+        margin-top: 20px;
     }
     
-    .experience-section .col:first-child,
-    .education-section .col:first-child {
-        margin-top: 0;
-    }
-    
-    .experience-section .col,
-    .education-section .col {
-        margin-top: 10px;
-    }
-    
-    .experience-section img,
-    .education-section img {
+    .forallphones-section img,
+    .happycode-section img {
         width: 100%;
         height: auto;
     }
     
-    .experience-section .btn,
-    .education-section .btn {
-        margin-top: 5%;
+    .forallphones-section .col .col,
+    .forallphones-section .roles,
+    .happycode-section .col .col {
+        margin-top: 10px;
+    }
+    
+    .forallphones-section .col .col:first-child,
+    .happycode-section .col .col:first-child {
+        margin-top: 0;
+    }
+    
+    .happycode-section .info p:last-child,
+    .forallphones-section .info p:last-child {
+        letter-spacing: 0;
     }
 }
