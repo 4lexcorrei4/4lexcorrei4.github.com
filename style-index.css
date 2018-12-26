@@ -53,98 +53,69 @@ header .arrow ion-icon {
     font-size: 7vh;
 }
 
-.experience-section,
-.education-section,
-.volunteer-section {
-    padding: 60px 10%;
-}
-
-.experience-section,
-.volunteer-section {
-    background-color: #f5f5f5;
-}
-
-.education-section {
-    background-color: #f0f0f0;
-}
-
-.experience-section h1,
-.education-section h1,
-.volunteer-section h1 {
+.sections h1 {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
     color: #305ea8;
 }
 
-.experience-section .col,
-.education-section .col {
+.sections .col {
     padding: 10px 0;
     box-shadow: 0 2px 2px #efefef;
     border-radius: 20px;
     background-color: #fff;
 }
 
-.experience-section ul,
-.education-section ul {
+.sections ul {
     list-style: none;
 }
 
-.experience-section ul li:first-child,
-.education-section ul li:first-child,
-.experience-section ul li ion-icon,
-.education-section ul li  ion-icon {
+.sections ul li:first-child {
     margin: 0 20px;
     float: left;
 }
 
-.experience-section img,
-.education-section img {
+.sections img {
     border-radius: 15px;
     height: 20vh;
     width: auto;
 }
 
-.experience-section .time::before,
-.experience-section .role::before,
-.education-section .time::before,
-.education-section .degree::before {
+.sections .time::before,
+.sections .role::before,
+.sections .degree::before {
     color: #0000aa;
     letter-spacing: 2px;
     font-size: 17px;
     font-style: normal;
 }
 
-.experience-section .time::before,
-.education-section .time::before {
+.sections .time::before {
     content: "time";
 }
 
-.experience-section .role::before {
+.sections .role::before {
     content: "role(s)";
 }
 
-.education-section .degree::before {
+.sections .degree::before {
     content: "degree";
 }
 
-.experience-section .time p,
-.experience-section .role p,
-.education-section .time p,
-.education-section .degree p {
+.sections .time p,
+.sections .role p,
+.sections .degree p {
     font-weight: bold;
 }
 
-.experience-section .time p span,
-.experience-section .role p span,
-.education-section .time p span,
-.education-section .degree p span {
+.sections .time p span,
+.sections .role p span,
+.sections .degree p span {
     font-weight: normal;
 }
 
-
-.experience-section .btn,
-.education-section .btn {
+.sections .btn {
     color: #5f5f5f;
     text-transform: uppercase;
     font-weight: bold;
@@ -158,54 +129,35 @@ header .arrow ion-icon {
     transition: background-color 0.5s;
 }
 
-.experience-section .btn:hover,
-.education-section .btn:hover {
+.sections .btn:hover {
     background-color: #eaeaea;
 }
 
+/* ----------------------------------------------- */
+/* HOMEPAGE MOBILE */
+/* ----------------------------------------------- */
+
 @media only screen and (max-width: 480px) {
-    /*header .menu li {
-        display: none;
-    }
-    
-    header .menu li:first-child {
-        display: block;
-    }
-    
-    header .menu ion-icon {
-        display: block;
-        position: fixed;
-        top: 2.5%;
-        right: 10%;
-        font-size: 5vh;
-        color: #fff;
-    }*/
-    
-    .experience-section .time,
-    .education-section .time,
-    .experience-section .role,
-    .education-section .degree {
+    .sections .time,
+    .sections .role,
+    .sections .degree {
         margin-left: 10px;
     }
     
-    .experience-section .col:first-child,
-    .education-section .col:first-child {
+    .sections .col:first-child {
         margin-top: 0;
     }
     
-    .experience-section .col,
-    .education-section .col {
+    .sections .col {
         margin-top: 10px;
     }
     
-    .experience-section img,
-    .education-section img {
+    .sections img {
         width: 100%;
         height: auto;
     }
     
-    .experience-section .btn,
-    .education-section .btn {
+    .sections .btn {
         margin-top: 5%;
     }
 }

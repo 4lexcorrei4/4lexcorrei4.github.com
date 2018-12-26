@@ -1,109 +1,88 @@
-* ----------------------------------------------- */
+/* ----------------------------------------------- */
 /* EXPERIENCE */
 /* ----------------------------------------------- */
 
-.page {
-    padding: 60px 10%;
-    background-color: #f5f5f5;
-}
-
-.impar-section {
-    background-color: #f0f0f0;
-}
-
-.page .title h1 {
+page .title h1 {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
     color: #305ea8;
 }
 
-.page .col {
+.sections .col {
     padding: 10px 10px;
     box-shadow: 0 2px 2px #efefef;
     border-radius: 20px;
     background-color: #fff;
 }
 
-.page .col .col {
+.sections .col .col {
     padding: 0;
     box-shadow: 0 0 0 0;
     border-radius: 20px;
 }
 
-.happycode-section .span-1-of-2,
-.forallphones-section .span-1-of-2 {
+.sections .span-1-of-2 {
     text-align: right;
 }
 
-.happycode-section img,
-.forallphones-section img {
+.sections img {
     border-radius: 15px;
     height: 30vh;
     width: auto;
 }
 
-.happycode-section .info p:first-child,
-.happycode-section .info p:last-child,
-.forallphones-section .info p:first-child,
-.forallphones-section .info p:last-child {
+.sections .info p:first-child,
+.sections .info p:last-child {
     text-align: justify;
     padding: 0;
     text-transform: uppercase;
 }
 
-.happycode-section .info:first-child p:first-child,
-.forallphones-section .info:first-child p:first-child {
+.sections .info:first-child p:first-child {
     padding-top: 0;
 }
 
-.happycode-section .info p:first-child,
-.forallphones-section .info p:first-child {
+.sections .info p:first-child {
     padding-top: 20px;
     font-size: 2vh;
 }
 
-.happycode-section .info p:last-child,
-.forallphones-section .info p:last-child {
+.sections .info p:last-child {
     font-weight: bold;
     letter-spacing: 3px;
 }
 
-.forallphones-section .roles-info {
+.sections .roles-info {
     background-color: #f5f5f5;
     border-radius: 20px;
     text-align: center;
     letter-spacing: 2px;
 }
 
-.forallphones-section .roles-info p {
+.sections .roles-info p {
     text-transform: uppercase;
 }
 
-.forallphones-section .roles-info p:first-child {
+.sections .roles-info p:first-child {
     font-weight: bold;
     margin-top: 5%;
 }
 
-.forallphones-section .roles-info p:last-of-type {
+.sections .roles-info p:last-of-type {
     font-size: 2vh;
     margin-bottom: 5%;
 }
 
-.happycode-section .info p span,
-.happycode-section .info p span,
-.forallphones-section .info p span,
-.forallphones-section .info p span {
+.sections .info p span {
     font-weight: normal;
 }
 
-.forallphones-section .time p,
-.forallphones-section .role p {
+.sections .time p {
     font-weight: bold;
 }
 
-.happycode-section .btn,
-.forallphones-section .btn {
+.sections .btn {
     color: #5f5f5f;
     text-transform: uppercase;
     font-weight: bold;
@@ -117,35 +96,39 @@
     transition: background-color 0.5s;
 }
 
-.happycode-section .btn:hover,
-.forallphones-section .btn:hover {
+.sections .btn:hover {
     background-color: #d9d9d9;
 }
 
+/* ----------------------------------------------- */
+/* EXPERIENCE MOBILE */
+/* ----------------------------------------------- */
+
 @media only screen and (max-width: 480px) {
-    .happycode-section {
+    .sections {
         margin-top: 20px;
     }
     
-    .forallphones-section img,
-    .happycode-section img {
+    .sections img {
         width: 100%;
         height: auto;
     }
     
-    .forallphones-section .col .col,
-    .forallphones-section .roles,
-    .happycode-section .col .col {
+    .sections .col .col,
+    .sections .roles,
+    .sections .col .col {
         margin-top: 10px;
     }
     
-    .forallphones-section .col .col:first-child,
-    .happycode-section .col .col:first-child {
+    .sections .col .col:first-child {
         margin-top: 0;
     }
     
-    .happycode-section .info p:last-child,
-    .forallphones-section .info p:last-child {
+    .sections .info p:last-child,{
         letter-spacing: 0;
+    }
+    
+    .sections .info:last-child {
+        margin-bottom: 20px;
     }
 }
