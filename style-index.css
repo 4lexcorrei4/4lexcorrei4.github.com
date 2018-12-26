@@ -4,36 +4,6 @@
 
 header {
     height: 100vh;
-    /*style-common.css*/
-}
-
-header .menu {
-    /*style-common.css*/
-}
-
-header .menu img {
-    /*style-common.css*/
-}
-
-header .menu li,
-header .menu li a {
-    /*style-common.css*/
-}
-
-header .menu li:first-child {
-    /*style-common.css*/
-}
-
-header .menu li:hover {
-    /*style-common.css*/
-}
-
-header .menu li:first-child:hover {
-    /*style-common.css*/
-}
-
-header .menu ion-icon {
-    /*style-common.css*/
 }
 
 header .welcome {
@@ -121,7 +91,9 @@ header .arrow ion-icon {
 }
 
 .experience-section ul li:first-child,
-.education-section ul li:first-child {
+.education-section ul li:first-child,
+.experience-section ul li ion-icon,
+.education-section ul li  ion-icon {
     margin: 0 20px;
     float: left;
 }
