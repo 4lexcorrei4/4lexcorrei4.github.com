@@ -22,16 +22,25 @@
     </head>
     <body>
         <header>
-            <div class="menu">
+            <menu>
+                <ul>
+                    <li><a href="/"><img src="/logo.png"></a></li>
+                    <li><a href="/experience.html">Experience</a></li>
+                    <li><a href="/education.html">Education</a></li>
+                </ul>
+            </menu>
+            <div class="sticky-menu">
                 <ul>
                     <li><a href="/"><img src="/logo.png"></a></li>
                     <li><a href="/experience.html">Experience</a></li>
                     <li><a href="/education.html">Education</a></li>
                 </ul>
             </div>
+            <ion-icon class="mobile-menu-open" name="menu"></ion-icon>
+            <ion-icon class="mobile-menu-close" name="close"></ion-icon>
         </header>
         <div class="page">
-            <div class="row title">
+            <div class="row title change-menu">
                 <h1>Education</h1>
             </div>
             <div class="row fct-section">
@@ -91,21 +100,7 @@
             </div>
         </div>
         <!-- scripts -->
-        <script>
-            $(function() {
-                $('a[href*=#]:not([href=#])').click(function() {
-                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                        if (target.length) {
-                            $('html,body').animate({
-                                scrollTop: target.offset().top
-                            }, 1000); // The number here represents the speed of the scroll in milliseconds
-                            return false;
-                        }
-                    }
-                });
-            });
-        </script>
+        <script src="/script.js"></script>
+        <script src="/jquery-waypoints-min.js"></script>
     </body>
 </html>
