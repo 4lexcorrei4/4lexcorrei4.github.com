@@ -2,31 +2,6 @@
 /* EXPERIENCE */
 /* ----------------------------------------------- */
 
-header {
-    /*style-common.css*/
-}
-
-header .menu {
-    /*style-common.css*/
-}
-
-header .menu img {
-    /*style-common.css*/
-}
-
-header .menu li,
-header .menu li a {
-    /*style-common.css*/
-}
-
-header .menu li:hover {
-    /*style-common.css*/
-}
-
-header .menu ion-icon {
-    /*style-common.css*/
-}
-
 .page {
     padding: 60px 10%;
     background-color: #f5f5f5;
