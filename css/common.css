@@ -49,9 +49,13 @@ body {
 
 header {
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/capa.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/capa.png");
     background-size: cover;
     background-position: center;
+}
+
+menu {
+    display: none;
 }
 
 .sticky-menu,
@@ -121,7 +125,12 @@ menu li a:active {
     color: black;
 }
 
-.sticky-menu li:first-child
+.sticky-menu li,
+menu li {
+    white-space: nowrap;
+}
+
+.sticky-menu li:first-child,
 menu li:first-child {
     padding-left: 0;
 }
@@ -144,7 +153,7 @@ menu li:first-child:active {
 /* ---- STICKY MENU ---- */
 
 .sticky-menu {
-    display: none;
+    z-index: 900;
     position: fixed;
     top: 0;
     background-color: rgba(255, 255, 255, 0.9);
@@ -238,4 +247,16 @@ a:active {
     .sticky-menu {
         display: none;
     }
+}
+
+/* ----------------------------------------------- */
+/* OPTIONS */
+/* ----------------------------------------------- */
+
+.option .col {
+    box-shadow: 0 0 0 0;
+}
+
+.option img {
+    width: 20px;
 }
