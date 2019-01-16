@@ -58,6 +58,16 @@ page .title h1 {
     border-radius: 20px;
     text-align: center;
     letter-spacing: 2px;
+    width: 30.26%;
+    margin: 0 1%;
+}
+
+.sections .roles-info:first-child {
+    margin: 0 1% 0 2%;
+}
+
+.sections .roles-info:last-child {
+    margin: 0 2% 0 1%;
 }
 
 .sections .roles-info p {
