@@ -232,6 +232,12 @@ header .arrow ion-icon {
 .option-experience-btn,
 .option-education-btn {
     cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.option-experience-btn:hover,
+.option-education-btn:hover {
+    background-color: #fafafa;
 }
 
 .option-experience,
