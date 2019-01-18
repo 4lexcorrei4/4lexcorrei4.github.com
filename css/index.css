@@ -222,6 +222,24 @@ header .arrow ion-icon {
 }
 
 /* ----------------------------------------------- */
+/* OPTIONS */
+/* ----------------------------------------------- */
+
+.option h1 {
+    margin-bottom: 0;
+}
+
+.option-experience-btn,
+.option-education-btn {
+    cursor: pointer;
+}
+
+.option-experience,
+.option-education {
+    display: none;
+}
+
+/* ----------------------------------------------- */
 /* HOMEPAGE MOBILE */
 /* ----------------------------------------------- */
 
