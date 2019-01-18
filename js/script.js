@@ -27,15 +27,15 @@ $(document).ready(function() {
         if ($('.option-education').css('display') == 'block')
             wasopen = 1;
         $('.option-education').css('display', 'none');
-        $('.option-education-btn').css('background-color', '#fff');
         if ($('.option-experience').css('display') == 'none') {
             if (!wasopen)
                 $('.option-experience').toggle(250);
+            else {
+                $('.option-experience').addClass('animated fadeInLeft');
+            }
             $('.option-experience').css('display', 'block');
-            $('.option-experience-btn').css('background-color', '#fafafa');
         } else {
             $('.option-experience').css('display', 'none');
-            $('.option-experience-btn').css('background-color', '#fff');
         }
     })
     
@@ -44,15 +44,15 @@ $(document).ready(function() {
         if ($('.option-experience').css('display') == 'block')
             wasopen = 1;
         $('.option-experience').css('display', 'none');
-        $('.option-experience-btn').css('background-color', '#fff');
         if ($('.option-education').css('display') == 'none') {
             if (!wasopen)
                 $('.option-education').toggle(250);
+            else {
+                $('.option-education').addClass('animated fadeInLeft');
+            }
             $('.option-education').css('display', 'block');
-            $('.option-education-btn').css('background-color', '#fafafa');
         } else {
             $('.option-education').css('display', 'none');
-            $('.option-education-btn').css('background-color', '#fff');
         }
     })
     
