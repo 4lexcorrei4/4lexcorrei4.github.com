@@ -245,6 +245,11 @@ header .arrow ion-icon {
     display: none;
 }
 
+.option-experience .title,
+.option-education .title {
+    margin-top: 20px;
+}
+
 /* ----------------------------------------------- */
 /* HOMEPAGE MOBILE */
 /* ----------------------------------------------- */
