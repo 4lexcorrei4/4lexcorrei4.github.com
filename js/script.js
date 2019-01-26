@@ -56,6 +56,14 @@ $(document).ready(function() {
         }
     })
     
+    $('.forallphones-details-btn').click(function(){
+        $('.forallphones-details').toggle(250);
+        $('.forallphones-details').css('display', 'block');
+    })
+    $('.details .close-btn ion-icon').click(function(){
+        $('.forallphones-details').css('display', 'none');
+    })
+    
     /* Navigation scroll */
     $(function() {
         $('a[href*=#]:not([href=#])').click(function() {
