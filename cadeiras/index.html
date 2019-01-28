@@ -11,20 +11,26 @@
                 <div class="col span-2-of-6"></div>
                 <div class="col span-1-of-6">
                     <p>Ano Letivo</p>
-                    <select name="year">
+                    <select id="year">
                         <option value="2019" onchange="loadPage()" selected>2018/19</option>
                     </select>
                 </div>
                 <div class="col span-1-of-6">
                     <p>Cadeira</p>
-                    <select name="subject">
+                    <select id="subject">
                         <option value="alga" title="Algebra Linear e Geometria Analitica" onchange="loadPage()" selected>ALGA</option>
                     </select>
                 </div>
                 <div class="col span-2-of-6"></div>
             </div>
         </form>
-        <h1 style="text-align: center">https://clip.fct.unl.pt/</h1>
+        <h1 id="url" style="text-align: center">https://clip.fct.unl.pt/</h1>
         <!--<iframe src="https://clip.fct.unl.pt/" style="width: 100%; height: 80%"></iframe>-->
+        <script>
+            function loadPage() {
+                var cYear = document.getElementById('year');
+                document.getElementById('url').value = "https://clip.fct.unl.pt/" + cYear;
+            }
+        </script>
     </body>
 </html>
