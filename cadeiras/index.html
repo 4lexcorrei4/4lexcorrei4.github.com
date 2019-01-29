@@ -4,9 +4,17 @@
         <title>CLIP Cadeiras</title>
         <link rel="SHORTCUT ICON" href="https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico" />
         <link rel="stylesheet" type="text/css" href="../css/grid.css"/>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127322788-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-127322788-1');
+        </script>
     </head>
     <body style="margin: 0; overflow: hidden">
-        <form style="text-align: center; margin-top: 15%;">
+        <form style="text-align: center; margin-top: 30vh">
             <div class="row">
                 <div class="col span-2-of-7"></div>
                 <div class="col span-1-of-7">
@@ -19,12 +27,12 @@
                 </div>
                 <div class="col span-1-of-7">
                     <p>Periodo Letivo</p>
-                    <select id="cTimeType">
+                    <select id="cTimeType" onchange="changeTime()">
                         <option disabled selected>Escolher</option>
                         <option value="s">Semestre</option>
                         <option value="t">Trimestre</option>
                     </select>
-                    <select id="cTime">
+                    <select id="cTime" onchange="changeSubsject()">
                         <option disabled selected>Escolher</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -32,37 +40,48 @@
                 </div>
                 <div class="col span-1-of-7">
                     <p>Cadeira</p>
-                    <select id="cSubject">
-                        <option disabled selected>Escolher</option>
-                        <option value="11152" title="Arquitetura de Computadores">AC</option>
-                        <option value="11154" title="Algoritmos e Estruturas de Dados">AED</option>
-                        <option value="11505" title="Algebra Linear e Geometria Analitica">ALGA</option>
-                        <option value="11504" title="Analise Matematica I">AM1</option>
-                        <option value="7996" title="Analise Matematica II">AM2</option>
-                        <option value="10640" title="Bases de Dados">BD</option>
-                        <option value="10352" title="Competencias Transversais para Ciencias e Tecnologia">CTCT</option>
-                        <option value="10358" title="Ciencia, Tecnologia e Sociedade">CTS</option>
-                        <option value="7663" title="Fisica">F.INF.</option>
-                        <option value="11155" title="Fundamentos de Sistemas de Operacao">FSO</option>
-                        <option value="10637" title="Introducao a Programacao">IP</option>
-                        <option value="8147" title="Linguagens e Ambientes de Programacao">LAP</option>
-                        <option value="7336" title="Logica Computacional">LC</option>
-                        <option value="3629" title="Matematica Discreta">MD</option>
-                        <option value="9414" title="Probabilidades e Estatistica E">PEE</option>
-                        <option value="11153" title="Programacao Orientada pelos Objetos">POO</option>
-                        <option value="5294" title="Sistemas Logicos">SL</option>
-                        <option value="2468" title="Teoria da Computacao">TC</option>
+                    <select id="cSubject" onchange="loadUrl()">
+                        <option disabled selected>Escolher Periodo Letivo</option>
                     </select>
                 </div>
                 <div class="col span-2-of-7"></div>
             </div>
-            <div class="row">
-                <input type="button" value="OBTER URL" onclick="loadPage()">
-            </div>
+            <!--<div class="row">
+                <input type="button" value="OBTER URL" onclick="loadUrl()">
+            </div>-->
         </form>
-        <h1 style="text-align: center; margin-top: 10%"><a href="" id="cUrl" target="_blank">ABRIR PAGINA</a></h1>
+        <p style="text-align: center; margin-top: 5vh">link da pagina atualiza quando se escolhe a cadeira</p>
+        <h1 style="text-align: center"><a href="" id="cUrl" target="_blank">ABRIR PAGINA</a></h1>
         <script>
-            function loadPage() {
+            function changeTime() {
+                var timeType = document.getElementById("cTimeType").value;
+                
+                if (timeType == "s")
+                    document.getElementById("cTime").innerHTML = "<option disabled selected>Escolher</option><option value='1'>1</option><option value='2'>2</option>";
+                else
+                    document.getElementById("cTime").innerHTML = "<option disabled>Escolher</option><option value='2' selected>2</option>";
+                
+                changeSubsject();
+            }
+            
+            function changeSubsject() {
+                var timeType = document.getElementById("cTimeType").value;
+                var time = document.getElementById("cTime").value;
+                
+                if (timeType == "s") {
+                    if (time == "1") {
+                        document.getElementById("cSubject").innerHTML = "<option disabled selected>Escolher</option><optgroup label='1º Ano'><option value='11505' title='Algebra Linear e Geometria Analitica'>ALGA</option><option value='11504' title='Analise Matematica I'>AM1</option><option value='7996' title='Analise Matematica II'>AM2</option><option value='10637' title='Introducao a Programacao'>IP</option><option value='5294' title='Sistemas Logicos'>SL</option></optgroup><optgroup label='2º Ano'><option value='11154' title='Algoritmos e Estruturas de Dados'>AED</option><option value='7663' title='Fisica'>F.INF.</option><option value='11155' title='Fundamentos de Sistemas de Operacao'>FSO</option><option value='7336' title='Logica Computacional'>LC</option></optgroup>";
+                    } else if (time == "2") {
+                        document.getElementById("cSubject").innerHTML = "<option disabled selected>Escolher</option><optgroup label='1º Ano'><option value='11152' title='Arquitetura de Computadores'>AC</option><option value='11504' title='Analise Matematica I'>AM1</option><option value='7996' title='Analise Matematica II'>AM2</option><option value='3629' title='Matematica Discreta'>MD</option><option value='11153' title='Programacao Orientada pelos Objetos'>POO</option></optgroup><optgroup label='2º Ano'><option value='10640' title='Bases de Dados'>BD</option><option value='8147' title='Linguagens e Ambientes de Programacao'>LAP</option><option value='9414' title='Probabilidades e Estatistica E'>PEE</option><option value='2468' title='Teoria da Computacao'>TC</option></optgroup>";
+                    }
+                } else if (timeType == "t" && time == "2") {
+                    document.getElementById("cSubject").innerHTML = "<option disabled selected>Escolher</option><optgroup label='1º Ano'><option value='10352' title='Competencias Transversais para Ciencias e Tecnologia'>CTCT</option></optgroup><optgroup label='2º Ano'><option value='10358' title='Ciencia, Tecnologia e Sociedade'>CTS</option></optgroup>";
+                } else {
+                    document.getElementById("cSubject").innerHTML = "<option disabled selected>Escolher Periodo Letivo</option>";
+                }
+            }
+            
+            function loadUrl() {
                 var year = document.getElementById("cYear").value;
                 var timeType = document.getElementById("cTimeType").value;
                 var time = document.getElementById("cTime").value;
