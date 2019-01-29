@@ -21,7 +21,7 @@
                 <div class="col span-2-of-7"></div>
                 <div class="col span-1-of-7">
                     <p class="option">Ano Letivo</p>
-                    <select id="cYear" onchange="checkLoadUrl()">
+                    <select id="cYear" onchange="loadUrl()">
                         <option value="-1" disabled selected>Escolher</option>
                         <option value="2019">2018/19</option>
                         <option value="2018">2017/18</option>
@@ -52,12 +52,9 @@
                 </div>
                 <div class="col span-2-of-7"></div>
             </div>
-            <!--<div class="row">
-                <input type="button" value="OBTER URL" onclick="loadUrl()">
-            </div>-->
         </form>
-        <p style="text-align: center; margin-top: 5vh">link da pagina atualiza quando se escolhe a cadeira ou se muda de ano</p>
-        <h1 style="text-align: center"><a href="" id="cUrl" target="_blank">ABRIR PAGINA</a></h1>
+        <!--<p style="text-align: center; margin-top: 5vh">link da pagina atualiza quando se escolhe a cadeira ou se muda de ano</p>-->
+        <h1 style="text-align: center"><a href="" id="cUrl" target="">ABRIR PAGINA</a></h1>
         <style>
             select {
                 border-radius: 20px;
@@ -70,25 +67,17 @@
             }
         </style>
         <script>
-            function checkLoadUrl() {
-                var year = document.getElementById("cYear").value;
-                var timeType = document.getElementById("cTimeType").value;
-                var time = document.getElementById("cTime").value;
-                var subject = document.getElementById("cSubject").value;
-                
-                if (!(year == "-1" || timeType == "-1" || time == "-1" || subject == "-1"))
-                    loadUrl();
-            }
             
             function changeTime() {
                 var timeType = document.getElementById("cTimeType").value;
                 
                 if (timeType == "s")
-                    document.getElementById("cTime").innerHTML = "<option disabled selected>Escolher</option><option value='1'>1</option><option value='2'>2</option>";
+                    document.getElementById("cTime").innerHTML = "<option value='-1' disabled selected>Escolher</option><option value='1'>1</option><option value='2'>2</option>";
                 else
-                    document.getElementById("cTime").innerHTML = "<option disabled>Escolher</option><option value='2' selected>2</option>";
+                    document.getElementById("cTime").innerHTML = "<option value='-1' disabled>Escolher</option><option value='2' selected>2</option>";
                 
                 changeSubsject();
+                loadUrl();
             }
             
             function changeSubsject() {
@@ -97,15 +86,19 @@
                 
                 if (timeType == "s") {
                     if (time == "1") {
-                        document.getElementById("cSubject").innerHTML = "<option disabled selected>Escolher</option><optgroup label='1º Ano'><option value='11505' title='Algebra Linear e Geometria Analitica'>ALGA</option><option value='11504' title='Analise Matematica I'>AM1</option><option value='7996' title='Analise Matematica II'>AM2</option><option value='10637' title='Introducao a Programacao'>IP</option><option value='5294' title='Sistemas Logicos'>SL</option></optgroup><optgroup label='2º Ano'><option value='11154' title='Algoritmos e Estruturas de Dados'>AED</option><option value='7663' title='Fisica'>F.INF.</option><option value='11155' title='Fundamentos de Sistemas de Operacao'>FSO</option><option value='7336' title='Logica Computacional'>LC</option></optgroup>";
+                        document.getElementById("cSubject").innerHTML = "<option value='-1' disabled selected>Escolher</option><optgroup label='1º Ano'><option value='11505' title='Algebra Linear e Geometria Analitica'>ALGA</option><option value='11504' title='Analise Matematica I'>AM1</option><option value='7996' title='Analise Matematica II'>AM2</option><option value='10637' title='Introducao a Programacao'>IP</option><option value='5294' title='Sistemas Logicos'>SL</option></optgroup><optgroup label='2º Ano'><option value='11154' title='Algoritmos e Estruturas de Dados'>AED</option><option value='7663' title='Fisica'>F.INF.</option><option value='11155' title='Fundamentos de Sistemas de Operacao'>FSO</option><option value='7336' title='Logica Computacional'>LC</option></optgroup>";
                     } else if (time == "2") {
-                        document.getElementById("cSubject").innerHTML = "<option disabled selected>Escolher</option><optgroup label='1º Ano'><option value='11152' title='Arquitetura de Computadores'>AC</option><option value='11504' title='Analise Matematica I'>AM1</option><option value='7996' title='Analise Matematica II'>AM2</option><option value='3629' title='Matematica Discreta'>MD</option><option value='11153' title='Programacao Orientada pelos Objetos'>POO</option></optgroup><optgroup label='2º Ano'><option value='10640' title='Bases de Dados'>BD</option><option value='8147' title='Linguagens e Ambientes de Programacao'>LAP</option><option value='9414' title='Probabilidades e Estatistica E'>PEE</option><option value='2468' title='Teoria da Computacao'>TC</option></optgroup>";
+                        document.getElementById("cSubject").innerHTML = "<option value='-1' disabled selected>Escolher</option><optgroup label='1º Ano'><option value='11152' title='Arquitetura de Computadores'>AC</option><option value='11504' title='Analise Matematica I'>AM1</option><option value='7996' title='Analise Matematica II'>AM2</option><option value='3629' title='Matematica Discreta'>MD</option><option value='11153' title='Programacao Orientada pelos Objetos'>POO</option></optgroup><optgroup label='2º Ano'><option value='10640' title='Bases de Dados'>BD</option><option value='8147' title='Linguagens e Ambientes de Programacao'>LAP</option><option value='9414' title='Probabilidades e Estatistica E'>PEE</option><option value='2468' title='Teoria da Computacao'>TC</option></optgroup>";
+                    } else {
+                        document.getElementById("cSubject").innerHTML = "<option value='-1' disabled selected>Escolher Periodo Letivo</option>";
                     }
                 } else if (timeType == "t" && time == "2") {
-                    document.getElementById("cSubject").innerHTML = "<option disabled selected>Escolher</option><optgroup label='1º Ano'><option value='10352' title='Competencias Transversais para Ciencias e Tecnologia'>CTCT</option></optgroup><optgroup label='2º Ano'><option value='10358' title='Ciencia, Tecnologia e Sociedade'>CTS</option></optgroup>";
+                    document.getElementById("cSubject").innerHTML = "<option value='-1' disabled selected>Escolher</option><optgroup label='1º Ano'><option value='10352' title='Competencias Transversais para Ciencias e Tecnologia'>CTCT</option></optgroup><optgroup label='2º Ano'><option value='10358' title='Ciencia, Tecnologia e Sociedade'>CTS</option></optgroup>";
                 } else {
-                    document.getElementById("cSubject").innerHTML = "<option disabled selected>Escolher Periodo Letivo</option>";
+                    document.getElementById("cSubject").innerHTML = "<option value='-1' disabled selected>Escolher Periodo Letivo</option>";
                 }
+                
+                loadUrl();
             }
             
             function loadUrl() {
@@ -114,10 +107,14 @@
                 var time = document.getElementById("cTime").value;
                 var subject = document.getElementById("cSubject").value;
                 
-                
-                
-                var url = "https://clip.fct.unl.pt/utente/eu/aluno/informa%E7%E3o_acad%E9mica/curso/unidade_curricular/unidade_curricular?tipo_de_per%EDodo_lectivo=" + timeType + "&curso=472&ano_lectivo=" + year + "&per%EDodo_lectivo=" + time + "&institui%E7%E3o=97747&unidade_curricular=" + subject;
-                document.getElementById("cUrl").href = url;
+                if (!(year == "-1" || timeType == "-1" || time == "-1" || subject == "-1")) {
+                    var url = "https://clip.fct.unl.pt/utente/eu/aluno/informa%E7%E3o_acad%E9mica/curso/unidade_curricular/unidade_curricular?tipo_de_per%EDodo_lectivo=" + timeType + "&curso=472&ano_lectivo=" + year + "&per%EDodo_lectivo=" + time + "&institui%E7%E3o=97747&unidade_curricular=" + subject;
+                    document.getElementById("cUrl").href = url;
+                    document.getElementById("cUrl").target = "_blank";
+                } else {
+                    document.getElementById("cUrl").href = "";
+                    document.getElementById("cUrl").target = "";
+                }
             }
         </script>
     </body>
