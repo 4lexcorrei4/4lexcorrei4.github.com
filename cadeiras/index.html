@@ -20,9 +20,9 @@
             <div class="row">
                 <div class="col span-2-of-7"></div>
                 <div class="col span-1-of-7">
-                    <p>Ano Letivo</p>
-                    <select id="cYear">
-                        <option disabled selected>Escolher</option>
+                    <p class="option">Ano Letivo</p>
+                    <select id="cYear" onchange="checkLoadUrl()">
+                        <option value="-1" disabled selected>Escolher</option>
                         <option value="2019">2018/19</option>
                         <option value="2018">2017/18</option>
                         <option value="2017">2016/17</option>
@@ -32,22 +32,22 @@
                     </select>
                 </div>
                 <div class="col span-1-of-7">
-                    <p>Periodo Letivo</p>
+                    <p class="option">Periodo Letivo</p>
                     <select id="cTimeType" onchange="changeTime()">
-                        <option disabled selected>Escolher</option>
+                        <option value="-1" disabled selected>Escolher</option>
                         <option value="s">Semestre</option>
                         <option value="t">Trimestre</option>
                     </select>
                     <select id="cTime" onchange="changeSubsject()">
-                        <option disabled selected>Escolher</option>
+                        <option value="-1" disabled selected>Escolher</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                     </select>
                 </div>
                 <div class="col span-1-of-7">
-                    <p>Cadeira</p>
+                    <p class="option">Cadeira</p>
                     <select id="cSubject" onchange="loadUrl()">
-                        <option disabled selected>Escolher Periodo Letivo</option>
+                        <option value="-1" disabled selected>Escolher Periodo Letivo</option>
                     </select>
                 </div>
                 <div class="col span-2-of-7"></div>
@@ -56,9 +56,30 @@
                 <input type="button" value="OBTER URL" onclick="loadUrl()">
             </div>-->
         </form>
-        <p style="text-align: center; margin-top: 5vh">link da pagina atualiza quando se escolhe a cadeira</p>
+        <p style="text-align: center; margin-top: 5vh">link da pagina atualiza quando se escolhe a cadeira ou se muda de ano</p>
         <h1 style="text-align: center"><a href="" id="cUrl" target="_blank">ABRIR PAGINA</a></h1>
+        <style>
+            select {
+                border-radius: 20px;
+                padding-left: 5px;
+            }
+            
+            p.option {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        </style>
         <script>
+            function checkLoadUrl() {
+                var year = document.getElementById("cYear").value;
+                var timeType = document.getElementById("cTimeType").value;
+                var time = document.getElementById("cTime").value;
+                var subject = document.getElementById("cSubject").value;
+                
+                if (!(year == "-1" || timeType == "-1" || time == "-1" || subject == "-1"))
+                    loadUrl();
+            }
+            
             function changeTime() {
                 var timeType = document.getElementById("cTimeType").value;
                 
