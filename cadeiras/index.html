@@ -5,32 +5,73 @@
         <link rel="SHORTCUT ICON" href="https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico" />
         <link rel="stylesheet" type="text/css" href="../css/grid.css"/>
     </head>
-    <body style="overflow: hidden">
-        <form style="text-align: center">
+    <body style="margin: 0; overflow: hidden">
+        <form style="text-align: center; margin-top: 15%;">
             <div class="row">
-                <div class="col span-2-of-6"></div>
-                <div class="col span-1-of-6">
+                <div class="col span-2-of-7"></div>
+                <div class="col span-1-of-7">
                     <p>Ano Letivo</p>
-                    <select id="cYear" onchange="loadPage()">
-                        <option value="2019" selected>2018/19</option>
+                    <select id="cYear">
+                        <option disabled selected>Escolher</option>
+                        <option value="2019">2018/19</option>
                         <option value="2018">2017/18</option>
                     </select>
                 </div>
-                <div class="col span-1-of-6">
-                    <p>Cadeira</p>
-                    <select id="cSubject" onchange="loadPage()">
-                        <option value="alga" title="Algebra Linear e Geometria Analitica" selected>ALGA</option>
+                <div class="col span-1-of-7">
+                    <p>Periodo Letivo</p>
+                    <select id="cTimeType">
+                        <option disabled selected>Escolher</option>
+                        <option value="s">Semestre</option>
+                        <option value="t">Trimestre</option>
+                    </select>
+                    <select id="cTime">
+                        <option disabled selected>Escolher</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
                     </select>
                 </div>
-                <div class="col span-2-of-6"></div>
+                <div class="col span-1-of-7">
+                    <p>Cadeira</p>
+                    <select id="cSubject">
+                        <option disabled selected>Escolher</option>
+                        <option value="11152" title="Arquitetura de Computadores">AC</option>
+                        <option value="11154" title="Algoritmos e Estruturas de Dados">AED</option>
+                        <option value="11505" title="Algebra Linear e Geometria Analitica">ALGA</option>
+                        <option value="11504" title="Analise Matematica I">AM1</option>
+                        <option value="7996" title="Analise Matematica II">AM2</option>
+                        <option value="10640" title="Bases de Dados">BD</option>
+                        <option value="10352" title="Competencias Transversais para Ciencias e Tecnologia">CTCT</option>
+                        <option value="10358" title="Ciencia, Tecnologia e Sociedade">CTS</option>
+                        <option value="7663" title="Fisica">F.INF.</option>
+                        <option value="11155" title="Fundamentos de Sistemas de Operacao">FSO</option>
+                        <option value="10637" title="Introducao a Programacao">IP</option>
+                        <option value="8147" title="Linguagens e Ambientes de Programacao">LAP</option>
+                        <option value="7336" title="Logica Computacional">LC</option>
+                        <option value="3629" title="Matematica Discreta">MD</option>
+                        <option value="9414" title="Probabilidades e Estatistica E">PEE</option>
+                        <option value="11153" title="Programacao Orientada pelos Objetos">POO</option>
+                        <option value="5294" title="Sistemas Logicos">SL</option>
+                        <option value="2468" title="Teoria da Computacao">TC</option>
+                    </select>
+                </div>
+                <div class="col span-2-of-7"></div>
+            </div>
+            <div class="row">
+                <input type="button" value="OBTER URL" onclick="loadPage()">
             </div>
         </form>
-        <h1 id="cUrl" style="text-align: center">https://clip.fct.unl.pt/</h1>
-        <!--<iframe src="https://clip.fct.unl.pt/" style="width: 100%; height: 80%"></iframe>-->
+        <h1 style="text-align: center; margin-top: 10%"><a href="" id="cUrl" target="_blank">ABRIR PAGINA</a></h1>
         <script>
             function loadPage() {
                 var year = document.getElementById("cYear").value;
-                document.getElementById("cUrl").html('test');
+                var timeType = document.getElementById("cTimeType").value;
+                var time = document.getElementById("cTime").value;
+                var subject = document.getElementById("cSubject").value;
+                
+                
+                
+                var url = "https://clip.fct.unl.pt/utente/eu/aluno/informa%E7%E3o_acad%E9mica/curso/unidade_curricular/unidade_curricular?tipo_de_per%EDodo_lectivo=" + timeType + "&curso=472&ano_lectivo=" + year + "&per%EDodo_lectivo=" + time + "&institui%E7%E3o=97747&unidade_curricular=" + subject;
+                document.getElementById("cUrl").href = url;
             }
         </script>
     </body>
