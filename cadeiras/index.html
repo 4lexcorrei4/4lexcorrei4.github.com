@@ -54,7 +54,7 @@
             </div>
         </form>
         <!--<p style="text-align: center; margin-top: 5vh">link da pagina atualiza quando se escolhe a cadeira ou se muda de ano</p>-->
-        <h1 style="text-align: center"><a href="" id="cUrl" target=""><img src="https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico" style="border-radius: 50%; height: 20px; width: auto"> ABRIR PAGINA</a></h1>
+        <h1 style="text-align: center"><a href="#" id="cUrl" target=""><img src="https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico" style="border-radius: 50%; height: 20px; width: auto"> SEM PAGINA</a></h1>
         <style>
             select {
                 border-radius: 20px;
@@ -129,9 +129,11 @@
                     var url = "https://clip.fct.unl.pt/utente/eu/aluno/informa%E7%E3o_acad%E9mica/curso/unidade_curricular/unidade_curricular?tipo_de_per%EDodo_lectivo=" + timeType + "&curso=472&ano_lectivo=" + year + "&per%EDodo_lectivo=" + time + "&institui%E7%E3o=97747&unidade_curricular=" + subject;
                     document.getElementById("cUrl").href = url;
                     document.getElementById("cUrl").target = "_blank";
+                    document.getElementById("cUrl").innerHTML = "<img src='https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico' style='border-radius: 50%; height: 20px; width: auto'> ABRIR PAGINA";
                 } else {
-                    document.getElementById("cUrl").href = "";
+                    document.getElementById("cUrl").href = "#";
                     document.getElementById("cUrl").target = "";
+                    document.getElementById("cUrl").innerHTML = "<img src='https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico' style='border-radius: 50%; height: 20px; width: auto'> SEM PAGINA";
                 }
             }
         </script>
