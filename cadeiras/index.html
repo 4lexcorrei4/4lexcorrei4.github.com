@@ -1,3 +1,4 @@
+
 <!DOCTYPE>
 <html>
     <head>
@@ -49,17 +50,8 @@
                 <div class="col span-2-of-7"></div>
             </div>
         </form>
-        <div class="row">
-            <div class="col span-1-of-2">
-                <h1 style="text-align: right"><a href="#" id="cUrlCLIP" target=""><img src="https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico" style="border-radius: 50%; height: 20px; width: auto"> SEM PAGINA</a></h1>
-            </div>
-            <div class="col span-1-of-2">
-                <h1 style="text-align: left"><a href="#" id="cUrlMoodle" target=""><img src="https://moodle.fct.unl.pt/theme/image.php/clean/theme/1543332681/favicon" style="height: 20px; width: auto"> SEM PAGINA</a></h1>
-            </div>
-        </div>
-        <div class="row">
-            <p style="text-align: center">AVISO: LINK PARA MOODLE EM TESTES</p>
-        </div>
+        <!--<p style="text-align: center; margin-top: 5vh">link da pagina atualiza quando se escolhe a cadeira ou se muda de ano</p>-->
+        <h1 style="text-align: center"><a href="#" id="cUrl" target=""><img src="https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico" style="border-radius: 50%; height: 20px; width: auto"> SEM PAGINA</a></h1>
         <style>
             select {
                 border-radius: 20px;
@@ -139,46 +131,14 @@
                         time = "2";
                     }
                     
-                    var urlCLIP = "https://clip.fct.unl.pt/utente/eu/aluno/informa%E7%E3o_acad%E9mica/curso/unidade_curricular/unidade_curricular?tipo_de_per%EDodo_lectivo=" + timeType + "&curso=472&ano_lectivo=" + year + "&per%EDodo_lectivo=" + time + "&institui%E7%E3o=97747&unidade_curricular=" + subject;
-                    document.getElementById("cUrlCLIP").href = urlCLIP;
-                    document.getElementById("cUrlCLIP").target = "_blank";
-                    document.getElementById("cUrlCLIP").innerHTML = "<img src='https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico' style='border-radius: 50%; height: 20px; width: auto'> ABRIR PAGINA";
-                    
-                    var subjectName = null;
-                    
-                    if (subject == "11154") {
-                        if (year == "2019")
-                            subjectName = "AED1819";
-                        else if (year == "2018")
-                            subjectName = "AED1718";
-                        else if (year == "2017")
-                            subjectName = "AED1617";
-                        else if (year == "2016")
-                            subjectName = "AED1516";
-                        else if (year == "2015")
-                            subjectName = "AED1415";
-                        else if (year == "2014")
-                            subjectName = "AEDMIEI1314";
-                    }
-                    
-                    if (subjectName == null) {
-                        document.getElementById("cUrlMoodle").href = "#";
-                        document.getElementById("cUrlMoodle").target = "";
-                        document.getElementById("cUrlMoodle").innerHTML = "<img src='https://moodle.fct.unl.pt/theme/image.php/clean/theme/1543332681/favicon' style='height: 20px; width: auto'> SEM PAGINA";
-                    } else {
-                        var urlMoodle = "https://moodle.fct.unl.pt/course/view.php?name=" + subjectName;
-                        document.getElementById("cUrlMoodle").href = urlMoodle;
-                        document.getElementById("cUrlMoodle").target = "_blank";
-                        document.getElementById("cUrlMoodle").innerHTML = "<img src='https://moodle.fct.unl.pt/theme/image.php/clean/theme/1543332681/favicon' style='height: 20px; width: auto'> ABRIR PAGINA";
-                    }
+                    var url = "https://clip.fct.unl.pt/utente/eu/aluno/informa%E7%E3o_acad%E9mica/curso/unidade_curricular/unidade_curricular?tipo_de_per%EDodo_lectivo=" + timeType + "&curso=472&ano_lectivo=" + year + "&per%EDodo_lectivo=" + time + "&institui%E7%E3o=97747&unidade_curricular=" + subject;
+                    document.getElementById("cUrl").href = url;
+                    document.getElementById("cUrl").target = "_blank";
+                    document.getElementById("cUrl").innerHTML = "<img src='https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico' style='border-radius: 50%; height: 20px; width: auto'> ABRIR PAGINA";
                 } else {
-                    document.getElementById("cUrlCLIP").href = "#";
-                    document.getElementById("cUrlCLIP").target = "";
-                    document.getElementById("cUrlCLIP").innerHTML = "<img src='https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico' style='border-radius: 50%; height: 20px; width: auto'> SEM PAGINA";
-                    
-                    document.getElementById("cUrlMoodle").href = "#";
-                    document.getElementById("cUrlMoodle").target = "";
-                    document.getElementById("cUrlMoodle").innerHTML = "<img src='https://moodle.fct.unl.pt/theme/image.php/clean/theme/1543332681/favicon' style='height: 20px; width: auto'> SEM PAGINA";
+                    document.getElementById("cUrl").href = "#";
+                    document.getElementById("cUrl").target = "";
+                    document.getElementById("cUrl").innerHTML = "<img src='https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico' style='border-radius: 50%; height: 20px; width: auto'> SEM PAGINA";
                 }
             }
         </script>
