@@ -15,8 +15,8 @@
           gtag('config', 'UA-127322788-1');
         </script>
     </head>
-    <body style="margin: 0; overflow: hidden; background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(./img/fct.png); background-position: center; background-repeat: no-repeat; background-size: 50%">
-        <form style="text-align: center; margin-top: 40vh">
+    <body>
+        <form>
             <div class="row">
                 <div class="col span-2-of-7"></div>
                 <div class="col span-1-of-7">
@@ -49,9 +49,24 @@
                 <div class="col span-2-of-7"></div>
             </div>
         </form>
-        <!--<p style="text-align: center; margin-top: 5vh">link da pagina atualiza quando se escolhe a cadeira ou se muda de ano</p>-->
         <h1 style="text-align: center"><a href="#" id="cUrl" target=""><img src="./img/clip.ico" style="border-radius: 50%; height: 20px; width: auto"> SEM PAGINA</a></h1>
         <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+                background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(./img/fct.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 50%;
+                position: fixed;
+                width: 100%;
+            }
+            
+            form {
+                text-align: center;
+                margin-top: 40vh;
+            }
+            
             select {
                 border-radius: 20px;
                 padding-left: 5px;
@@ -80,21 +95,18 @@
                 background-color: rgba(0, 0, 0, 0.1);
                 color: #205260;
             }
+            
+            @media only screen and (max-width: 400px) {
+                form {
+                    margin-top: 30vh;
+                }
+                
+                select {
+                    width: 80%;
+                }
+            }
         </style>
         <script>
-            
-            /*function changeTime() {
-                var timeType = document.getElementById("cTimeType").value;
-                
-                if (timeType == "s")
-                    document.getElementById("cTime").innerHTML = "<option value='-1' disabled selected>Escolher</option><option value='1'>1</option><option value='2'>2</option>";
-                else
-                    document.getElementById("cTime").innerHTML = "<option value='-1' disabled>Escolher</option><option value='2' selected>2</option>";
-                
-                changeSubsject();
-                loadUrl();
-            }*/
-            
             function changeSubsject() {
                 var time = document.getElementById("cTime").value;
                 
