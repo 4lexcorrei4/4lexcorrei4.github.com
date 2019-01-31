@@ -1,11 +1,10 @@
-
 <!DOCTYPE>
 <html>
     <head>
         <title>CLIP Cadeiras</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="SHORTCUT ICON" href="https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico" />
+        <link rel="shorcut icon" href="./img/clip.ico" />
         <link rel="stylesheet" type="text/css" href="../css/grid.css"/>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127322788-1"></script>
@@ -16,7 +15,7 @@
           gtag('config', 'UA-127322788-1');
         </script>
     </head>
-    <body style="margin: 0; overflow: hidden; background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(https://www.fct.unl.pt/sites/www.fct.unl.pt/themes/fct_unl_pt_2015/images/logo.png); background-position: center; background-repeat: no-repeat; background-size: 50%">
+    <body style="margin: 0; overflow: hidden; background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(./img/fct.png); background-position: center; background-repeat: no-repeat; background-size: 50%">
         <form style="text-align: center; margin-top: 40vh">
             <div class="row">
                 <div class="col span-2-of-7"></div>
@@ -51,7 +50,7 @@
             </div>
         </form>
         <!--<p style="text-align: center; margin-top: 5vh">link da pagina atualiza quando se escolhe a cadeira ou se muda de ano</p>-->
-        <h1 style="text-align: center"><a href="#" id="cUrl" target=""><img src="https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico" style="border-radius: 50%; height: 20px; width: auto"> SEM PAGINA</a></h1>
+        <h1 style="text-align: center"><a href="#" id="cUrl" target=""><img src="./img/clip.ico" style="border-radius: 50%; height: 20px; width: auto"> SEM PAGINA</a></h1>
         <style>
             select {
                 border-radius: 20px;
@@ -134,11 +133,11 @@
                     var url = "https://clip.fct.unl.pt/utente/eu/aluno/informa%E7%E3o_acad%E9mica/curso/unidade_curricular/unidade_curricular?tipo_de_per%EDodo_lectivo=" + timeType + "&curso=472&ano_lectivo=" + year + "&per%EDodo_lectivo=" + time + "&institui%E7%E3o=97747&unidade_curricular=" + subject;
                     document.getElementById("cUrl").href = url;
                     document.getElementById("cUrl").target = "_blank";
-                    document.getElementById("cUrl").innerHTML = "<img src='https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico' style='border-radius: 50%; height: 20px; width: auto'> ABRIR PAGINA";
+                    document.getElementById("cUrl").innerHTML = "<img src='./img/clip.ico' style='border-radius: 50%; height: 20px; width: auto'> ABRIR PAGINA";
                 } else {
                     document.getElementById("cUrl").href = "#";
                     document.getElementById("cUrl").target = "";
-                    document.getElementById("cUrl").innerHTML = "<img src='https://clip.fct.unl.pt/imagem/formata%E7%E3o/clip.ico' style='border-radius: 50%; height: 20px; width: auto'> SEM PAGINA";
+                    document.getElementById("cUrl").innerHTML = "<img src='./img/clip.ico' style='border-radius: 50%; height: 20px; width: auto'> SEM PAGINA";
                 }
             }
         </script>
