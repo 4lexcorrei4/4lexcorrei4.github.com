@@ -5,8 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shorcut icon" href="./img/clip.ico" />
-        <link rel="stylesheet" type="text/css" href="../css/grid.css"/>
+        <link rel="stylesheet" type="text/css" href="./grid.css"/>
         <link rel="stylesheet" type="text/css" href="./style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="./script.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127322788-1"></script>
@@ -17,40 +18,7 @@
           gtag('config', 'UA-127322788-1');
         </script>
     </head>
-    <body>
-        <form>
-            <div class="row">
-                <div class="col span-2-of-7"></div>
-                <div class="col span-1-of-7">
-                    <p class="option">Ano Letivo</p>
-                    <select id="cYear" onchange="loadUrl()">
-                        <option value="-1" disabled selected>Escolher</option>
-                        <option value="2019">2018/19</option>
-                        <option value="2018">2017/18</option>
-                        <option value="2017">2016/17</option>
-                        <option value="2016">2015/16</option>
-                        <option value="2015">2014/15</option>
-                        <option value="2014">2013/14</option>
-                    </select>
-                </div>
-                <div class="col span-1-of-7">
-                    <p class="option">Periodo Letivo</p>
-                    <select id="cTime" onchange="changeSubsject()">
-                        <option value="-1" disabled selected>Escolher</option>
-                        <option value="s1">1º Semestre</option>
-                        <option value="s2">2º Semestre</option>
-                        <option value="t">Trimestre</option>
-                    </select>
-                </div>
-                <div class="col span-1-of-7">
-                    <p class="option">Cadeira</p>
-                    <select id="cSubject" onchange="loadUrl()">
-                        <option value="-1" disabled selected>Escolher Periodo Letivo</option>
-                    </select>
-                </div>
-                <div class="col span-2-of-7"></div>
-            </div>
-        </form>
-        <h1><a href="#" id="cUrl" target=""><img src="./img/clip.ico"> SEM PAGINA</a></h1>
+    <body style="margin: 0">
+        <iframe src="http://mieicadeiras.epizy.com/" width="100%" height="100%" style="border: none"></iframe>
     </body>
 </html>
