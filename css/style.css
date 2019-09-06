@@ -320,22 +320,28 @@ header .arrow ion-icon {
     border-radius: 50%;
 }
 
+
+.education .experience-box,
+.education .details,
 .experience .experience-box,
-.experience .details .col {
+.experience .details {
     background-color: white;
     box-shadow: 0 0 5px 0 gray;
     border-radius: 20px;
     margin-top: 20px;
 }
 
+.education .experience-box,
 .experience .experience-box {
     padding: 20px;
 }
 
-.experience .details .col {
+.education .details,
+.experience .details {
     padding: 20px 0;
 }
 
+.education img,
 .experience img {
     width: 50%;
     height: auto;
@@ -343,18 +349,27 @@ header .arrow ion-icon {
     margin-left: 50%;
 }
 
+.education .time-from,
+.education .time-to,
+.education .degree,
+.education .website,
 .experience .time-from,
 .experience .time-to,
 .experience .role,
-.experience .website{
+.experience .website {
     font-weight: bold;
 }
 
+.education .degree,
+.education .website,
 .experience .role,
 .experience .website {
     padding-top: 20px;
 }
 
+.education .time::before,
+.education .degree::before,
+.education .website::before,
 .experience .time::before,
 .experience .role::before,
 .experience .website::before {
@@ -364,6 +379,8 @@ header .arrow ion-icon {
     font-weight: normal;
 }
 
+.education .time-from::before,
+.education .time-to::before,
 .experience .time-from::before,
 .experience .time-to::before {
     color: #0000aa;
@@ -372,14 +389,17 @@ header .arrow ion-icon {
     font-weight: normal;
 }
 
+.education .time::before,
 .experience .time::before {
     content: "Time";
 }
 
+.education .time-from::before,
 .experience .time-from::before {
     content: "From";
 }
 
+.education .time-to::before,
 .experience .time-to::before {
     content: "To";
 }
@@ -388,14 +408,21 @@ header .arrow ion-icon {
     content: "Role";
 }
 
+.education .degree::before {
+    content: "Degree";
+}
+
+.education .website::before,
 .experience .website::before {
     content: "Website (Link)";
 }
 
+.education .role span,
 .experience .role span {
     font-weight: normal;
 }
 
+.education .details-btn,
 .experience .details-btn {
     width: 100%;
     text-align: center;
@@ -408,28 +435,30 @@ header .arrow ion-icon {
     margin-top: 20px;
 }
 
+.education .details,
 .experience .details {
     display: none;
 }
 
+.education .details .role-title,
 .experience .details .role-title {
     width: 100%;
-    text-align: center;
+    text-align: right;
     text-transform: capitalize;
     font-weight: bold;
 }
 
+.education .details .time-title,
 .experience .details .time-title {
     width: 100%;
-    text-align: center;
+    text-align: left;
     text-transform: capitalize;
     font-weight: normal;
 }
 
 .about-me h1,
 .experience h1,
-.education h1,
-.contacts h1 {
+.education h1 {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
@@ -620,6 +649,33 @@ header .arrow ion-icon {
 /* ----------------------------------------------- */
 
 @media only screen and (max-width: 480px) {
+    .education .details .row,
+    .experience .details .row {
+        margin-top: 20px;
+    }
+    .education .details .row:first-child,
+    .experience .details .row:first-child {
+        margin-top: 0;
+    }
+    
+    .education .details .role-title,
+    .experience .details .role-title {
+        width: 100%;
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+
+    .education .details .time-title,
+    .experience .details .time-title {
+        width: 100%;
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: normal;
+    }
+    
+    
+    
     .sections .time,
     .sections .role,
     .sections .degree {
