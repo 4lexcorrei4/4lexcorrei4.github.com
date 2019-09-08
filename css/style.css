@@ -189,6 +189,7 @@ a:link,
 a:visited {
     color: #000000;
     text-decoration: none;
+    border-bottom: 0.5px solid black;
     transition: color 0.5s, border 0.5s;
 }
 
@@ -197,6 +198,21 @@ a:active {
     color: #0000AA;
     text-decoration: none;
     border-bottom: 0.5px solid #0000AA;
+}
+
+
+.about-me .social a:link,
+.about-me .social a:visited {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: none;
+    transition: color 0.5s
+}
+
+.about-me .social a:hover,
+.about-me .social a:active {
+    color: #0000AA;
+    text-decoration: none;
 }
 
 /* ----------------------------------------------- */
@@ -254,9 +270,6 @@ a:active {
         margin-top: 40px;
     }
 }
-
-
-
 
 
 /* ----------------------------------------------- */
@@ -320,6 +333,44 @@ header .arrow ion-icon {
     border-radius: 50%;
 }
 
+.about-me h1,
+.experience h1,
+.education h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #305ea8;
+}
+
+.about-me .info {
+    text-align: justify;
+    font-weight: 400;
+}
+
+.about-me .social,
+.about-me .languages {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about-me .social p,
+.about-me .languages p {
+    font-weight: 400;
+}
+
+.about-me .languages .language {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.about-me .languages .level {
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.about-me .social ion-icon {
+    font-size: 40px;
+}
 
 .education .experience-box,
 .education .details,
@@ -454,33 +505,6 @@ header .arrow ion-icon {
     text-align: left;
     text-transform: capitalize;
     font-weight: normal;
-}
-
-.about-me h1,
-.experience h1,
-.education h1 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #305ea8;
-}
-
-.about-me .info {
-    text-align: justify;
-    font-weight: 400;
-}
-
-.about-me .icons {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.about-me .icons p {
-    font-weight: 400;
-}
-
-.about-me .icons ion-icon {
-    font-size: 40px;
 }
 
 .sections .col {
