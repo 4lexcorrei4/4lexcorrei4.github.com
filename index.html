@@ -261,7 +261,40 @@
                 <div class="row">
                     <h1>Projects</h1>
                 </div>
-                <div class="row" style="text-align: center; font-weight: bold"><p>Available Soon</p></div>
+                <div class="row">
+                    <div class="col span-1-of-2 experience-box">
+                        <div class="row">
+                            <div class="col span-1-of-4">
+                                <img src="./img/clipcadeiras.png">
+                            </div>
+                            <div class="col span-3-of-4">
+                                <div class="row name">
+                                    <p><a href="http://clipcadeiras.epizy.com" target="_blank">CLIP Cadeiras</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row details-btn" onclick="showHideDetails('clipcadeiras')">Show / Hide Description</div>
+                        <div id="clipcadeiras-details" class="row description">
+                            <p>Facilitates the access to the various infos and pages of each subject of each course, at this moment, of some of the FCT NOVA courses</p>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-2 experience-box">
+                        <div class="row">
+                            <div class="col span-1-of-4">
+                                <img src="./img/logo.png">
+                            </div>
+                            <div class="col span-3-of-4">
+                                <div class="row name">
+                                    <p><a href="https://4lexcorrei4.github.io" target="_blank">Online Curriculum</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row details-btn" onclick="showHideDetails('online-curriculum')">Show / Hide Description</div>
+                        <div id="online-curriculum-details" class="row description">
+                            <p>Complements my LinkedIn profile info</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="section section-none footer">
                 <p>
@@ -284,11 +317,11 @@
                 '<link rel="stylesheet" type="text/css" href="./css/grid.css?v=' + time + '"/>';*/
         }
         
-        function showHideDetails(experience) {
-            if (document.getElementById(experience + '-details').style.display == 'none') {
-                document.getElementById(experience + '-details').style.display = 'block';
+        function showHideDetails(block) {
+            if (document.getElementById(block + '-details').style.display == 'none') {
+                document.getElementById(block + '-details').style.display = 'block';
             } else {
-                document.getElementById(experience + '-details').style.display = 'none';
+                document.getElementById(block + '-details').style.display = 'none';
             }
         }
         

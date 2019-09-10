@@ -47,6 +47,11 @@ body {
     background-color: #eee;
 }
 
+.cols-same-height {
+    display: flex;
+    align-items: stretch;
+}
+
 /* ----------------------------------------------- */
 /* HEADER */
 /* ----------------------------------------------- */
@@ -376,7 +381,8 @@ header .arrow ion-icon {
 .education .experience-box,
 .education .details,
 .experience .experience-box,
-.experience .details {
+.experience .details,
+.projects .experience-box {
     background-color: white;
     box-shadow: 0 0 5px 0 gray;
     border-radius: 20px;
@@ -394,11 +400,18 @@ header .arrow ion-icon {
 }
 
 .education img,
-.experience img {
+.experience img,
+.projects img {
     width: 50%;
     height: auto;
     border-radius: 20px;
     margin-left: 50%;
+}
+
+.projects img {
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .education .time-from,
@@ -408,7 +421,8 @@ header .arrow ion-icon {
 .experience .time-from,
 .experience .time-to,
 .experience .role,
-.experience .website {
+.experience .website,
+.projects .name {
     font-weight: bold;
 }
 
@@ -419,12 +433,22 @@ header .arrow ion-icon {
     padding-top: 20px;
 }
 
+.projects .name {
+    margin: 20px 20px 20px 0;
+}
+
+.projects .description {
+    text-align: justify;
+    margin: 20px;
+}
+
 .education .time::before,
 .education .degree::before,
 .education .website::before,
 .experience .time::before,
 .experience .role::before,
-.experience .website::before {
+.experience .website::before,
+.projects .name::before {
     color: #0000aa;
     letter-spacing: 2px;
     font-size: 22px;
@@ -469,22 +493,32 @@ header .arrow ion-icon {
     content: "Website (Link)";
 }
 
+.projects .name::before {
+    content: "Name";
+}
+
 .education .role span,
 .experience .role span {
     font-weight: normal;
 }
 
 .education .details-btn,
-.experience .details-btn {
+.experience .details-btn,
+.projects .details-btn {
     width: 100%;
     text-align: center;
     text-transform: capitalize;
     font-weight: 400;
     background-color: rgba(0, 0, 0, 0.1);
-    padding: 5px;
+    padding: 5px 0;
     border-radius: 20px;
     cursor: pointer;
     margin-top: 20px;
+}
+
+.projects .details-btn {
+    width: auto;
+    margin: 0 20px 20px 20px;
 }
 
 .education .details,
