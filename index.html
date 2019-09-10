@@ -5,8 +5,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- STYLES -->
-        <link rel="stylesheet" type="text/css" href="./css/style.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/grid.css"/>
+        <div id="styles">
+            <!--<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+            <link rel="stylesheet" type="text/css" href="./css/grid.css"/>-->
+        </div>
         <!-- SCRIPTS -->
         <script src="./js/script.js"></script>
         <!--<script src="./js/jquery-waypoints-min.js"></script>-->
@@ -25,7 +27,7 @@
         </script>
         <title>Alexandre Correia | Online Curriculum</title>
     </head>
-    <body>
+    <body onload="onLoad()">
         <header>
             <menu id="menu">
                 <ul>
@@ -276,6 +278,14 @@
         </page>
     </body>
     <script>
+        function onLoad() {
+            const today = new Date();
+            var time = today.getDate() + today.getMonth() + today.getFullYear() + today.getHours() + today.getMinutes() + today.getSeconds();
+            document.getElementById('styles').innerHTML = 
+                '<link rel="stylesheet" type="text/css" href="./css/style.css?v=' + time + '"/>' + 
+                '<link rel="stylesheet" type="text/css" href="./css/grid.css?v=' + time + '"/>';
+        }
+        
         function showHideDetails(experience) {
             if (document.getElementById(experience + '-details').style.display == 'none') {
                 document.getElementById(experience + '-details').style.display = 'block';
