@@ -22,14 +22,14 @@ body {
     animation: fadeInDown 0.3s linear;
 }
 
-/*@keyframes fadeInDown {
+@keyframes fadeInDown {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
-}*/
+}
 
 .section {
     padding: 100px 10% !important;
@@ -273,6 +273,10 @@ a:active {
     
     .about-me .info {
         margin-top: 40px;
+    }
+    
+    .projects .name {
+        padding-left: 20px;
     }
 }
 
