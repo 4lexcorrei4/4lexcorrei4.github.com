@@ -1,0 +1,10 @@
+
+{ "initialState": "START",
+	"transitions": [
+            ["START","a","A"], ["START","a","AB"],
+            ["A","a","AB"], ["AB","a","A"],
+            ["A","a","SUCCESS"], ["AB","a","SUCCESS"]
+		],
+	"acceptStates": ["SUCCESS"]
+}
+

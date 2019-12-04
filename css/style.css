@@ -446,13 +446,29 @@ header .arrow ion-icon {
     margin: 20px;
 }
 
+.projects .subject-info {
+    list-style: none;
+    text-align: right;
+    margin: 20px 5px 20px 20px;
+}
+
+/*.projects .subject-info::before {
+    content: "Subject Info";
+}*/
+
+.projects .subject-name {
+    font-size: 20px;
+    font-weight: 400;
+}
+
 .education .time::before,
 .education .degree::before,
 .education .website::before,
 .experience .time::before,
 .experience .role::before,
 .experience .website::before,
-.projects .name::before {
+.projects .name::before,
+.projects .subject-info::before {
     color: #0000aa;
     letter-spacing: 2px;
     font-size: 22px;
