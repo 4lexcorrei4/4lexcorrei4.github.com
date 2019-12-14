@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(./img/fct.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    position: fixed;
+    width: 100%;
+}
+
+form {
+    text-align: center;
+    margin-top: 40vh;
+}
+
+select {
+    border-radius: 20px;
+    padding-left: 5px;
+    width: 100%;
+}
+
+p.option {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 img {
+    border-radius: 50%;
+    height: 20px;
+    width: auto;
+}
+
+a:link,
+a:visited {
+    padding: 1%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px gray;
+    border-radius: 20px;
+    border: 1px solid gray;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+a:hover,
+a:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #205260;
+}
+
+@media only screen and (max-width: 400px) {
+    form {
+        margin-top: 30vh;
+    }
+
+    select {
+        width: 80%;
+    }
+}

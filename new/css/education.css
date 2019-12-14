@@ -1,0 +1,236 @@
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: #fff;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+/* ----------------------------------------------- */
+/* HOMEPAGE */
+/* ----------------------------------------------- */
+
+header .menu {
+    padding: 2% 10% 0 10%;
+}
+
+header .menu img {
+    height: 7vh;
+    border-radius: 50%;
+}
+
+header .menu li,
+header .menu li a {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: solid 2px rgba(255, 255, 255, 0);
+    padding-bottom: 5px;
+    color: white;
+    list-style: none;
+    display: inline-block;
+    margin-left: 2%;
+    font-size: 100%;
+    vertical-align: middle;
+    transition: border-bottom 0.2s;
+}
+
+header .menu li:first-child {
+    padding-left: 0;
+}
+
+header .menu li:hover {
+    border-bottom: solid 2px white;
+    padding-bottom: 5px;
+}
+
+header .menu li:first-child:hover {
+    border-bottom: solid 2px rgba(255, 255, 255, 0);
+}
+
+.page {
+    padding: 60px 10%;
+}
+
+.page {
+    background-color: #f5f5f5;
+}
+
+.impar-section {
+    background-color: #f0f0f0;
+}
+
+.page .title h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #305ea8;
+}
+
+.page .col {
+    padding: 10px 0;
+    box-shadow: 0 2px 2px #efefef;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.fct-section p {
+    padding: 5%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.fct-section ul {
+    list-style: none;
+}
+
+.fct-section ul li:first-child {
+    margin: 0 20px;
+    float: left;
+}
+
+.fct-section img {
+    border-radius: 15px;
+    height: 40vh;
+    width: auto;
+}
+
+.experience-section,
+.education-section,
+.volunteer-section {
+    padding: 60px 10%;
+}
+
+.experience-section,
+.volunteer-section {
+    background-color: #f5f5f5;
+}
+
+.education-section {
+    background-color: #f0f0f0;
+}
+
+.experience-section h1,
+.education-section h1,
+.volunteer-section h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #305ea8;
+}
+
+.experience-section .col,
+.education-section .col {
+    padding: 10px 0;
+    box-shadow: 0 2px 2px #efefef;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.experience-section ul,
+.education-section ul {
+    list-style: none;
+}
+
+.experience-section ul li:first-child,
+.education-section ul li:first-child {
+    margin: 0 20px;
+    float: left;
+}
+
+.experience-section img,
+.education-section img {
+    border-radius: 15px;
+    height: 20vh;
+    width: auto;
+}
+
+.experience-section .time::before,
+.experience-section .role::before,
+.education-section .time::before,
+.education-section .degree::before {
+    color: #0000aa;
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-style: normal;
+}
+
+.experience-section .time::before,
+.education-section .time::before {
+    content: "time";
+}
+
+.experience-section .role::before {
+    content: "role(s)";
+}
+
+.education-section .degree::before {
+    content: "degree";
+}
+
+.experience-section .time p,
+.experience-section .role p,
+.education-section .time p,
+.education-section .degree p {
+    font-weight: bold;
+}
+
+.experience-section .btn,
+.education-section .btn {
+    color: #5f5f5f;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 0;
+    margin: 1% 2.5%;
+    width: 95%;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+
+.experience-section .btn:hover,
+.education-section .btn:hover {
+    background-color: #eaeaea;
+}
+
+@media only screen and (max-width: 480px) {
+    .experience-section .time,
+    .education-section .time,
+    .experience-section .role,
+    .education-section .degree {
+        margin-left: 10px;
+    }
+    
+    .experience-section .col:first-child,
+    .education-section .col:first-child {
+        margin-top: 0;
+    }
+    
+    .experience-section .col,
+    .education-section .col {
+        margin-top: 10px;
+    }
+    
+    .experience-section img,
+    .education-section img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .experience-section .btn,
+    .education-section .btn {
+        margin-top: 5%;
+    }
+}

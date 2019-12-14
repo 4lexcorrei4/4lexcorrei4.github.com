@@ -1,0 +1,197 @@
+/* -------- BASIC SETUP -------- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: #fff;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    animation: fadeInDown 0.3s linear;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* -------- SECTIONS -------- */
+
+.section {
+    padding: 100px;
+}
+
+.section:nth-child(2n+1) {
+    background-color: rgba(245 , 245, 245, 1);
+}
+
+.section:nth-child(2n) {
+    background-color: rgba(238, 238, 238, 1);
+}
+
+/* -------- LINKS -------- */
+
+a:link,
+a:visited {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+a:hover,
+a:active {
+    color: #0000AA;
+    text-decoration: none;
+}
+
+/* -------- MENU -------- */
+
+#menu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 20px 1px gray;
+    padding: 5px 100px;
+    z-index: 800;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu ul li {
+    white-space: nowrap;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#menu ul li:first-child {
+    margin-left: 0;
+}
+
+#menu ul li img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+#menu ul li a {
+    color: rgba(50, 50, 50, 1);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#menu .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#menu .dropdown-content {
+    display: none;
+    top: 30px;
+    position: absolute;
+    background-color: rgba(240, 240, 240, 0.95);
+    box-shadow: 0 20px 20px -20px gray;
+    min-width: 100px;
+    padding: 10px;
+    z-index: 801;
+}
+
+#menu .dropdown-content li {
+    display: block;
+    margin: 5px 10px !important;
+}
+  
+#menu .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* -------- HEADER -------- */
+
+#header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/capa.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+#header #header-content {
+    text-align: center;
+}
+
+#header #header-content img {
+    border-radius: 50%;
+    height: 300px;
+}
+
+#header #header-content h1 {
+    margin-top: 40px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+#header #continue {
+    position: absolute;
+    top: 90vh;
+}
+
+#header #continue ion-icon {
+    font-size: 5vh;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* -------- SHOWN AND HIDDEN SECTIONS -------- */
+
+/*#about-me,
+#experience,
+#education,
+#personal-projects,
+#academic-projects {
+    display: none;
+}
+
+#about-me:target {
+    display: block;
+}
+
+#experience:target {
+    display: block;
+}
+
+#education:target {
+    display: block;
+}
+
+#personal-projects:target {
+    display: block;
+}
+
+#academic-projects:target {
+    display: block;
+}*/

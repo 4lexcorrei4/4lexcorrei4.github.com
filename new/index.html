@@ -1,0 +1,370 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- STYLES -->
+        <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/grid.css"/>
+        <!-- SCRIPTS -->
+        <script src="./js/script.js"></script>
+        <!--<script src="./js/jquery-waypoints-min.js"></script>-->
+        <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- FONTS -->
+        <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href="./img/logo.png"/>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-127322788-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-127322788-1');
+        </script>-->
+        <title>Alexandre Correia</title>
+    </head>
+    <body>
+        <div id="header" class="section">
+            <div id="header-content">
+                <img src="/img/face.png">
+                <h1>Alexandre Correia</h1>
+            </div>
+            <div id="continue">
+                <a href="#page-beggining"><ion-icon name="arrow-round-down"></ion-icon></a>
+            </div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="/"><img src="/img/logo.png"></a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li class="dropdown">
+                    <a>Projects</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#personal-projects">Personal</a></li>
+                        <li><a href="#academic-projects">Academic</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!--<header>
+            <menu id="menu">
+                <ul>
+                    <li><a href="./"><img src="./img/logo.png"></a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects-personal">Personal Projects</a></li>
+                    <li><a href="#projects-academic">Academic Projects</a></li>
+                </ul>
+            </menu>
+            <ion-icon id="mobile-menu-open" name="menu" onclick="showMenu()"></ion-icon>
+            <ion-icon id="mobile-menu-close" name="close" onclick="hideMenu()"></ion-icon>
+            <div class="welcome"> 
+                <img src="./img/face.png">
+                <h1>Alexandre Correia</h1>
+                <p>Online Curriculum</p>
+            </div>
+            <div class="arrow">
+                <a href="#page-beggining">
+                    <p>Continue</p>
+                    <ion-icon name="arrow-dropdown"></ion-icon>
+                </a>
+            </div>
+        </header>-->
+        <page id="page-beggining">
+            <div id="about-me" class="row section about-me">
+                <div class="row">
+                    <h1>About Me</h1>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-4">
+                        <img src="./img/face.png">
+                    </div>
+                    <div class="col span-3-of-4">
+                        <p class="info">
+                            &nbsp;&nbsp;I'm Alexandre Correia and I'm currently studying Computer Engineering at <a href="https://www.fct.unl.pt/" target="_blank">FCT NOVA</a>.
+                            <br>&nbsp;&nbsp;Two of my favourite free time activities are programming (that's why I chose this course) and sailing.
+                            <br>&nbsp;&nbsp;I have already completed some summer courses, where I have learnt easier ways to code; of course, some of them were still pretty hard. I've also done some online courses about programming which I loved. These are many of the reasons why I love technology.
+                            <br>&nbsp;&nbsp;Now, let's talk about school. Well, to be honest, there isn't much to talk about. Though, I'd like to say that my favourite subjects are maths and physics. I know, they're the most difficult ones. But if you try to discover what really is behind all the facts and actions in your life, you'll find out there's maths and physics involved. That's why I like them.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-2 languages">
+                        <p>Languages</p>
+                        <span class="language">PT</span><span class="level"><span title="Native or bilingual proficiency">Native</span> &#183;</span>
+                        <span class="language">EN</span><span class="level"><span title="Professional working proficiency">FCE</span><!-- &#183;--></span>
+                        <!--<span class="language">FR</span><span class="level"><span title="Elementary proficiency">Basic</span></span>-->
+                    </div>
+                    <div class="col span-1-of-2 social">
+                        <p>Social Networks</p>
+                        <a href="https://www.facebook.com/4lexcorrei4" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://www.instagram.com/4lexcorrei4/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="https://twitter.com/4lexcorrei4" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="https://www.linkedin.com/in/4lexcorrei4/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="https://github.com/4lexcorrei4" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+            <div id="experience" class="row section experience">
+                <div class="row">
+                    <h1>Experience</h1>
+                </div>
+                <div class="row experience-box">
+                    <div class="col span-1-of-2">
+                        <img src="./img/happycode.png">
+                    </div>
+                    <div class="col span-1-of-2">
+                        <div class="row time">
+                            <div class="col span-1-of-2 time-from">
+                                <p>November 2016</p>
+                            </div>
+                            <div class="col span-1-of-2 time-to">
+                                <p>Present</p>
+                            </div>
+                        </div>
+                        <div class="row role">
+                            <p>Webmaster</p>
+                        </div>
+                        <div class="row website">
+                            <p><a href="https://www.happycodeschool.com/pt/" target="_blank">Happy Code Portugal</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row experience-box">
+                    <div class="row">
+                        <div class="col span-1-of-2">
+                            <img src="./img/forallphones.jpg">
+                        </div>
+                        <div class="col span-1-of-2">
+                            <div class="row time">
+                                <div class="col span-1-of-2 time-from">
+                                    <p>March 2018</p>
+                                </div>
+                                <div class="col span-1-of-2 time-to">
+                                    <p>Present</p>
+                                </div>
+                            </div>
+                            <div class="row role">
+                                <p>Alumni<span>,</span><br>IT Team Member <span>&amp;</span><br>Shaper / Ambassador</p>
+                            </div>
+                            <div class="row website">
+                                <p><a href="https://forallphones.com/" target="_blank">Forall Phones</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row details-btn" onclick="showHideDetails('forallphones')">Show / Hide Details</div>
+                    <div id="forallphones-details" class="details" style="display: none;">
+                        <div class="row">
+                            <div class="col span-1-of-2">
+                                <p class="role-title">Alumni</p>
+                            </div>
+                            <div class="col span-1-of-2">
+                                <p class="time-title">November 2018 - Present</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-2">
+                                <p class="role-title">IT Team Member</p>
+                            </div>
+                            <div class="col span-1-of-2">
+                                <p class="time-title">April 2018 - June 2018</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-2">
+                                <p class="role-title">Shaper / Ambassador</p>
+                            </div>
+                            <div class="col span-1-of-2">
+                                <p class="time-title">March 2018 - November 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="education" class="row section education">
+                <div class="row">
+                    <h1>Education</h1>
+                </div>
+                <div class="row experience-box">
+                    <div class="row">
+                        <div class="col span-1-of-2">
+                            <img src="./img/fct.png">
+                        </div>
+                        <div class="col span-1-of-2">
+                            <div class="row time">
+                                <div class="col span-1-of-2 time-from">
+                                    <p>2017</p>
+                                </div>
+                                <div class="col span-1-of-2 time-to">
+                                    <p>Present</p>
+                                </div>
+                            </div>
+                            <div class="row degree">
+                                <p>Integrated Master in Computer Engineering</p>
+                            </div>
+                            <div class="row website">
+                                <p><a href="https://www.fct.unl.pt/" target="_blank">FCT NOVA</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row details-btn" onclick="showHideDetails('fct')">Show / Hide Details</div>
+                    <div id="fct-details" class="details" style="display: none;">
+                        <div class="row">
+                            <div class="col span-1-of-2">
+                                <p class="role-title">Current Grade</p>
+                            </div>
+                            <div class="col span-1-of-2">
+                                <p class="time-title">15.18 / 20</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-2">
+                                <p class="role-title">Current ECTS</p>
+                            </div>
+                            <div class="col span-1-of-2">
+                                <p class="time-title">120 (3rd year)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row experience-box">
+                    <div class="row">
+                        <div class="col span-1-of-2">
+                            <img src="./img/colegio.png">
+                        </div>
+                        <div class="col span-1-of-2">
+                            <div class="row time">
+                                <div class="col span-1-of-2 time-from">
+                                    <p>2014</p>
+                                </div>
+                                <div class="col span-1-of-2 time-to">
+                                    <p>2017</p>
+                                </div>
+                            </div>
+                            <div class="row degree">
+                                <p>High School in the Area of Sciences and Technologies</p>
+                            </div>
+                            <div class="row website">
+                                <p><a href="https://www.campodeflores.com/" target="_blank">College Field of Flowers</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row details-btn" onclick="showHideDetails('colegio')">Show / Hide Details</div>
+                    <div id="colegio-details" class="details" style="display: none;">
+                        <div class="row">
+                            <div class="col span-1-of-2">
+                                <p class="role-title">Final Grade</p>
+                            </div>
+                            <div class="col span-1-of-2">
+                                <p class="time-title">15 / 20</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-2">
+                                <p class="role-title">Application Grade</p>
+                            </div>
+                            <div class="col span-1-of-2">
+                                <p class="time-title">16.08 / 20</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="personal-projects" class="row section projects">
+                <div class="row">
+                    <h1>Personal Projects</h1>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-2 experience-box">
+                        <div class="row">
+                            <div class="col span-1-of-4">
+                                <img src="./img/clipcadeiras.png">
+                            </div>
+                            <div class="col span-3-of-4">
+                                <div class="row name">
+                                    <p><a href="http://clipcadeiras.epizy.com" target="_blank">CLIP Cadeiras</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row details-btn" onclick="showHideDetails('clipcadeiras')">Show / Hide Description</div>
+                        <div id="clipcadeiras-details" class="row description" style="display: none;">
+                            <p>Facilitates the access to the various infos and pages of each subject of each course, at this moment, of some of the FCT NOVA courses</p>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-2 experience-box">
+                        <div class="row">
+                            <div class="col span-1-of-4">
+                                <img src="./img/logo.png">
+                            </div>
+                            <div class="col span-3-of-4">
+                                <div class="row name">
+                                    <p><a href="https://4lexcorrei4.github.io" target="_blank">Online Curriculum</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row details-btn" onclick="showHideDetails('online-curriculum')">Show / Hide Description</div>
+                        <div id="online-curriculum-details" class="row description" style="display: none;">
+                            <p>Complements my LinkedIn profile info</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="academic-projects" class="row section projects">
+                <div class="row">
+                    <h1>Academic Projects</h1>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-2 experience-box">
+                        <div class="row">
+                            <div class="col span-2-of-4">
+                                <div>
+                                    <ul class="subject-info">
+                                        <li class="subject-name">Programming Languages and Environments</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col span-2-of-4">
+                                <div class="row name">
+                                    <p><a href="/academic-projects/automatamania/" target="_blank">Automatamania</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-none footer">
+                <p>
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script>
+                    Alexandre Correia | Online Curriculum
+                </p>
+            </div>
+        </page>
+    </body>
+    <script>
+        function showHideDetails(block) {
+            if (document.getElementById(block + '-details').style.display == 'none') {
+                document.getElementById(block + '-details').style.display = 'block';
+            } else {
+                document.getElementById(block + '-details').style.display = 'none';
+            }
+        }
+        
+        /* MENU */
+        function showMenu() {
+            document.getElementById('menu').style.display = 'block';
+            document.getElementById('mobile-menu-open').style.display = 'none';
+            document.getElementById('mobile-menu-close').style.display = 'block';
+        }
+        function hideMenu() {
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('mobile-menu-open').style.display = 'block';
+            document.getElementById('mobile-menu-close').style.display = 'none';
+        }
+    </script>
+</html>
