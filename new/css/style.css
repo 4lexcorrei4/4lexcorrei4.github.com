@@ -163,6 +163,7 @@ a:active {
 
 .section {
     padding: 50px !important;
+    min-height: 100vh;
 }
 
 .section #title {
