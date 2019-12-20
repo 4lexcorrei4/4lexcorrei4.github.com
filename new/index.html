@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="./css/style.css?v=1"/>
         <link rel="stylesheet" type="text/css" href="./css/grid.css"/>
         <!-- SCRIPTS -->
-        <script src="./js/script.js"></script>
+        <!--<script src="./js/script.js"></script>-->
         <!--<script src="./js/jquery-waypoints-min.js"></script>-->
         <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -26,20 +26,22 @@
         <title>Alexandre Correia</title>
     </head>
     <body>
+        <ion-icon name="menu" id="mobile-menu-open" onclick="showMenu()"></ion-icon>
+        <ion-icon name="close" id="mobile-menu-close" onclick="hideMenu()"></ion-icon>
         <div id="sidebar">
             <div id="logo">
                 <img src="/img/logo.png">
                 <div id="name">Alexandre Correia</div>
             </div>
             <ul id="menu" >
-                <li><a href="/new/contents.html?v=1#about-me" target="page">About Me</a></li>
-                <li><a href="/new/contents.html?v=1#experience" target="page">Experience</a></li>
-                <li><a href="/new/contents.html?v=1#education" target="page">Education</a></li>
+                <li><a href="/new/contents.html?v=1#about-me" target="page" onclick="hideMenu()">About Me</a></li>
+                <li><a href="/new/contents.html?v=1#experience" target="page" onclick="hideMenu()">Experience</a></li>
+                <li><a href="/new/contents.html?v=1#education" target="page" onclick="hideMenu()">Education</a></li>
                 <li class="submenu">
                     <a href="#">Projects</a class="disabled">
                     <ul class="submenu-content">
-                        <li><a href="/new/contents.html?v=1#personal-projects" target="page">Personal</a></li>
-                        <li><a href="/new/contents.html?v=1#academic-projects" target="page">Academic</a></li>
+                        <li><a href="/new/contents.html?v=1#personal-projects" target="page" onclick="hideMenu()">Personal</a></li>
+                        <li><a href="/new/contents.html?v=1#academic-projects" target="page" onclick="hideMenu()">Academic</a></li>
                     </ul>
                 </li>
                 <li>(more soon)</li>
@@ -62,14 +64,19 @@
     <script>
         /* MENU */
         function showMenu() {
-            document.getElementById('menu').style.display = 'block';
-            document.getElementById('mobile-menu-open').style.display = 'none';
-            document.getElementById('mobile-menu-close').style.display = 'block';
+            if (window.matchMedia('(max-device-width: 480px)').matches) {
+                document.getElementById('sidebar').style.display = 'block';
+                document.getElementById('mobile-menu-open').style.display = 'none';
+                document.getElementById('mobile-menu-close').style.display = 'block';
+            }
         }
+
         function hideMenu() {
-            document.getElementById('menu').style.display = 'none';
-            document.getElementById('mobile-menu-open').style.display = 'block';
-            document.getElementById('mobile-menu-close').style.display = 'none';
+            if (window.matchMedia('(max-device-width: 480px)').matches) {
+                document.getElementById('sidebar').style.display = 'none';
+                document.getElementById('mobile-menu-open').style.display = 'block';
+                document.getElementById('mobile-menu-close').style.display = 'none';
+            }
         }
     </script>
 </html>
