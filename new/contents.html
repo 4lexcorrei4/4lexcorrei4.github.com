@@ -20,25 +20,22 @@
             <div class="row">
                 <h1>About Me</h1>
             </div>
+            <div class="row center">
+                <img src="./img/face.png">
+            </div>
             <div class="row">
-                <div class="col span-1-of-4">
-                    <img src="./img/face.png">
-                </div>
-                <div class="col span-3-of-4">
-                    <p class="info">
-                        &nbsp;&nbsp;I'm Alexandre Correia and I'm currently studying Computer Engineering at <a href="https://www.fct.unl.pt/" target="_blank">FCT NOVA</a>.
-                        <br>&nbsp;&nbsp;Two of my favourite free time activities are programming (that's why I chose this course) and sailing.
-                        <br>&nbsp;&nbsp;I have already completed some summer courses, where I have learnt easier ways to code; of course, some of them were still pretty hard. I've also done some online courses about programming which I loved. These are many of the reasons why I love technology.
-                        <br>&nbsp;&nbsp;Now, let's talk about school. Well, to be honest, there isn't much to talk about. Though, I'd like to say that my favourite subjects are maths and physics. I know, they're the most difficult ones. But if you try to discover what really is behind all the facts and actions in your life, you'll find out there's maths and physics involved. That's why I like them.
-                    </p>
-                </div>
+                <p class="info">
+                    &emsp;I'm Alexandre Correia and I'm currently studying Computer Engineering at <a href="https://www.fct.unl.pt/" target="_blank">FCT NOVA</a>.
+                    <br>&emsp;Two of my favourite free time activities are programming (that's why I chose this course) and sailing.
+                    <br>&emsp;I have already completed some summer courses, where I have learnt easier ways to code; of course, some of them were still pretty hard. I've also done some online courses about programming which I loved. These are many of the reasons why I love technology.
+                    <br>&emsp;Now, let's talk about school. Well, to be honest, there isn't much to talk about. Though, I'd like to say that my favourite subjects are maths and physics. I know, they're the most difficult ones. But if you try to discover what really is behind all the facts and actions in your life, you'll find out there's maths and physics involved. That's why I like them.
+                </p>
             </div>
             <div class="row">
                 <div class="col span-1-of-2 languages">
                     <p>Languages</p>
                     <span class="language">PT</span><span class="level"><span title="Native or bilingual proficiency">Native</span> &#183;</span>
                     <span class="language">EN</span><span class="level"><span title="Professional working proficiency">FCE</span><!-- &#183;--></span>
-                    <!--<span class="language">FR</span><span class="level"><span title="Elementary proficiency">Basic</span></span>-->
                 </div>
                 <div class="col span-1-of-2 social">
                     <p>Social Networks</p>
@@ -278,4 +275,13 @@
             </div>
         </div>
     </body>
+    <script>
+        function showHideDetails(block) {
+            if (document.getElementById(block + '-details').style.display == 'none') {
+                document.getElementById(block + '-details').style.display = 'block';
+            } else {
+                document.getElementById(block + '-details').style.display = 'none';
+            }
+        }
+    </script>
 </html>

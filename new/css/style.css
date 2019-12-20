@@ -44,10 +44,15 @@ a:active {
     text-decoration: none;
 }
 
-/* -------- STATES -------- */
+/* -------- STATES AND BASIC STYLING -------- */
 
 .disabled {
     opacity: 0.5;
+}
+
+.center {
+    width: 100%;
+    text-align: center;
 }
 
 /* -------- SIDEBAR -------- */
@@ -166,9 +171,55 @@ a:active {
     min-height: calc(100vh - 100px);
 }
 
-.section #title {
+.section h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+/* -------- ABOUT ME -------- */
+
+.about-me div.row {
+    margin: 40px 0 0 0;
+}
+
+.about-me div.row:first-child {
+    margin: 0;
+}
+
+.about-me img {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.about-me .info {
+    text-align: justify;
+    font-weight: 400;
+}
+
+.about-me .social,
+.about-me .languages {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about-me .social p,
+.about-me .languages p {
+    font-weight: 400;
+}
+
+.about-me .languages .language {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.about-me .languages .level {
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.about-me .social ion-icon {
+    font-size: 40px;
 }
 
 /*#menu .submenu {
