@@ -153,12 +153,16 @@ a:active {
 
 /* -------- SECTIONS -------- */
 
-.section {
+.section:nth-child(2n) {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.section #container {
-    padding: 50px;
+.section:nth-child(2n+1) {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.section {
+    padding: 50px !important;
 }
 
 .section #title {
