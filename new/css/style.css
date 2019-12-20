@@ -178,11 +178,11 @@ a:active {
 
 /* -------- ABOUT ME -------- */
 
-.about-me div.row {
+div.row.with-space {
     margin: 40px 0 0 0;
 }
 
-.about-me div.row:first-child {
+div.row:first-child {
     margin: 0;
 }
 
@@ -220,6 +220,184 @@ a:active {
 
 .about-me .social ion-icon {
     font-size: 40px;
+}
+
+.experience-box,
+.details {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 5px 0 gray;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.education .experience-box,
+.experience .experience-box {
+    padding: 20px;
+}
+
+.education .details,
+.experience .details {
+    padding: 20px 0;
+}
+
+.education img,
+.experience img,
+.projects img {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    margin-left: 50%;
+}
+
+.projects img {
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.education .time-from,
+.education .time-to,
+.education .degree,
+.education .website,
+.experience .time-from,
+.experience .time-to,
+.experience .role,
+.experience .website,
+.projects .name {
+    font-weight: bold;
+}
+
+.education .degree,
+.education .website,
+.experience .role,
+.experience .website {
+    padding-top: 20px;
+}
+
+
+.projects .name {
+    margin: 20px 20px 20px 0;
+}
+
+.projects .description {
+    text-align: justify;
+    margin: 20px;
+}
+
+.projects .subject-info {
+    list-style: none;
+    text-align: right;
+    margin: 20px 5px 20px 20px;
+}
+
+.projects .subject-name {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.education .time::before,
+.education .degree::before,
+.education .website::before,
+.experience .time::before,
+.experience .role::before,
+.experience .website::before,
+.projects .name::before,
+.projects .subject-info::before {
+    color: rgba(0, 255, 0, 0.8);
+    letter-spacing: 2px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.education .time-from::before,
+.education .time-to::before,
+.experience .time-from::before,
+.experience .time-to::before {
+    color: rgba(0, 255, 0, 0.8);
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.education .time::before,
+.experience .time::before {
+    content: "Time";
+}
+
+.education .time-from::before,
+.experience .time-from::before {
+    content: "From";
+}
+
+.education .time-to::before,
+.experience .time-to::before {
+    content: "To";
+}
+
+.experience .role::before {
+    content: "Role";
+}
+
+.education .degree::before {
+    content: "Degree";
+}
+
+.education .website::before,
+.experience .website::before {
+    content: "Website (Link)";
+}
+
+.projects .name::before {
+    content: "Name";
+}
+
+.education .role span,
+.experience .role span {
+    font-weight: normal;
+}
+
+.education .details-btn,
+.experience .details-btn,
+.projects .details-btn {
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.projects .details-btn {
+    width: auto;
+    margin: 0 20px 20px 20px;
+}
+
+.education .details,
+.experience .details {
+    display: none;
+}
+
+.education .details .role-title,
+.experience .details .role-title {
+    width: 100%;
+    text-align: right;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.education .details .time-title,
+.experience .details .time-title {
+    width: 100%;
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: normal;
+}
+
+.projects .description {
+    display: none;
 }
 
 /*#menu .submenu {
