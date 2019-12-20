@@ -10,6 +10,7 @@ body {
     background-color: #fff;
     font-weight: 300;
     font-size: 20px;
+    color: #fff;
     text-rendering: optimizeLegibility;
     font-family: 'Lato', sans-serif;
     scroll-behavior: smooth;
@@ -28,38 +29,57 @@ body {
   }
 }
 
-/* -------- SECTIONS -------- */
-
-.section {
-    padding: 100px;
-}
-
-.section:nth-child(2n+1) {
-    background-color: rgba(245 , 245, 245, 1);
-}
-
-.section:nth-child(2n) {
-    background-color: rgba(238, 238, 238, 1);
-}
-
 /* -------- LINKS -------- */
 
 a:link,
 a:visited {
-    color: #000000;
+    color: #fff;
     text-decoration: none;
     transition: color 0.5s;
 }
 
 a:hover,
 a:active {
-    color: #0000AA;
+    color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
 }
 
-/* -------- MENU -------- */
+/* -------- STATES -------- */
 
-#menu {
+.disabled {
+    opacity: 0.5;
+}
+
+/* -------- SIDEBAR -------- */
+
+#sidebar {
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 50px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    display: inline-block;
+    border-radius: 50%;
+    height: 50px;
+}
+
+#logo #name {
+    display: inline-block;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+
+/*#menu {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -68,46 +88,90 @@ a:active {
     box-shadow: 0 0 20px 1px gray;
     padding: 5px 100px;
     z-index: 800;
+}*/
+
+#menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: 50px 0 0 0;
 }
 
-#menu ul {
-    margin: 0;
+#menu li {
+    white-space: nowrap;
+    margin: 20px 0 0 0;
+}
+
+#menu li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#menu .submenu-content {
+    margin: 0 0 0 20px;
     padding: 0;
     list-style: none;
 }
 
-#menu ul li {
-    white-space: nowrap;
-    vertical-align: middle;
-    display: inline-block;
-    margin-left: 10px;
+#menu .submenu-content li {
+    margin-top: 10px;
+}
+
+#cv {
+    margin: 50px 0 0 0;
+    padding: 20px 10px;
+    border-radius: 10px;
     cursor: pointer;
+    text-align: center;
+    border: 1px solid #fff;
+    transition: background-color 0.5s, color 0.5s;
 }
 
-#menu ul li:first-child {
-    margin-left: 0;
+#cv:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
 
-#menu ul li img {
-    height: 40px;
-    border-radius: 50%;
+#footer {
+    text-align: center;
+    margin: 50px 0 0 0;
 }
 
-#menu ul li a {
-    color: rgba(50, 50, 50, 1);
-    text-decoration: none;
+/* -------- PAGE -------- */
+
+#page {
+    position: fixed;
+    left: calc(20% + 100px);
+    width: calc(100% - (20% + 100px));
+    height: 100vh;
+    border: none;
+}
+
+/* -------- SECTIONS -------- */
+
+.section {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.section #container {
+    padding: 50px;
+}
+
+.section #title {
     text-transform: uppercase;
-    font-size: 25px;
-    letter-spacing: 1px;
-    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-#menu .dropdown {
+/*#menu .submenu {
     position: relative;
     display: inline-block;
 }
 
-#menu .dropdown-content {
+#menu .submenu-content {
     display: none;
     top: 30px;
     position: absolute;
@@ -118,18 +182,18 @@ a:active {
     z-index: 801;
 }
 
-#menu .dropdown-content li {
+#menu .submenu-content li {
     display: block;
     margin: 5px 10px !important;
 }
   
-#menu .dropdown:hover .dropdown-content {
+#menu .submenu:hover .submenu-content {
     display: block;
-}
+}*/
 
 /* -------- HEADER -------- */
 
-#header {
+/*#header {
     height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/capa.png");
