@@ -90,17 +90,6 @@ a:active {
     margin-left: 10px;
 }
 
-/*#menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 20px 1px gray;
-    padding: 5px 100px;
-    z-index: 800;
-}*/
-
 #menu {
     margin: 0;
     padding: 0;
@@ -273,33 +262,21 @@ div.row:first-child {
     margin: 0 0 0 20px;
 }
 
-.projects .name {
-    margin: 20px 20px 0 0;
-}
-
 .projects .description,
 .projects .language {
     text-align: justify;
-    margin: 20px 20px 0 0;
-}
-
-.projects .language {
-    font-weight: bold;
 }
 
 .projects .language span {
     font-weight: normal;
 }
 
-.projects .subject-info {
-    list-style: none;
-    text-align: right;
-    margin: 20px 5px 20px 20px;
+#personal-projects .row .row .row {
+    margin: 20px 0 0 0;
 }
 
-.projects .subject-name {
-    font-size: 20px;
-    font-weight: 400;
+#personal-projects .row .row .row:first-child {
+    margin: 0;
 }
 
 .time::before,
@@ -307,9 +284,9 @@ div.row:first-child {
 .website::before,
 .role::before,
 .name::before,
-.subject-info::before,
 .description::before,
-.projects .language::before {
+.projects .language::before,
+.projects .subject::before {
     color: rgba(0, 255, 0, 0.8);
     letter-spacing: 2px;
     font-size: 22px;
@@ -325,7 +302,8 @@ div.row:first-child {
 }
 
 .education .time::before,
-.experience .time::before {
+.experience .time::before,
+.projects .time::before {
     content: "Time";
 }
 
@@ -364,6 +342,22 @@ div.row:first-child {
     content: "Language(s)";
 }
 
+.projects .subject::before {
+    content: "Subject";
+}
+
+#personal-projects .description,
+#personal-projects .language {
+    padding-right: 20px;
+}
+
+#academic-projects .name p,
+#academic-projects .time p,
+#academic-projects .name::before,
+#academic-projects .time::before {
+    margin-left: 20px;
+}
+
 .education .role span,
 .experience .role span {
     font-weight: normal;
@@ -396,7 +390,6 @@ div.row:first-child {
     width: 100%;
     text-align: left;
     text-transform: capitalize;
-    font-weight: normal;
 }
 
 #mobile-menu-open,
@@ -409,6 +402,10 @@ div.row:first-child {
 }
 
 @media only screen and (max-width: 480px) {
+    .same-height {
+        display: block;
+    }
+
     #sidebar {
         display: none;
         width: calc(100% - 100px);
@@ -427,6 +424,63 @@ div.row:first-child {
 
     #mobile-menu-open {
         display: block;
+    }
+
+    .section h1 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .about-me img {
+        width: 100%;
+    }
+
+    .education img,
+    .experience img {
+        width: calc(100% - 40px);
+        height: auto;
+        border-radius: 20px;
+        margin-left: 20px;
+    }
+
+    .experience .time,
+    .experience .role,
+    .experience .website,
+    .education .time,
+    .education .degree,
+    .education .website,
+    #personal-projects .name,
+    #personal-projects .description,
+    #personal-projects .language,
+    #academic-projects .subject,
+    #academic-projects .language {
+        padding-left: 20px;
+    }
+
+    .experience .time,
+    #personal-projects .name,
+    #academic-projects .subject,
+    #academic-projects .time,
+    #academic-projects .language {
+        padding-top: 20px;
+    }
+
+    .box {
+        margin-top: 20px !important;
+    }
+
+    .box:first-child {
+        margin-top: 0 !important;
+    }
+
+    .details .role-title,
+    .details .time-title {
+        text-align: center;
+    }
+
+    .details .time-title {
+        margin-bottom: 20px;
     }
 }
 
