@@ -55,6 +55,11 @@ a:active {
     text-align: center;
 }
 
+.same-height {
+    display: flex;
+    align-items: stretch;
+}
+
 /* -------- SIDEBAR -------- */
 
 #sidebar {
@@ -222,17 +227,14 @@ div.row:first-child {
     font-size: 40px;
 }
 
-.experience-box,
+/* -------- EXPERIENCE, EDUCATION AND PROJECTS -------- */
+
+.box,
 .details {
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 5px 0 gray;
     border-radius: 20px;
-    margin-top: 20px;
-}
-
-.education .experience-box,
-.experience .experience-box {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .education .details,
@@ -241,47 +243,50 @@ div.row:first-child {
 }
 
 .education img,
-.experience img,
-.projects img {
-    width: 50%;
+.experience img {
+    width: calc(100% - 20px);
     height: auto;
     border-radius: 20px;
-    margin-left: 50%;
+    margin-left: 20px;
 }
 
-.projects img {
-    width: 40%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.education .time-from,
-.education .time-to,
-.education .degree,
-.education .website,
-.experience .time-from,
-.experience .time-to,
-.experience .role,
-.experience .website,
-.projects .name {
+.time-from,
+.time-to,
+.degree,
+.website,
+.role,
+.name {
     font-weight: bold;
 }
 
-.education .degree,
-.education .website,
-.experience .role,
-.experience .website {
+.degree,
+.website,
+.role {
     padding-top: 20px;
 }
 
-
-.projects .name {
-    margin: 20px 20px 20px 0;
+.projects img {
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 0 0 20px;
 }
 
-.projects .description {
+.projects .name {
+    margin: 20px 20px 0 0;
+}
+
+.projects .description,
+.projects .language {
     text-align: justify;
-    margin: 20px;
+    margin: 20px 20px 0 0;
+}
+
+.projects .language {
+    font-weight: bold;
+}
+
+.projects .language span {
+    font-weight: normal;
 }
 
 .projects .subject-info {
@@ -295,24 +300,22 @@ div.row:first-child {
     font-weight: 400;
 }
 
-.education .time::before,
-.education .degree::before,
-.education .website::before,
-.experience .time::before,
-.experience .role::before,
-.experience .website::before,
-.projects .name::before,
-.projects .subject-info::before {
+.time::before,
+.degree::before,
+.website::before,
+.role::before,
+.name::before,
+.subject-info::before,
+.description::before,
+.projects .language::before {
     color: rgba(0, 255, 0, 0.8);
     letter-spacing: 2px;
     font-size: 22px;
     font-weight: normal;
 }
 
-.education .time-from::before,
-.education .time-to::before,
-.experience .time-from::before,
-.experience .time-to::before {
+.time-from::before,
+.time-to::before {
     color: rgba(0, 255, 0, 0.8);
     letter-spacing: 2px;
     font-size: 17px;
@@ -348,7 +351,15 @@ div.row:first-child {
 }
 
 .projects .name::before {
-    content: "Name";
+    content: "Name (Link)";
+}
+
+.projects .description::before {
+    content: "Description";
+}
+
+.projects .language::before {
+    content: "Language(s)";
 }
 
 .education .role span,
@@ -356,48 +367,34 @@ div.row:first-child {
     font-weight: normal;
 }
 
-.education .details-btn,
-.experience .details-btn,
-.projects .details-btn {
-    width: 100%;
+.details-btn {
     text-align: center;
     text-transform: capitalize;
     font-weight: 400;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 5px 0;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 20px 20px 0 20px;
 }
 
-.projects .details-btn {
-    width: auto;
-    margin: 0 20px 20px 20px;
-}
-
-.education .details,
-.experience .details {
+.details {
     display: none;
+    margin: 20px 20px 0 20px;
 }
 
-.education .details .role-title,
-.experience .details .role-title {
+.details .role-title {
     width: 100%;
     text-align: right;
     text-transform: capitalize;
     font-weight: bold;
 }
 
-.education .details .time-title,
-.experience .details .time-title {
+.details .time-title {
     width: 100%;
     text-align: left;
     text-transform: capitalize;
     font-weight: normal;
-}
-
-.projects .description {
-    display: none;
 }
 
 /*#menu .submenu {
