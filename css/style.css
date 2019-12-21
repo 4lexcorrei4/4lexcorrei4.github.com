@@ -284,7 +284,9 @@ div.row:first-child {
 .website::before,
 .role::before,
 .name::before,
+.courses .name-no-link::before,
 .description::before,
+.type::before,
 .projects .language::before,
 .projects .subject::before {
     color: rgba(0, 255, 0, 0.8);
@@ -330,8 +332,13 @@ div.row:first-child {
     content: "Website (Link)";
 }
 
-.projects .name::before {
+.projects .name::before,
+.courses .name::before {
     content: "Name (Link)";
+}
+
+.courses .name-no-link::before {
+    content: "Name";
 }
 
 .projects .description::before {
@@ -346,6 +353,10 @@ div.row:first-child {
     content: "Subject";
 }
 
+.courses .type::before {
+    content: "Type";
+}
+
 #personal-projects .description,
 #personal-projects .language {
     padding-right: 20px;
@@ -354,7 +365,9 @@ div.row:first-child {
 #academic-projects .name p,
 #academic-projects .time p,
 #academic-projects .name::before,
-#academic-projects .time::before {
+#academic-projects .time::before,
+.courses .name-no-link p,
+.courses .name-no-link::before {
     margin-left: 20px;
 }
 
@@ -454,7 +467,9 @@ div.row:first-child {
     #personal-projects .description,
     #personal-projects .language,
     #academic-projects .subject,
-    #academic-projects .language {
+    #academic-projects .language,
+    #courses .name,
+    #courses .type {
         padding-left: 20px;
     }
 
