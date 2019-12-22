@@ -65,6 +65,10 @@ a:active {
     align-items: flex-end;
 }
 
+div.with-space {
+    margin: 40px 0 0 0;
+}
+
 .same-height {
     display: flex;
     align-items: stretch;
@@ -184,10 +188,6 @@ a:active {
 }
 
 /* -------- ABOUT ME -------- */
-
-div.row.with-space {
-    margin: 40px 0 0 0;
-}
 
 div.row:first-child {
     margin: 0;
