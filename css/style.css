@@ -205,13 +205,15 @@ div.row:first-child {
 }
 
 .about-me .social,
-.about-me .languages {
+.about-me .languages,
+.about-me .skills {
     text-align: center;
     margin-top: 20px;
 }
 
 .about-me .social p,
-.about-me .languages p {
+.about-me .languages p,
+.about-me .skills p {
     font-weight: 400;
 }
 
@@ -227,6 +229,22 @@ div.row:first-child {
 
 .about-me .social ion-icon {
     font-size: 40px;
+}
+
+.about-me .skills ul {
+    list-style: none;
+}
+
+.about-me .skills ul li {
+    display: inline-block;
+}
+
+.about-me .skills ul li::after {
+    content: " ; ";
+}
+
+.about-me .skills ul li:last-child::after {
+    content: "";
 }
 
 /* -------- EXPERIENCE, EDUCATION AND PROJECTS -------- */
