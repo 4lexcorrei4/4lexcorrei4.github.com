@@ -55,6 +55,16 @@ a:active {
     text-align: center;
 }
 
+.right {
+    width: 100%;
+    text-align: right;
+}
+
+.vertical-bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
 .same-height {
     display: flex;
     align-items: stretch;
@@ -403,6 +413,28 @@ div.row:first-child {
     width: 100%;
     text-align: left;
     text-transform: capitalize;
+}
+
+/* -------- COURSES -------- */
+
+#courses #online .head,
+#courses #summer .head {
+    border: 1px solid #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#courses #online #courses-online-contents,
+#courses #summer #courses-summer-contents {
+    padding: 20px 20px;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 #mobile-menu-open,

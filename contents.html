@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- STYLES -->
-        <link rel="stylesheet" type="text/css" href="./css/style.css?v=1"/>
+        <link rel="stylesheet" type="text/css" href="./css/style.css?v=2"/>
         <link rel="stylesheet" type="text/css" href="./css/grid.css"/>
         <!-- SCRIPTS -->
         <!--<script src="./js/script.js"></script>-->
@@ -346,80 +346,94 @@
             <div class="row with-space">
                 <h1>Courses</h1>
             </div>
-            <div class="row with-space same-height">
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-no-link">
-                            <p>Markov Matrices</p>
-                        </div>
-                        <div class="col span-1-of-2 type">
-                            <p>Online</p>
-                        </div>
-                    </div>
+            <div id="online" class="row with-space">
+                <div class="row vertical-bottom head" onclick="showCourses('courses-online-contents')">
+                    <h2>Online</h2>
                 </div>
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-no-link">
-                            <p>Programming for Everybody (Python)</p>
+                <div id="courses-online-contents" class="row" style="display: none;">
+                    <div class="row same-height">
+                        <div class="col span-1-of-2 box">
+                            <div class="row">
+                                <div class="col span-2-of-3 name-no-link">
+                                    <p>Markov Matrices</p>
+                                </div>
+                                <div class="col span-1-of-3 type">
+                                    <p>Online</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col span-1-of-2 type">
-                            <p>Online</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row with-space same-height">
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-no-link">
-                            <p>Construction and Programming of Mobile Robots</p>
-                        </div>
-                        <div class="col span-1-of-2 type">
-                            <p>Summer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-no-link">
-                            <p>Construction of Sailboats Equipped with Electronic Systems for Autonomous Navigation</p>
-                        </div>
-                        <div class="col span-1-of-2 type">
-                            <p>Summer</p>
+                        <div class="col span-1-of-2 box">
+                            <div class="row">
+                                <div class="col span-2-of-3 name-no-link">
+                                    <p>Programming for Everybody (Python)</p>
+                                </div>
+                                <div class="col span-1-of-3 type">
+                                    <p>Online</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row with-space same-height">
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-no-link">
-                            <p>Ingenuity and Art - Engineering in Action</p>
+            <div id="summer" class="row with-space">
+                <div class="row vertical-bottom head" onclick="showCourses('courses-summer-contents')">
+                    <h2>Summer</h2>
+                </div>
+                <div id="courses-summer-contents" style="display: none;">
+                    <div class="row same-height">
+                        <div class="col span-1-of-2 box">
+                            <div class="row">
+                                <div class="col span-2-of-3 name-no-link">
+                                    <p>Construction and Programming of Mobile Robots</p>
+                                </div>
+                                <div class="col span-1-of-3 type">
+                                    <p>Summer</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col span-1-of-2 type">
-                            <p>Summer</p>
+                        <div class="col span-1-of-2 box">
+                            <div class="row">
+                                <div class="col span-2-of-3 name-no-link">
+                                    <p>Construction of Sailboats Equipped with Electronic Systems for Autonomous Navigation</p>
+                                </div>
+                                <div class="col span-1-of-3 type">
+                                    <p>Summer</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-no-link">
-                            <p>Junior Engineering</p>
+                    <div class="row same-height">
+                        <div class="col span-1-of-2 box">
+                            <div class="row">
+                                <div class="col span-2-of-3 name-no-link">
+                                    <p>Ingenuity and Art - Engineering in Action</p>
+                                </div>
+                                <div class="col span-1-of-3 type">
+                                    <p>Summer</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col span-1-of-2 type">
-                            <p>Summer</p>
+                        <div class="col span-1-of-2 box">
+                            <div class="row">
+                                <div class="col span-2-of-3 name-no-link">
+                                    <p>Junior Engineering</p>
+                                </div>
+                                <div class="col span-1-of-3 type">
+                                    <p>Summer</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row with-space same-height">
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-no-link">
-                            <p>Robotics Office</p>
-                        </div>
-                        <div class="col span-1-of-2 type">
-                            <p>Summer</p>
+                    <div class="row same-height">
+                        <div class="col span-1-of-2 box">
+                            <div class="row">
+                                <div class="col span-2-of-3 name-no-link">
+                                    <p>Robotics Office</p>
+                                </div>
+                                <div class="col span-1-of-3 type">
+                                    <p>Summer</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -427,6 +441,20 @@
         </div>
     </body>
     <script>
+        function showCourses(type) {
+            var types = ["courses-online-contents", "courses-summer-contents"];
+            for (var thisType = 0; thisType < types.length; thisType++) {
+                if (types[thisType] == type) {
+                    if (document.getElementById(types[thisType]).style.display == "none")
+                        document.getElementById(types[thisType]).style.display = "block";
+                    else
+                        document.getElementById(types[thisType]).style.display = "none";
+                }
+                else
+                    document.getElementById(types[thisType]).style.display = "none";
+            }
+        }
+
         function showHideDetails(block) {
             if (document.getElementById(block + '-details').style.display == 'none') {
                 document.getElementById(block + '-details').style.display = 'block';
