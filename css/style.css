@@ -76,7 +76,7 @@ a:active {
     z-index: 1;
     position: fixed;
     width: 20%;
-    height: 100vh;
+    height: calc(100vh - 100px);
     background-color: rgba(0, 0, 0, 0.9);
     padding: 50px;
     overflow-y: auto;
