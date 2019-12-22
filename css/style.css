@@ -79,6 +79,7 @@ a:active {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 50px;
+    overflow-y: auto;
 }
 
 #logo {
