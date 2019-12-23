@@ -559,23 +559,15 @@
         function showHideCourses(type) {
             var types = ["courses-online-contents", "courses-summer-contents"];
             for (var thisType = 0; thisType < types.length; thisType++) {
-                if (types[thisType] == type) {
-                    if (document.getElementById(types[thisType]).style.display == "none")
-                        document.getElementById(types[thisType]).style.display = "block";
-                    else
-                        document.getElementById(types[thisType]).style.display = "none";
-                }
-                else
-                    document.getElementById(types[thisType]).style.display = "none";
+                if (types[thisType] == type)
+                    $("#" + types[thisType]).slideToggle();
+                else if ($("#" + types[thisType]).css("display") == "block")
+                    $("#" + types[thisType]).slideToggle();
             }
         }
 
         function showHideDetails(block) {
-            if (document.getElementById(block + '-details').style.display == 'none') {
-                document.getElementById(block + '-details').style.display = 'block';
-            } else {
-                document.getElementById(block + '-details').style.display = 'none';
-            }
+            $("#" + block + "-details").slideToggle();
         }
     </script>
 </html>
