@@ -314,10 +314,11 @@ div.row:first-child {
 .degree::before,
 .website::before,
 .role::before,
-.name::before,
-.courses .name-no-link::before,
+.name-with-link::before,
+.courses .name::before,
 .description::before,
 .type::before,
+.location::before,
 .projects .language::before,
 .projects .subject::before {
     color: rgba(0, 255, 0, 0.8);
@@ -363,12 +364,12 @@ div.row:first-child {
     content: "Website (Link)";
 }
 
-.projects .name::before,
-.courses .name::before {
+.projects .name-with-link::before,
+.courses .name-with-link::before {
     content: "Name (Link)";
 }
 
-.courses .name-no-link::before {
+.courses .name::before {
     content: "Name";
 }
 
@@ -384,8 +385,8 @@ div.row:first-child {
     content: "Subject";
 }
 
-.courses .type::before {
-    content: "Type";
+.courses .location::before {
+    content: "Location";
 }
 
 #personal-projects .description,
@@ -393,12 +394,12 @@ div.row:first-child {
     padding-right: 20px;
 }
 
-#academic-projects .name p,
+#academic-projects .name-with-link p,
 #academic-projects .subject p,
-#academic-projects .name::before,
+#academic-projects .name-with-link::before,
 #academic-projects .subject::before,
-.courses .name-no-link p,
-.courses .name-no-link::before {
+.courses .name p,
+.courses .name::before {
     margin-left: 20px;
 }
 
@@ -516,18 +517,18 @@ div.row:first-child {
     .education .time,
     .education .degree,
     .education .website,
-    #personal-projects .name,
+    #personal-projects .name-with-link,
     #personal-projects .description,
     #personal-projects .language,
     #academic-projects .subject,
     #academic-projects .language,
-    #courses .name,
+    #courses .name-with-link,
     #courses .type {
         padding-left: 20px;
     }
 
     .experience .time,
-    #personal-projects .name,
+    #personal-projects .name-with-link,
     #academic-projects .subject,
     #academic-projects .time,
     #academic-projects .language {

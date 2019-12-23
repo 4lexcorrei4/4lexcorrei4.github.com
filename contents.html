@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name-with-link="viewport" content="width=device-width, initial-scale=1.0">
         <!-- STYLES -->
         <link rel="stylesheet" type="text/css" href="./css/style.css?v=2"/>
         <link rel="stylesheet" type="text/css" href="./css/grid.css"/>
@@ -237,7 +237,7 @@
                             <img src="./img/clipcadeiras.png">
                         </div>
                         <div class="col span-5-of-6">
-                            <div class="row name">
+                            <div class="row name-with-link">
                                 <p><a href="http://clipcadeiras.epizy.com" target="_blank">CLIP Cadeiras</a></p>
                             </div>
                             <div class="row description">
@@ -255,7 +255,7 @@
                             <img src="./img/logo.png">
                         </div>
                         <div class="col span-5-of-6">
-                            <div class="row name">
+                            <div class="row name-with-link">
                                 <p><a href="https://4lexcorrei4.github.io" target="_blank">Personal Website</a></p>
                             </div>
                             <div class="row description">
@@ -273,10 +273,73 @@
             <div class="row with-space">
                 <h1>Academic Projects</h1>
             </div>
-            <div class="row with-space same-height">
+            <div class="row with-space">
+                <table>
+                    <thead>
+                        <td>Name (Link)</td>
+                        <td>Time</td>
+                        <td>Subject</td>
+                        <td>Language(s)</td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="/academic-projects/cgi_airplane/" target="_blank">Airplane</a></td>
+                            <td rowspan="3">1st Semester, 2019/20</td>
+                            <td rowspan="3">Computer Graphics and Interfaces</td>
+                            <td rowspan="3">WebGL</td>
+                        </tr>
+                        <tr>
+                            <td><a href="/academic-projects/cgi_projections/" target="_blank">Projections</a></td>
+                            <!--<td>1st Semester, 2019/20</td>-->
+                            <!--<td>Computer Graphics and Interfaces</td>-->
+                            <!--<td>WebGL</td>-->
+                        </tr>
+                            <td><a href="/academic-projects/cgi_fireworks/" target="_blank">Fireworks</a></td>
+                            <!--<td>1st Semester, 2019/20</td>-->
+                            <!--<td>Computer Graphics and Interfaces</td>-->
+                            <!--<td>WebGL</td>-->
+                        </tr>
+                        <tr>
+                            <td><a href="/academic-projects/lap_automatamania/" target="_blank">Automatamania</a></td>
+                            <td rowspan="3">2nd Semester, 2018/19</td>
+                            <td rowspan="3">Programming Languages and Environments</td>
+                            <td>JavaScript</td>
+                        </tr>
+                        <tr>
+                            <td><a href="/academic-projects/lap_secrets/Secrets.c" target="_blank">Secrets</a></td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td><a href="/academic-projects/lap_finite_automata/FiniteAutomata.txt" target="_blank">Finite Automata</a></td>
+                            <td>OCaml</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <style>
+                table {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                thead {
+                    font-weight: bold;
+                    font-size: 20px;
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+
+                table td {
+                    padding: 10px;
+                }
+
+                tbody tr:nth-child(2n) {
+                    background-color: rgba(255, 255, 255, 0.05);
+                }
+            </style>
+            <!--<div class="row with-space same-height">
                 <div class="col span-1-of-2 box">
                     <div class="row">
-                        <div class="col span-1-of-2 name">
+                        <div class="col span-1-of-2 name-with-link">
                             <p><a href="/academic-projects/cgi_airplane/" target="_blank">Airplane</a></p>
                         </div>
                         <div class="col span-1-of-2 time">
@@ -294,7 +357,7 @@
                 </div>
                 <div class="col span-1-of-2 box">
                     <div class="row">
-                        <div class="col span-1-of-2 name">
+                        <div class="col span-1-of-2 name-with-link">
                             <p><a href="/academic-projects/cgi_projections/" target="_blank">Projections</a></p>
                         </div>
                         <div class="col span-1-of-2 time">
@@ -314,7 +377,7 @@
             <div class="row same-height">
                 <div class="col span-1-of-2 box">
                     <div class="row">
-                        <div class="col span-1-of-2 name">
+                        <div class="col span-1-of-2 name-with-link">
                             <p><a href="/academic-projects/cgi_fireworks/" target="_blank">Fireworks</a></p>
                         </div>
                         <div class="col span-1-of-2 time">
@@ -332,7 +395,7 @@
                 </div>
                 <div class="col span-1-of-2 box">
                     <div class="row">
-                        <div class="col span-1-of-2 name">
+                        <div class="col span-1-of-2 name-with-link">
                             <p><a href="/academic-projects/lap_automatamania/" target="_blank">Automatamania</a></p>
                         </div>
                         <div class="col span-1-of-2 time">
@@ -352,7 +415,7 @@
             <div class="row same-height">
                 <div class="col span-1-of-2 box">
                     <div class="row">
-                        <div class="col span-1-of-2 name">
+                        <div class="col span-1-of-2 name-with-link">
                             <p><a href="/academic-projects/lap_secrets/Secrets.c" target="_blank">Secrets</a></p>
                         </div>
                         <div class="col span-1-of-2 time">
@@ -370,7 +433,7 @@
                 </div>
                 <div class="col span-1-of-2 box">
                     <div class="row">
-                        <div class="col span-1-of-2 name">
+                        <div class="col span-1-of-2 name-with-link">
                             <p><a href="/academic-projects/lap_finite_automata/FiniteAutomata.txt" target="_blank">Finite Automata</a></p>
                         </div>
                         <div class="col span-1-of-2 time">
@@ -386,7 +449,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div id="courses" class="row section courses">
             <div class="row with-space">
@@ -400,21 +463,21 @@
                     <div class="row same-height">
                         <div class="col span-1-of-2 box">
                             <div class="row">
-                                <div class="col span-2-of-3 name-no-link">
+                                <div class="col span-2-of-3 name">
                                     <p>Markov Matrices</p>
                                 </div>
-                                <div class="col span-1-of-3 type">
-                                    <p>Online</p>
+                                <div class="col span-1-of-3 location">
+                                    <p>MOOC Tecnico</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col span-1-of-2 box">
                             <div class="row">
-                                <div class="col span-2-of-3 name-no-link">
+                                <div class="col span-2-of-3 name">
                                     <p>Programming for Everybody (Python)</p>
                                 </div>
-                                <div class="col span-1-of-3 type">
-                                    <p>Online</p>
+                                <div class="col span-1-of-3 location">
+                                    <p>Coursera</p>
                                 </div>
                             </div>
                         </div>
@@ -429,20 +492,20 @@
                     <div class="row same-height">
                         <div class="col span-1-of-2 box">
                             <div class="row">
-                                <div class="col span-2-of-3 name-no-link">
+                                <div class="col span-2-of-3 name">
                                     <p>Construction and Programming of Mobile Robots</p>
                                 </div>
-                                <div class="col span-1-of-3 type">
+                                <div class="col span-1-of-3 location">
                                     <p>Summer</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col span-1-of-2 box">
                             <div class="row">
-                                <div class="col span-2-of-3 name-no-link">
+                                <div class="col span-2-of-3 name">
                                     <p>Construction of Sailboats Equipped with Electronic Systems for Autonomous Navigation</p>
                                 </div>
-                                <div class="col span-1-of-3 type">
+                                <div class="col span-1-of-3 location">
                                     <p>Summer</p>
                                 </div>
                             </div>
@@ -451,20 +514,20 @@
                     <div class="row same-height">
                         <div class="col span-1-of-2 box">
                             <div class="row">
-                                <div class="col span-2-of-3 name-no-link">
+                                <div class="col span-2-of-3 name">
                                     <p>Ingenuity and Art - Engineering in Action</p>
                                 </div>
-                                <div class="col span-1-of-3 type">
+                                <div class="col span-1-of-3 location">
                                     <p>Summer</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col span-1-of-2 box">
                             <div class="row">
-                                <div class="col span-2-of-3 name-no-link">
+                                <div class="col span-2-of-3 name">
                                     <p>Junior Engineering</p>
                                 </div>
-                                <div class="col span-1-of-3 type">
+                                <div class="col span-1-of-3 location">
                                     <p>Summer</p>
                                 </div>
                             </div>
@@ -473,10 +536,10 @@
                     <div class="row same-height">
                         <div class="col span-1-of-2 box">
                             <div class="row">
-                                <div class="col span-2-of-3 name-no-link">
+                                <div class="col span-2-of-3 name">
                                     <p>Robotics Office</p>
                                 </div>
-                                <div class="col span-1-of-3 type">
+                                <div class="col span-1-of-3 location">
                                     <p>Summer</p>
                                 </div>
                             </div>
