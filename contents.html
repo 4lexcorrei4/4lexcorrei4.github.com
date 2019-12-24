@@ -2,13 +2,13 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name-with-link="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- STYLES -->
         <link rel="stylesheet" type="text/css" href="./css/style.css?v=4"/>
         <link rel="stylesheet" type="text/css" href="./css/grid.css"/>
         <!-- SCRIPTS -->
-        <!--<script src="./js/script.js"></script>-->
         <!--<script src="./js/jquery-waypoints-min.js"></script>-->
+        <script src="./js/script.js"></script>
         <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- FONTS -->
@@ -34,8 +34,20 @@
             <div class="row">
                 <div class="col span-1-of-2 languages">
                     <p>Languages</p>
-                    <span class="language">PT</span><span class="level"><span title="Native or bilingual proficiency">Native</span> &#183;</span>
-                    <span class="language">EN</span><span class="level"><span title="Professional working proficiency">FCE</span><!-- &#183;--></span>
+                    <ul>
+                        <li>
+                            <span class="language">PT</span>
+                            <span class="level">
+                                <span title="Native or bilingual proficiency">Native</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="language">EN</span>
+                            <span class="level">
+                                <span title="Professional working proficiency">FCE</span>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col span-1-of-2 skills">
                     <p>Skills</p>
@@ -60,7 +72,7 @@
                 <h1>Experience</h1>
             </div>
             <div class="row with-space">
-                <div class="col span-1-of-2 box">
+                <div class="col span-1-of-2 box-fill">
                     <div class="row">
                         <div class="col span-1-of-3">
                             <img src="./img/happycode.png">
@@ -83,7 +95,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col span-1-of-2 box">
+                <div class="col span-1-of-2 box-fill">
                     <div class="row">
                         <div class="col span-1-of-3">
                             <img src="./img/forallphones.jpg">
@@ -106,7 +118,7 @@
                         </div>
                     </div>
                     <div class="row details-btn" onclick="showHideDetails('forallphones')">Show / Hide Details</div>
-                    <div id="forallphones-details" class="details" style="display: none;">
+                    <div id="forallphones-details" class="details box-border" style="display: none;">
                         <div class="row">
                             <div class="col span-1-of-2">
                                 <p class="role-title">Alumni</p>
@@ -140,7 +152,7 @@
                 <h1>Education</h1>
             </div>
             <div class="row with-space">
-                <div class="col span-1-of-2 box">
+                <div class="col span-1-of-2 box-fill">
                     <div class="row">
                         <div class="col span-1-of-3">
                             <img src="./img/fct.png">
@@ -163,7 +175,7 @@
                         </div>
                     </div>
                     <div class="row details-btn" onclick="showHideDetails('fct')">Show / Hide Details</div>
-                    <div id="fct-details" class="details" style="display: none;">
+                    <div id="fct-details" class="details box-border" style="display: none;">
                         <div class="row">
                             <div class="col span-1-of-2">
                                 <p class="role-title">Current Grade</p>
@@ -182,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col span-1-of-2 box">
+                <div class="col span-1-of-2 box-fill">
                     <div class="row">
                         <div class="col span-1-of-3">
                             <img src="./img/colegio.png">
@@ -205,7 +217,7 @@
                         </div>
                     </div>
                     <div class="row details-btn" onclick="showHideDetails('colegio')">Show / Hide Details</div>
-                    <div id="colegio-details" class="details" style="display: none;">
+                    <div id="colegio-details" class="details box-border" style="display: none;">
                         <div class="row">
                             <div class="col span-1-of-2">
                                 <p class="role-title">Final Grade</p>
@@ -231,38 +243,38 @@
                 <h1>Personal Projects</h1>
             </div>
             <div class="row with-space same-height">
-                <div class="col span-1-of-2 box">
+                <div class="col span-1-of-2 box-fill">
                     <div class="row">
                         <div class="col span-1-of-6">
                             <img src="./img/clipcadeiras.png">
                         </div>
                         <div class="col span-5-of-6">
-                            <div class="row name-with-link">
+                            <div class="row name">
                                 <p><a href="http://clipcadeiras.epizy.com" target="_blank">CLIP Cadeiras</a></p>
                             </div>
                             <div class="row description">
                                 <p>Facilitates the access to the various infos and pages of each subject of each course, at this moment, of some of the FCT NOVA courses</p>
                             </div>
                             <div class="row language">
-                                <p>PHP, CSS, JavaScript and MySQL</p>
+                                <p>PHP<span>,</span> CSS<span>,</span> JavaScript <span>and</span> MySQL</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col span-1-of-2 box">
+                <div class="col span-1-of-2 box-fill">
                     <div class="row">
                         <div class="col span-1-of-6">
                             <img src="./img/logo.png">
                         </div>
                         <div class="col span-5-of-6">
-                            <div class="row name-with-link">
+                            <div class="row name">
                                 <p><a href="https://4lexcorrei4.github.io" target="_blank">Personal Website</a></p>
                             </div>
                             <div class="row description">
                                 <p>Complements my LinkedIn profile info</p>
                             </div>
                             <div class="row language">
-                                <p>HTML, CSS and JavaScript</p>
+                                <p>HTML<span>,</span> CSS <span>and</span> JavaScript</p>
                             </div>
                         </div>
                     </div>
@@ -276,7 +288,7 @@
             <div class="row with-space">
                 <table>
                     <thead>
-                        <td>Name (Link)</td>
+                        <td>Name</td>
                         <td>Time</td>
                         <td>Subject</td>
                         <td>Language(s)</td>
@@ -290,14 +302,8 @@
                         </tr>
                         <tr>
                             <td><a href="/academic-projects/cgi_projections/" target="_blank">Projections</a></td>
-                            <!--<td>1st Semester, 2019/20</td>-->
-                            <!--<td>Computer Graphics and Interfaces</td>-->
-                            <!--<td>WebGL</td>-->
                         </tr>
                             <td><a href="/academic-projects/cgi_fireworks/" target="_blank">Fireworks</a></td>
-                            <!--<td>1st Semester, 2019/20</td>-->
-                            <!--<td>Computer Graphics and Interfaces</td>-->
-                            <!--<td>WebGL</td>-->
                         </tr>
                         <tr>
                             <td><a href="/academic-projects/lap_automatamania/" target="_blank">Automatamania</a></td>
@@ -316,146 +322,6 @@
                     </tbody>
                 </table>
             </div>
-            <style>
-                table {
-                    width: 100%;
-                    text-align: center;
-                    border: 2px solid gray;
-                    border-radius: 10px;
-                }
-
-                thead {
-                    font-weight: bold;
-                    font-size: 20px;
-                    background-color: rgba(255, 255, 255, 0.1);
-                }
-
-                thead td {
-                    border-bottom: 2px solid gray;
-                }
-
-                table td {
-                    padding: 10px;
-                }
-
-                tbody tr:nth-child(2n) {
-                    background-color: rgba(255, 255, 255, 0.05);
-                }
-            </style>
-            <!--<div class="row with-space same-height">
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-with-link">
-                            <p><a href="/academic-projects/cgi_airplane/" target="_blank">Airplane</a></p>
-                        </div>
-                        <div class="col span-1-of-2 time">
-                            <p>1st Semester, 2019/20</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-2 subject">
-                            <p>Computer Graphics and Interfaces</p>
-                        </div>
-                        <div class="col span-1-of-2 language">
-                            <p>WebGL</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-with-link">
-                            <p><a href="/academic-projects/cgi_projections/" target="_blank">Projections</a></p>
-                        </div>
-                        <div class="col span-1-of-2 time">
-                            <p>1st Semester, 2019/20</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-2 subject">
-                            <p>Computer Graphics and Interfaces</p>
-                        </div>
-                        <div class="col span-1-of-2 language">
-                            <p>WebGL</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row same-height">
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-with-link">
-                            <p><a href="/academic-projects/cgi_fireworks/" target="_blank">Fireworks</a></p>
-                        </div>
-                        <div class="col span-1-of-2 time">
-                            <p>1st Semester, 2019/20</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-2 subject">
-                            <p>Computer Graphics and Interfaces</p>
-                        </div>
-                        <div class="col span-1-of-2 language">
-                            <p>WebGL</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-with-link">
-                            <p><a href="/academic-projects/lap_automatamania/" target="_blank">Automatamania</a></p>
-                        </div>
-                        <div class="col span-1-of-2 time">
-                            <p>2nd Semester, 2018/19</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-2 subject">
-                            <p>Programming Languages and Environments</p>
-                        </div>
-                        <div class="col span-1-of-2 language">
-                            <p>JavaScript</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row same-height">
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-with-link">
-                            <p><a href="/academic-projects/lap_secrets/Secrets.c" target="_blank">Secrets</a></p>
-                        </div>
-                        <div class="col span-1-of-2 time">
-                            <p>2nd Semester, 2018/19</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-2 subject">
-                            <p>Programming Languages and Environments</p>
-                        </div>
-                        <div class="col span-1-of-2 language">
-                            <p>C</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col span-1-of-2 box">
-                    <div class="row">
-                        <div class="col span-1-of-2 name-with-link">
-                            <p><a href="/academic-projects/lap_finite_automata/FiniteAutomata.txt" target="_blank">Finite Automata</a></p>
-                        </div>
-                        <div class="col span-1-of-2 time">
-                            <p>2nd Semester, 2018/19</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-2 subject">
-                            <p>Programming Languages and Environments</p>
-                        </div>
-                        <div class="col span-1-of-2 language">
-                            <p>OCaml</p>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
         </div>
         <div id="courses" class="row section courses">
             <div class="row with-space">
@@ -467,7 +333,7 @@
                 </div>
                 <div id="courses-online-contents" class="row" style="display: none;">
                     <div class="row same-height">
-                        <div class="col span-1-of-2 box">
+                        <div class="col span-1-of-2 box-fill">
                             <div class="row">
                                 <div class="col span-2-of-3 name">
                                     <p>Markov Matrices</p>
@@ -477,7 +343,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col span-1-of-2 box">
+                        <div class="col span-1-of-2 box-fill">
                             <div class="row">
                                 <div class="col span-2-of-3 name">
                                     <p>Programming for Everybody (Python)</p>
@@ -496,7 +362,7 @@
                 </div>
                 <div id="courses-summer-contents" style="display: none;">
                     <div class="row same-height">
-                        <div class="col span-1-of-2 box">
+                        <div class="col span-1-of-2 box-fill">
                             <div class="row">
                                 <div class="col span-2-of-3 name">
                                     <p>Construction and Programming of Mobile Robots</p>
@@ -506,7 +372,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col span-1-of-2 box">
+                        <div class="col span-1-of-2 box-fill">
                             <div class="row">
                                 <div class="col span-2-of-3 name">
                                     <p>Construction of Sailboats Equipped with Electronic Systems for Autonomous Navigation</p>
@@ -518,7 +384,7 @@
                         </div>
                     </div>
                     <div class="row same-height">
-                        <div class="col span-1-of-2 box">
+                        <div class="col span-1-of-2 box-fill">
                             <div class="row">
                                 <div class="col span-2-of-3 name">
                                     <p>Ingenuity and Art - Engineering in Action</p>
@@ -528,7 +394,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col span-1-of-2 box">
+                        <div class="col span-1-of-2 box-fill">
                             <div class="row">
                                 <div class="col span-2-of-3 name">
                                     <p>Junior Engineering</p>
@@ -540,7 +406,7 @@
                         </div>
                     </div>
                     <div class="row same-height">
-                        <div class="col span-1-of-2 box">
+                        <div class="col span-1-of-2 box-fill">
                             <div class="row">
                                 <div class="col span-2-of-3 name">
                                     <p>Robotics Office</p>
@@ -555,19 +421,4 @@
             </div>
         </div>
     </body>
-    <script>
-        function showHideCourses(type) {
-            var types = ["courses-online-contents", "courses-summer-contents"];
-            for (var thisType = 0; thisType < types.length; thisType++) {
-                if (types[thisType] == type)
-                    $("#" + types[thisType]).slideToggle();
-                else if ($("#" + types[thisType]).css("display") == "block")
-                    $("#" + types[thisType]).slideToggle();
-            }
-        }
-
-        function showHideDetails(block) {
-            $("#" + block + "-details").slideToggle();
-        }
-    </script>
 </html>

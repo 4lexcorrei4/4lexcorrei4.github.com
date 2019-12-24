@@ -8,8 +8,8 @@
         <link rel="stylesheet" type="text/css" href="./css/style.css?v=4"/>
         <link rel="stylesheet" type="text/css" href="./css/grid.css"/>
         <!-- SCRIPTS -->
-        <!--<script src="./js/script.js"></script>-->
         <!--<script src="./js/jquery-waypoints-min.js"></script>-->
+        <script src="./js/script.js"></script>
         <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- FONTS -->
@@ -71,27 +71,4 @@
         </div>
         <iframe src="/contents.html#about-me" id="page" name="page"></iframe>
     </body>
-    <script>
-        /* MENU */
-        function showHideMenu() {
-            if (window.matchMedia('(max-device-width: 480px)').matches) {
-                if ($('#sidebar').css("display") == "none") {
-                    $('#mobile-menu-open').css("display", "none");
-                    $('#mobile-menu-close').css("display", "block");
-                } else {
-                    $('#mobile-menu-open').css("display", "block");
-                    $('#mobile-menu-close').css("display", "none");
-                }
-                $('#sidebar').slideToggle();
-            }
-        }
-
-        function showHideSubmenu(element) {
-            if ($("#submenu-" + element).css("display") == "none")
-                $("#arrow-" + element).css("transform", "rotate(90deg)");
-            else
-                $("#arrow-" + element).css("transform", "rotate(0)");
-            $("#submenu-" + element).slideToggle();
-        }
-    </script>
 </html>

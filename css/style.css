@@ -35,12 +35,14 @@ a:link,
 a:visited {
     color: #fff;
     text-decoration: none;
-    transition: color 0.5s;
+    border-bottom: 1px solid #fff;
+    transition: color 0.5s, border-bottom 0.5s;
 }
 
 a:hover,
 a:active {
     color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     text-decoration: none;
 }
 
@@ -72,6 +74,39 @@ div.with-space {
 .same-height {
     display: flex;
     align-items: stretch;
+}
+
+.box-fill {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 5px 0 gray;
+    border-radius: 20px;
+    padding: 20px 0;
+}
+
+.box-border {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px 0 gray;
+    border-radius: 20px;
+    padding: 20px 0;
+}
+
+.details {
+    display: none;
+    margin: 20px 20px 0 20px;
+    padding: 20px 0;
+}
+
+.details .role-title {
+    width: 100%;
+    text-align: right;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.details .time-title {
+    width: 100%;
+    text-align: left;
+    text-transform: capitalize;
 }
 
 /* -------- SIDEBAR -------- */
@@ -125,6 +160,7 @@ div.with-space {
     letter-spacing: 2px;
     font-weight: bold;
     cursor: pointer;
+    border-bottom: none;
 }
 
 #menu .submenu .arrow {
@@ -164,6 +200,10 @@ div.with-space {
 #social {
     margin: 50px 0 0 0;
     text-align: center;
+}
+
+#social a {
+    border-bottom: none;
 }
 
 #social ion-icon {
@@ -240,40 +280,30 @@ div.row:first-child {
 }
 
 .about-me .languages .level {
-    margin-left: 5px;
     font-weight: 400;
 }
 
+.about-me .languages ul,
 .about-me .skills ul {
     list-style: none;
 }
 
+.about-me .languages ul li,
 .about-me .skills ul li {
     display: inline-block;
 }
 
+.about-me .languages ul li::after,
 .about-me .skills ul li::after {
-    content: " ; ";
+    content: " · ";
 }
 
+.about-me .languages ul li:last-child::after,
 .about-me .skills ul li:last-child::after {
     content: "";
 }
 
 /* -------- EXPERIENCE, EDUCATION AND PROJECTS -------- */
-
-.box,
-.details {
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 5px 0 gray;
-    border-radius: 20px;
-    padding: 20px 0;
-}
-
-.education .details,
-.experience .details {
-    padding: 20px 0;
-}
 
 .education img,
 .experience img {
@@ -288,50 +318,29 @@ div.row:first-child {
 .degree,
 .website,
 .role,
-.name {
+.name,
+.description,
+.language,
+.location {
     font-weight: bold;
 }
 
+.role,
 .degree,
-.website,
-.role {
+.website {
     padding-top: 20px;
-}
-
-.projects img {
-    width: 60px;
-    border-radius: 50%;
-    margin: 0 0 0 20px;
-}
-
-.projects .description,
-.projects .language {
-    text-align: justify;
-}
-
-.projects .language span {
-    font-weight: normal;
-}
-
-#personal-projects .row .row .row {
-    margin: 20px 0 0 0;
-}
-
-#personal-projects .row .row .row:first-child {
-    margin: 0;
 }
 
 .time::before,
 .degree::before,
 .website::before,
 .role::before,
-.name-with-link::before,
-.courses .name::before,
+.name::before,
 .description::before,
 .type::before,
 .location::before,
-.projects .language::before,
-.projects .subject::before {
+.language::before,
+.subject::before {
     color: rgba(0, 255, 0, 0.8);
     letter-spacing: 2px;
     font-size: 22px;
@@ -372,14 +381,10 @@ div.row:first-child {
 
 .education .website::before,
 .experience .website::before {
-    content: "Website (Link)";
+    content: "Website";
 }
 
-.projects .name-with-link::before,
-.courses .name-with-link::before {
-    content: "Name (Link)";
-}
-
+.projects .name::before,
 .courses .name::before {
     content: "Name";
 }
@@ -400,15 +405,60 @@ div.row:first-child {
     content: "Location";
 }
 
+.projects img {
+    width: calc(100% - 20px);
+    max-width: 60px;
+    border-radius: 50%;
+    margin: 0 0 0 20px;
+}
+
+.projects .description,
+.projects .language {
+    text-align: justify;
+}
+
+.projects .language span {
+    font-weight: normal;
+}
+
+#personal-projects .row .row .row {
+    margin: 20px 0 0 0;
+}
+
+#personal-projects .row .row .row:first-child {
+    margin: 0;
+}
+
 #personal-projects .description,
 #personal-projects .language {
     padding-right: 20px;
 }
 
-#academic-projects .name-with-link p,
-#academic-projects .subject p,
-#academic-projects .name-with-link::before,
-#academic-projects .subject::before,
+#academic-projects table {
+    width: 100%;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+#academic-projects thead {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#academic-projects thead td {
+    border-bottom: 2px solid gray;
+}
+
+#academic-projects table td {
+    padding: 10px;
+}
+
+#academic-projects tbody tr:nth-child(2n) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
 .courses .name p,
 .courses .name::before {
     margin-left: 20px;
@@ -428,24 +478,6 @@ div.row:first-child {
     border-radius: 20px;
     cursor: pointer;
     margin: 20px 20px 0 20px;
-}
-
-.details {
-    display: none;
-    margin: 20px 20px 0 20px;
-}
-
-.details .role-title {
-    width: 100%;
-    text-align: right;
-    text-transform: capitalize;
-    font-weight: bold;
-}
-
-.details .time-title {
-    width: 100%;
-    text-align: left;
-    text-transform: capitalize;
 }
 
 /* -------- COURSES -------- */
