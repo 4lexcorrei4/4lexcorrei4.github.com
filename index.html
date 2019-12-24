@@ -26,26 +26,26 @@
         <title>Alexandre Correia</title>
     </head>
     <body>
-        <ion-icon name="menu" id="mobile-menu-open" onclick="showMenu()"></ion-icon>
-        <ion-icon name="close" id="mobile-menu-close" onclick="hideMenu()"></ion-icon>
+        <ion-icon name="menu" id="mobile-menu-open" onclick="showHideMenu()"></ion-icon>
+        <ion-icon name="close" id="mobile-menu-close" onclick="showHideMenu()"></ion-icon>
         <div id="sidebar">
             <div id="logo">
                 <img src="/img/logo.png">
                 <div id="name">Alexandre Correia</div>
             </div>
             <ul id="menu" >
-                <li><a href="/contents.html#about-me" target="page" onclick="hideMenu()">About Me</a></li>
-                <li><a href="/contents.html#experience" target="page" onclick="hideMenu()">Experience</a></li>
-                <li><a href="/contents.html#education" target="page" onclick="hideMenu()">Education</a></li>
+                <li><a href="/contents.html#about-me" target="page" onclick="showHideMenu()">About Me</a></li>
+                <li><a href="/contents.html#experience" target="page" onclick="showHideMenu()">Experience</a></li>
+                <li><a href="/contents.html#education" target="page" onclick="showHideMenu()">Education</a></li>
                 <li class="submenu">
                     <ion-icon id="arrow-projects" class="arrow" name="arrow-dropright" onclick="showHideSubmenu('projects')"></ion-icon>
                     <span id="name" onclick="showHideSubmenu('projects')">Projects</span>
                     <ul id="submenu-projects" class="submenu-content" style="display: none;">
-                        <li><a href="/contents.html#personal-projects" target="page" onclick="hideMenu()">Personal</a></li>
-                        <li><a href="/contents.html#academic-projects" target="page" onclick="hideMenu()">Academic</a></li>
+                        <li><a href="/contents.html#personal-projects" target="page" onclick="showHideMenu()">Personal</a></li>
+                        <li><a href="/contents.html#academic-projects" target="page" onclick="showHideMenu()">Academic</a></li>
                     </ul>
                 </li>
-                <li><a href="/contents.html#courses" target="page" onclick="hideMenu()">Courses</a></li>
+                <li><a href="/contents.html#courses" target="page" onclick="showHideMenu()">Courses</a></li>
                 <li class="disabled"><a href="#">Certifications</a></li>
                 <li class="disabled"><a href="#">Volunteer</a></li>
             </ul>
@@ -73,28 +73,25 @@
     </body>
     <script>
         /* MENU */
-        function showMenu() {
+        function showHideMenu() {
             if (window.matchMedia('(max-device-width: 480px)').matches) {
-                document.getElementById('sidebar').style.display = 'block';
-                document.getElementById('mobile-menu-open').style.display = 'none';
-                document.getElementById('mobile-menu-close').style.display = 'block';
+                if ($('#sidebar').css("display") == "none") {
+                    $('#mobile-menu-open').css("display", "none");
+                    $('#mobile-menu-close').css("display", "block");
+                } else {
+                    $('#mobile-menu-open').css("display", "block");
+                    $('#mobile-menu-close').css("display", "none");
+                }
+                $('#sidebar').slideToggle();
             }
         }
 
         function showHideSubmenu(element) {
             if ($("#submenu-" + element).css("display") == "none")
-                $("#arrow-" + element).attr("name", "arrow-dropdown");
+                $("#arrow-" + element).css("transform", "rotate(90deg)");
             else
-                $("#arrow-" + element).attr("name", "arrow-dropright");
+                $("#arrow-" + element).css("transform", "rotate(0)");
             $("#submenu-" + element).slideToggle();
-        }
-
-        function hideMenu() {
-            if (window.matchMedia('(max-device-width: 480px)').matches) {
-                document.getElementById('sidebar').style.display = 'none';
-                document.getElementById('mobile-menu-open').style.display = 'block';
-                document.getElementById('mobile-menu-close').style.display = 'none';
-            }
         }
     </script>
 </html>

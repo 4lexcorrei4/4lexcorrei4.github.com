@@ -132,6 +132,8 @@ div.with-space {
     margin-left: -20px;
     margin-top: 2px;
     cursor: pointer;
+    transform: rotate(0);
+    transition: transform 0.5s;
 }
 
 #menu .submenu-content {
