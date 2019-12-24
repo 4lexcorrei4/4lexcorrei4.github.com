@@ -109,6 +109,11 @@ div.with-space {
     text-transform: capitalize;
 }
 
+div.table {
+    width: 100%;
+    overflow-x: auto;
+}
+
 /* -------- SIDEBAR -------- */
 
 #sidebar {
