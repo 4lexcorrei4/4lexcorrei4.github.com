@@ -117,12 +117,20 @@ div.with-space {
     margin: 20px 0 0 0;
 }
 
-#menu li a {
+#menu li a,
+#menu li #name {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 2px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+#menu .submenu .arrow {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 2px;
     cursor: pointer;
 }
 
