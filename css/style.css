@@ -458,6 +458,7 @@ div.row:first-child {
 
 #academic-projects table td {
     padding: 10px;
+    white-space: nowrap;
 }
 
 #academic-projects tbody tr:nth-child(2n) {
