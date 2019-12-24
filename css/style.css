@@ -434,11 +434,6 @@ div.row:first-child {
     margin: 0;
 }
 
-#personal-projects .description,
-#personal-projects .language {
-    padding-right: 20px;
-}
-
 #academic-projects table {
     width: 100%;
     text-align: center;
@@ -463,11 +458,6 @@ div.row:first-child {
 
 #academic-projects tbody tr:nth-child(2n) {
     background-color: rgba(255, 255, 255, 0.05);
-}
-
-.courses .name p,
-.courses .name::before {
-    margin-left: 20px;
 }
 
 .education .role span,
@@ -507,6 +497,18 @@ div.row:first-child {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+#courses .name p,
+#courses .name::before {
+    padding-left: 20px;
+}
+
+#courses .location p,
+#courses .location::before {
+    padding-right: 20px;
+}
+
+/* -------- MENU -------- */
 
 #mobile-menu-open,
 #mobile-menu-close {
@@ -566,30 +568,35 @@ div.row:first-child {
     .education .time,
     .education .degree,
     .education .website,
-    #personal-projects .name-with-link,
+    #personal-projects .name,
     #personal-projects .description,
     #personal-projects .language,
     #academic-projects .subject,
     #academic-projects .language,
-    #courses .name-with-link,
-    #courses .type {
-        padding-left: 20px;
+    #courses .location {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    #courses .name p,
+    #courses .location p {
+        padding-right: 20px;
+        text-align: justify;
     }
 
     .experience .time,
-    #personal-projects .name-with-link,
+    .education .time,
+    #personal-projects .name,
     #academic-projects .subject,
     #academic-projects .time,
-    #academic-projects .language {
+    #academic-projects .language,
+    #courses .location {
         padding-top: 20px;
     }
 
-    .box {
+    .box-fill,
+    .box-border {
         margin-top: 20px !important;
-    }
-
-    .box:first-child {
-        margin-top: 0 !important;
     }
 
     .details .role-title,
