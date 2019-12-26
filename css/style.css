@@ -205,6 +205,11 @@ div.table {
 #social {
     margin: 50px 0 0 0;
     text-align: center;
+    list-style: none;
+}
+
+#social li {
+    display: inline-block;
 }
 
 #social a {
