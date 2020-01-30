@@ -431,37 +431,42 @@ div.row:first-child {
     font-weight: normal;
 }
 
-#personal-projects .row .row .row {
+/*#personal-projects .row .row .row {
     margin: 20px 0 0 0;
 }
 
 #personal-projects .row .row .row:first-child {
     margin: 0;
-}
+}*/
 
-#academic-projects table {
+#academic-projects table,
+#projects table {
     width: 100%;
     text-align: center;
     border: 2px solid gray;
     border-radius: 10px;
 }
 
-#academic-projects thead {
+#academic-projects thead,
+#projects thead {
     font-weight: bold;
     font-size: 20px;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-#academic-projects thead td {
+#academic-projects thead td,
+#projects thead td {
     border-bottom: 2px solid gray;
 }
 
-#academic-projects table td {
+#academic-projects table td,
+#projects table td {
     padding: 10px;
     white-space: nowrap;
 }
 
-#academic-projects tbody tr:nth-child(2n) {
+#academic-projects tbody tr:nth-child(2n),
+#projects tbody tr:nth-child(2n) {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
