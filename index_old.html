@@ -1,0 +1,76 @@
+<!DOCTYPE>
+<html lang="en" dir="ltr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Here you can find all about me">
+        <meta name="author" content="BitSys">
+        <link rel="canonical" href="https://cv.bitsys.tech">
+        <link rel="icon" type="image/png" href="./img/logo.png"/>
+        <!-- SCRIPTS -->
+        <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="./js/jquery-waypoints-min.js"></script>
+        <script src="./js/script.js"></script>
+        <!-- STYLES -->
+        <link rel="stylesheet" type="text/css" href="./css/style.css?v=8"/>
+        <link rel="stylesheet" type="text/css" href="./css/grid.css"/>
+        <!-- FONTS -->
+        <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127322788-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-127322788-1');
+        </script>
+        <title>Online CV</title>
+    </head>
+    <body>
+        <ion-icon name="menu" id="mobile-menu-open" onclick="showHideMenu()"></ion-icon>
+        <ion-icon name="close" id="mobile-menu-close" onclick="showHideMenu()"></ion-icon>
+        <div id="sidebar">
+            <div id="logo">
+                <img src="/img/logo.png">
+                <div id="name">Online CV</div>
+            </div>
+            <ul id="menu">
+                <!--<li><a href="/contents.html#about-me" target="page" onclick="showHideMenu()">About Me</a></li>-->
+                <li><a href="/contents.html#experience" target="page" onclick="showHideMenu()">Experience</a></li>
+                <li><a href="/contents.html#education" target="page" onclick="showHideMenu()">Education</a></li>
+                <!--<li class="submenu">
+                    <ion-icon id="arrow-projects" class="arrow" name="arrow-dropright" onclick="showHideSubmenu('projects')"></ion-icon>
+                    <span id="name" onclick="showHideSubmenu('projects')">Projects</span>
+                    <ul id="submenu-projects" class="submenu-content" style="display: none;">
+                        <li><a href="/contents.html#personal-projects" target="page" onclick="showHideMenu()">Personal</a></li>-->
+                        <li><a href="/contents.html#academic-projects" target="page" onclick="showHideMenu()">Academic Projects</a></li>
+                    <!--</ul>
+                </li>-->
+                <li><a href="/contents.html#courses" target="page" onclick="showHideMenu()">Courses</a></li>
+                <li class="disabled"><a href="#">Certifications</a></li>
+                <li class="disabled"><a href="#">Volunteer</a></li>
+            </ul>
+            <a href="/cv_alexandre_correia.pdf" target="page" class="button">
+                <div id="cv">
+                    Download CV
+                </div>
+            </a>
+            <ul id="social">
+                <li><a href="https://www.facebook.com/4lexcorrei4" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://www.instagram.com/4lexcorrei4/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="https://twitter.com/4lexcorrei4" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://www.linkedin.com/in/4lexcorrei4/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="https://github.com/4lexcorrei4" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+            </ul>
+            <div id="footer">
+                &#9400;
+                <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script>
+                BitSys
+            </div>
+        </div>
+        <iframe src="/contents.html#about-me" id="page" name="page"></iframe>
+    </body>
+</html>
