@@ -1,0 +1,36 @@
+#skills ul {
+    padding: 0;
+    margin: 0;
+}
+
+#skills li {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0 0 0;
+    display: inline-block;
+}
+
+#skills img {
+    height: 100px;
+    max-width: 100px;
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+#skills span {
+    font-weight: bold;
+    font-size: 25px;
+    display: block;
+    text-transform: uppercase;
+}
+
+@media(max-width: 500px) {
+    #skills ul:last-child li {
+        width: 100%;
+    }
+
+    #skills ul:last-child span {
+        font-size: 15px;
+    }
+}

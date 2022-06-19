@@ -1,0 +1,55 @@
+#work .company {
+    display: flex;
+}
+
+#work .company img {
+    height: 70px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#work .company .name {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+#work .company .location {
+    display: flex;
+    align-items: center;
+    margin: 15px 0 0 0;
+}
+
+#work .company .location svg {
+    height: 20px;
+    width: 20px;
+}
+
+#work .positions {
+    padding: 0 0 20px 90px;
+    margin: 0;
+    list-style: none;
+}
+#work .positions:last-child {
+    padding-bottom: 0;
+}
+
+#work .positions h3 {
+    text-align: justify;
+}
+#work .positions h3::after {
+    display: none;
+}
+
+#work .positions .description {
+    margin: 0;
+    padding: 0 0 0 20px;
+    text-align: justify;
+}
+
+@media(max-width: 500px) {
+    #work .positions {
+        padding: 0 0 20px 0;
+    }
+}

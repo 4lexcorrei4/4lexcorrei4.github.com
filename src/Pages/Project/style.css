@@ -1,0 +1,64 @@
+#project #back {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+#project .header {
+    display: flex;
+}
+
+#project .header img {
+    height: 70px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#project .header .name {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+#project .header .url {
+    display: flex;
+    align-items: center;
+    margin: 15px 0 0 0;
+    width: 100%;
+}
+
+#project .header .url svg {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+#project .description li {
+    text-align: justify;
+}
+
+#project #screenshot-pagination {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+}
+
+#project #screenshot-pagination li {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+#project #screenshot-pagination li.active {
+    color: var(--main-color);
+}
+#project #screenshot-pagination li:last-child {
+    margin-right: 0;
+}
+
+#project #screenshot {
+    width: 100%;
+}

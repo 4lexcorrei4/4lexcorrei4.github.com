@@ -1,0 +1,106 @@
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home #welcome {
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#home #name {
+    font-family: 'Futura', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: var(--main-color);
+}
+
+#home #social {
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+#home #social a {
+    margin-right: 5px;
+}
+#home #social a:last-child {
+    margin-right: 0;
+}
+
+#home #social svg {
+    height: 25px;
+    width: 25px;
+    transition: fill 0.5s;
+}
+#home #social svg:hover {
+    fill: var(--main-color);
+}
+
+@media(max-width: 500px) {
+    #home #name {
+        font-size: 45px;
+    }
+}
+
+
+
+
+/*#home .cover span#name {
+    color: var(--main-color);
+}
+
+#home #continue {
+    font-style: normal;
+    text-decoration: none;
+    position: absolute;
+    bottom: 40px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#home #links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#home #links li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home #links a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    transition: font-weight 0.5s, color 0.5s, fill 0.5s;
+}
+
+#home #links a span {
+    display: block;
+}
+
+#home #links a span svg {
+    height: 100px;
+    width: 100px;
+    transition: font-weight 0.5s, color 0.5s, fill 0.5s;
+}
+
+#home #links a:hover,
+#home #links a:hover span svg {
+    font-weight: bold;
+    color: var(--main-color);
+    fill: var(--main-color);
+}*/
