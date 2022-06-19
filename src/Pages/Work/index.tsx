@@ -1,9 +1,7 @@
 import React from "react";
 import "./style.css"
-import {externalUrls, internalUrls} from "../../Infos/urls";
-import {Link} from "react-router-dom";
-import {Location} from "react-ionicons";
 import {work} from "../../Infos/work";
+import {IoLocationSharp} from "react-icons/io5";
 
 const Work = () => {
     return <div id="work" className="page bgcolor">
@@ -14,7 +12,7 @@ const Work = () => {
                     <img src={company.logo}/>
                     <div>
                         <a href={company.url} target="_blank" rel="noopener noreferrer" className="name">{company.company}</a>
-                        <p className="location"><Location />{company.location}</p>
+                        <p className="location"><IoLocationSharp />{company.location}</p>
                     </div>
                 </div>
                     <ul className="positions">

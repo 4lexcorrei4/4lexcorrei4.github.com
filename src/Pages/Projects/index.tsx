@@ -1,9 +1,6 @@
 import React from "react";
 import "./style.css"
-import {externalUrls, internalUrls} from "../../Infos/urls";
 import {NavLink} from "react-router-dom";
-import {Location} from "react-ionicons";
-import {work} from "../../Infos/work";
 import {projects} from "../../Infos/projects";
 
 const Projects = () => {

@@ -1,7 +1,5 @@
 import React from "react";
 import "./style.css"
-import {externalUrls, internalUrls} from "../../Infos/urls";
-import {Link} from "react-router-dom";
 
 const Skills = () => {
     return <div id="skills" className="page bgcolor">

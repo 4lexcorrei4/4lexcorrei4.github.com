@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import "./style.css"
-import {externalUrls, internalUrls} from "../../Infos/urls";
-import {Link, NavLink} from "react-router-dom";
-import {Globe} from "react-ionicons";
+import {internalUrls} from "../../Infos/urls";
+import {NavLink} from "react-router-dom";
 import {projects} from "../../Infos/projects";
+import {IoGlobeOutline} from "react-icons/io5";
 
 // @ts-ignore
 const Project = ({codename}) => {
@@ -23,7 +23,7 @@ const Project = ({codename}) => {
             <img src={project.logo ? project.logo : "/img/white_square.jpg"}/>
             <div>
                 <p className="name">{project.name}</p>
-                {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer" className="url"><Globe />{project.url}</a>}
+                {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer" className="url"><IoGlobeOutline />{project.url}</a>}
             </div>
         </div>
         <h3>Description</h3>

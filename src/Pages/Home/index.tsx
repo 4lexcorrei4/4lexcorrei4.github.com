@@ -1,8 +1,6 @@
 import React from "react";
 import "./style.css";
-import {Link} from "react-router-dom";
-import {internalUrls} from "../../Infos/urls";
-import {LogoFacebook, LogoGithub, LogoInstagram, LogoLinkedin} from "react-ionicons";
+import {IoLogoFacebook, IoLogoGithub, IoLogoInstagram, IoLogoLinkedin} from "react-icons/io5";
 
 const Home = () => {
     const scrollTo = (id:string) => {
@@ -14,10 +12,10 @@ const Home = () => {
         <div id="welcome">Welcome, I'm</div>
         <div id="name">Alexandre Correia</div>
         <div id="social">
-            <a href={"https://www.linkedin.com/in/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><LogoLinkedin /></a>
-            <a href={"https://www.facebook.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><LogoFacebook /></a>
-            <a href={"https://www.instagram.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><LogoInstagram /></a>
-            <a href={"https://github.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><LogoGithub /></a>
+            <a href={"https://www.linkedin.com/in/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoLinkedin /></a>
+            <a href={"https://www.facebook.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoFacebook /></a>
+            <a href={"https://www.instagram.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoInstagram /></a>
+            <a href={"https://github.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoGithub /></a>
         </div>
     </div>
 };

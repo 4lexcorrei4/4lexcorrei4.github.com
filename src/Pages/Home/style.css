@@ -37,6 +37,7 @@
 #home #social svg {
     height: 25px;
     width: 25px;
+    fill: #000;
     transition: fill 0.5s;
 }
 #home #social svg:hover {
