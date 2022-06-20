@@ -193,8 +193,11 @@ ul.cols-6 li {
   #menu-close {
     position: fixed;
     top: 2.5vh;
+    font-size: 30px;
     width: calc(100% - 40px);
     text-align: center;
+    animation-name: fadeIn;
+    animation-duration: 1s;
   }
 
   #menu-open {

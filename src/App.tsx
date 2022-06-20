@@ -11,6 +11,7 @@ import Work from "./Pages/Work";
 import Projects from "./Pages/Projects";
 import Project from "./Pages/Project";
 import {projects} from "./Infos/projects";
+import {IoClose, IoMenu} from "react-icons/io5";
 
 function App() {
     const openMenu = () => {
@@ -49,8 +50,8 @@ function App() {
                   }
                   <Route path="*" element={<Navigate to={internalUrls.home()} />} />
               </Routes>
-              <div id="menu-open" onClick={openMenu}>Menu</div>
-              <div id="menu-close" onClick={closeMenu}>Close Menu</div>
+              <div id="menu-open" onClick={openMenu}><IoMenu /></div>
+              <div id="menu-close" onClick={closeMenu}><IoClose /></div>
               <div id="menu">
                   {
                       pages.map(page => {
