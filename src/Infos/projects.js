@@ -9,7 +9,7 @@ export const projects = [
         "logo": "/img/projects/thesis/logo.svg",
         "description": [
             "Framework based on reinforcement learning which guides conversational assistants to get closer to the user’s target product, in the context of the iFetch project.",
-            "Achieved by asking a sequence of clarifying questions and giving recommendations, which enables either the user or the assistant to get the initiative, i.e. if the user has the freedom to express its preferences or just answers a more specific question."
+            "Achieved by asking a sequence of clarifying questions and giving recommendations. This way, the assistant has the capability of deciding which question (conditioning the freedom of the user's answer and may be accompanied with one or more product recommendations) is most relevant to narrow down the search space."
         ],
         "screenshots": [
             "/img/projects/thesis/screenshot1.png"

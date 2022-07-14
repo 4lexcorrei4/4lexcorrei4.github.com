@@ -41,3 +41,24 @@
     height: 60px;
     border-radius: 10px;
 }
+
+@media(max-width: 500px) {
+    #projects .button {
+        display: none;
+    }
+
+    #projects a {
+        border-radius: 10px;
+        font-size: 20px;
+    }
+
+    #projects a div {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #projects img {
+        margin: 0 auto;
+        height: 60px;
+    }
+}

@@ -1,5 +1,5 @@
 #project #back {
-    display: block;
+    display: inline-block;
     margin-bottom: 20px;
     text-decoration: none;
 }
@@ -61,4 +61,38 @@
 
 #project #screenshot {
     width: 100%;
+}
+
+@media(max-width: 500px) {
+    #project .header {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    #project .header img {
+        height: 60px;
+        width: auto;
+        margin-right: 0;
+    }
+
+    #project .header div {
+        width: 100%;
+    }
+
+    #project .header .name {
+        text-align: center;
+    }
+
+    #project .header .url {
+        margin: 5px 0 0 0;
+        justify-content: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #project .description {
+        padding: 0 0 0 20px;
+    }
 }

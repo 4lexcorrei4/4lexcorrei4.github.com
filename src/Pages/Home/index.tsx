@@ -3,13 +3,8 @@ import "./style.css";
 import {IoLogoFacebook, IoLogoGithub, IoLogoInstagram, IoLogoLinkedin} from "react-icons/io5";
 
 const Home = () => {
-    const scrollTo = (id:string) => {
-        // @ts-ignore
-        window.scrollTo(0, document.getElementById(id).offsetTop);
-    };
-
     return <div id="home" className="page">
-        <div id="welcome">Welcome, I'm</div>
+        <div id="welcome">Hey, I am</div>
         <div id="name">Alexandre Correia</div>
         <div id="social">
             <a href={"https://www.linkedin.com/in/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoLinkedin /></a>

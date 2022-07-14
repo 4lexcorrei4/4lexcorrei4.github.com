@@ -49,7 +49,34 @@
 }
 
 @media(max-width: 500px) {
+    #work .company {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid gray;
+        flex-direction: column;
+    }
+    #work .company:first-child {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+
+    #work .company img {
+        width: 70px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #work .company div {
+        text-align: center;
+    }
+
+    #work .company .location {
+        margin-top: 5px;
+        justify-content: center;
+    }
+
     #work .positions {
-        padding: 0 0 20px 0;
+        padding: 0;
     }
 }
