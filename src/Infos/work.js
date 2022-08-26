@@ -4,7 +4,7 @@ export const work = [
     {
         "company": "Happy Code Portugal",
         "url": externalUrls.happyCodePortugal(),
-        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQGk5jjhKmrA9g/company-logo_100_100/0/1562102399603?e=1663804800&v=beta&t=2ip9vKVYRGUyf1s1mo7gS39XuuwRnBKYxTcZlzteS3k",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQF5I1ceR7ycqQ/company-logo_200_200/0/1661542791373?e=1669852800&v=beta&t=fYTcNBGIusjS1aJOdKkexh6cKG8AwVy_JfVVxmqwyFc",
         "location": "Lisbon, Portugal",
         "positions": [
             {
@@ -29,7 +29,7 @@ export const work = [
     {
         "company": "Betacode",
         "url": externalUrls.betacode(),
-        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQEDqOB4PFvJ6A/company-logo_100_100/0/1563456798428?e=1663804800&v=beta&t=glNm8kGE8ljKJbEmstjtEf1EPCcPTVUxSzl7BzqWKz0",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQEDqOB4PFvJ6A/company-logo_200_200/0/1563456798428?e=1669852800&v=beta&t=RLoVbn1MMBgzBXzUFSHesITUQoskLPvGYB_bGjE_Bw4",
         "location": "Setúbal, Portugal",
         "positions": [
             {
@@ -44,7 +44,7 @@ export const work = [
     {
         "company": "Forall Phones",
         "url": externalUrls.forallPhones(),
-        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQFHOhkWpv_3Lg/company-logo_100_100/0/1586794762866?e=1663804800&v=beta&t=mlepLa6TRtDmqa_wAXa7pTliFcffcmg5abUD7W_vTEM",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQFHOhkWpv_3Lg/company-logo_200_200/0/1586794762866?e=1669852800&v=beta&t=LZJK-W4aLH7WIyOLLy_JnOXEcN1E6Wd3sFDTMnzmSHE",
         "location": "Lisbon, Portugal",
         "positions": [
             {
