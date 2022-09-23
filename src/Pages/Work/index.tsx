@@ -1,9 +1,11 @@
 import React from "react";
 import "./style.css"
 import {work} from "../../Infos/work";
-import {IoLocationSharp} from "react-icons/io5";
+import {IoCalendarClear, IoLocationSharp} from "react-icons/io5";
 
 const Work = () => {
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
     return <div id="work" className="page bgcolor">
         {
             work.map(company => {
@@ -19,7 +21,19 @@ const Work = () => {
                     {
                         company.positions.map(position => {
                             return <li>
-                                    <h3 className="role">{position.role}</h3>
+                                    <h3 className="role">
+                                        {position.role}
+                                        <span>
+                                            <IoCalendarClear />
+                                            {monthNames[new Date(position.dates.start).getMonth()]} {new Date(position.dates.start).getFullYear()}
+                                            &nbsp;-&nbsp;
+                                            {
+                                                position.dates.end
+                                                    ? <>{monthNames[new Date(position.dates.end).getMonth()]} {new Date(position.dates.end).getFullYear()}</>
+                                                    : <>Present</>
+                                            }
+                                        </span>
+                                    </h3>
                                     <ul className="description">
                                         {
                                             position.description.map(desc => <li>{desc}</li>)

@@ -36,10 +36,28 @@
 }
 
 #work .positions h3 {
+    display: flex;
+    align-items: center;
     text-align: justify;
 }
 #work .positions h3::after {
     display: none;
+}
+
+#work .positions h3 span {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 70%;
+    font-weight: normal;
+    text-transform: none;
+    opacity: 0.7;
+}
+
+#work .positions h3 span svg {
+    height: 12px;
+    width: 12px;
+    margin-right: 2px;
 }
 
 #work .positions .description {
@@ -78,5 +96,16 @@
 
     #work .positions {
         padding: 0;
+    }
+
+    #work .positions .role {
+        flex-direction: column;
+    }
+
+    #work .positions li {
+        margin-bottom: 10px;
+    }
+    #work .positions li:last-child {
+        margin-bottom: 0;
     }
 }
