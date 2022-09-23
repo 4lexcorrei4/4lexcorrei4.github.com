@@ -6,8 +6,8 @@ const Skills = () => {
         <h2>Technical</h2>
         <h3>Operating Systems</h3>
         <ul className="cols-2">
-            <li><img src="https://cdn.iconscout.com/icon/free/png-256/linux-3521549-2944967.png" />Linux (Unix-like)</li>
             <li><img src="https://cdn.iconscout.com/icon/free/png-256/macos-3-225413.png" />MacOS (Unix-like)</li>
+            <li><img src="https://cdn.iconscout.com/icon/free/png-256/linux-3521549-2944967.png" />Linux (Unix-like)</li>
         </ul>
         <h3>Programming Languages</h3>
         <ul className="cols-6">
@@ -66,7 +66,7 @@ const Skills = () => {
         </ul>
         <h3>Languages</h3>
         <ul className="cols-2">
-            <li><span>Portuguese</span>Native language</li>
+            <li><span>Portuguese</span>Native Language</li>
             <li><span>English</span>First Certificate in English</li>
         </ul>
     </div>
