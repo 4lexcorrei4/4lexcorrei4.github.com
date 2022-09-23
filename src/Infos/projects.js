@@ -5,6 +5,10 @@ export const projects = [
         "name": "Thesis",
         "codename": "thesis",
         "details": internalUrls.projectThesis(),
+        "dates": {
+            "start": Date.parse("2021-07"),
+            "end": undefined
+        },
         "url": undefined,
         "logo": "/img/projects/thesis/logo.svg",
         "description": [
@@ -19,6 +23,10 @@ export const projects = [
         "name": "Simulador de Horários",
         "codename": "simulador-horarios",
         "details": internalUrls.projectSimuladorHorarios(),
+        "dates": {
+            "start": Date.parse("2021-02"),
+            "end": Date.parse("2022-07")
+        },
         "url": "https://horarios.bitsys.tech",
         "logo": "/img/projects/simulador-horarios/logo.png",
         "description": [
@@ -34,6 +42,10 @@ export const projects = [
         "name": "Aquarium Management",
         "codename": "aquarium-management",
         "details": internalUrls.projectAquariumManagement(),
+        "dates": {
+            "start": Date.parse("2022-03"),
+            "end": Date.parse("2022-06")
+        },
         "url": undefined,
         "logo": "/img/projects/aquarium-management/logo.svg",
         "description": [
@@ -49,6 +61,10 @@ export const projects = [
         "name": "CLIP Cadeiras",
         "codename": "clip-cadeiras",
         "details": internalUrls.projectCLIPCadeiras(),
+        "dates": {
+            "start": Date.parse("2019-02"),
+            "end": Date.parse("2021-07")
+        },
         "url": "https://clipcadeiras.bitsys.tech",
         "logo": "/img/projects/clip-cadeiras/logo.png",
         "description": [
@@ -70,6 +86,10 @@ export const projects = [
         "name": "Fashion Product Search",
         "codename": "fashion-product-search",
         "details": internalUrls.projectFashionProductSearch(),
+        "dates": {
+            "start": Date.parse("2021-03"),
+            "end": Date.parse("2021-06")
+        },
         "url": undefined,
         "logo": undefined,
         "description": [
@@ -84,6 +104,10 @@ export const projects = [
         "name": "Samucar Website",
         "codename": "samucar-website",
         "details": internalUrls.projectSamucarWebsite(),
+        "dates": {
+            "start": Date.parse("2020-10"),
+            "end": Date.parse("2021-02")
+        },
         "url": "https://samucar.pt",
         "logo": "/img/projects/samucar-website/logo.png",
         "description": [
@@ -102,6 +126,10 @@ export const projects = [
         "name": "WordBucket",
         "codename": "wordbucket",
         "details": internalUrls.projectWordBucket(),
+        "dates": {
+            "start": Date.parse("2020-03"),
+            "end": Date.parse("2020-07")
+        },
         "url": "https://word-bucket.com",
         "logo": "/img/projects/wordbucket/logo.ico",
         "description": [

@@ -14,18 +14,39 @@
     border-radius: 20px;
     font-size: 25px;
     margin-bottom: 10px;
-    transition: background-color 0.5s, font-weight 0.5s;
+    transition: all 0.5s;
 }
 #projects a div {
     display: flex;
     align-items: center;
 }
+#projects a div div {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+#projects a .name {
+    transition: all 0.5s;
+}
+#projects a .date {
+    display: flex;
+    align-items: center;
+    font-size: 55%;
+    opacity: 0.7;
+    transition: all 0.5s;
+}
 #projects a:last-child {
     margin-bottom: 0;
 }
 #projects a:hover {
-    font-weight: bold;
     background-color: var(--background-color);
+}
+#projects a:hover .name {
+    font-weight: bold;
+}
+#projects a:hover .date {
+    font-weight: normal;
+    opacity: 1;
 }
 
 #projects .button {
@@ -55,6 +76,10 @@
     #projects a div {
         width: 100%;
         flex-direction: column;
+    }
+
+    #projects a div div {
+        align-items: center;
     }
 
     #projects img {

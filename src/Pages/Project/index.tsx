@@ -3,10 +3,12 @@ import "./style.css"
 import {internalUrls} from "../../Infos/urls";
 import {NavLink} from "react-router-dom";
 import {projects} from "../../Infos/projects";
-import {IoGlobeOutline} from "react-icons/io5";
+import {IoCalendarClear, IoGlobeOutline} from "react-icons/io5";
 
 // @ts-ignore
 const Project = ({codename}) => {
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
     const project = projects.filter(p => p.codename == codename)[0]
     const [screenshot, setScreenshot] = useState(0)
 
@@ -23,7 +25,19 @@ const Project = ({codename}) => {
             <img src={project.logo ? project.logo : "/img/white_square.jpg"}/>
             <div>
                 <p className="name">{project.name}</p>
-                {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer" className="url"><IoGlobeOutline />{project.url}</a>}
+                <div className="info">
+                    <span>
+                        <IoCalendarClear />
+                        {monthNames[new Date(project.dates.start).getMonth()]} {new Date(project.dates.start).getFullYear()}
+                        &nbsp;-&nbsp;
+                        {
+                            project.dates.end
+                                ? <>{monthNames[new Date(project.dates.end).getMonth()]} {new Date(project.dates.end).getFullYear()}</>
+                                : <>Present</>
+                        }
+                    </span>
+                    {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer" className="url"><IoGlobeOutline />{project.url}</a>}
+                </div>
             </div>
         </div>
         <h3>Description</h3>
