@@ -7,13 +7,14 @@ export const projects = [
         "details": internalUrls.projectThesis(),
         "dates": {
             "start": Date.parse("2021-07"),
-            "end": undefined
+            "end": Date.parse("2022-09")
         },
         "url": undefined,
         "logo": "/img/projects/thesis/logo.svg",
         "description": [
-            "Framework based on reinforcement learning which guides conversational assistants to get closer to the user’s target product, in the context of the iFetch project.",
-            "Achieved by asking a sequence of clarifying questions and giving recommendations. This way, the assistant has the capability of deciding which question (conditioning the freedom of the user's answer and may be accompanied with one or more product recommendations) is most relevant to narrow down the search space."
+            "In partnership with Farfetch, CMU Portugal and Técnico, Farfetch is developing its own conversational assistant with the goal of having a virtual assistant that can mimic the Farfetch's in-store experience, being the assistant able to offer a more natural and personalized experience than the traditional conversational agents.",
+            "The work of this thesis focuses on efficiently retrieving the user's desired product, which is achieved by generating a sequence of clarifying questions and giving recommendations. The clarifying questions are chosen before each interaction, in real-time, and are capable of narrowing down the search space.",
+            "Additionally, this can be served as a module inside projects and lets the recommendation conversation to evolve in various directions: minimizing the number of interactions, minimizing the repetitiveness of used questions and minimizing the repetitiveness of used questions according to their feedback times."
         ],
         "screenshots": [
             "/img/projects/thesis/screenshot1.png"
