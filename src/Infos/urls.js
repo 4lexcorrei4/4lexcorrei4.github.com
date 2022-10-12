@@ -14,9 +14,9 @@ export const internalUrls = {
 };
 
 export const externalUrls = {
-    currentPosition: () => "https://www.di.fct.unl.pt/ensino/mestrado-em-engenharia-informatica/estrutura-curricular-do-mei",
-    currentCompany: () => "https://www.fct.unl.pt/",
+    currentCompany: () => externalUrls.caixaMagicaSoftware(),
 
+    caixaMagicaSoftware: () => "https://www.caixamagica.pt/",
     happyCodePortugal: () => "https://www.happycode.pt/",
     betacode: () => "https://www.betacode.tech/",
     forallPhones: () => "https://forallphones.pt/"

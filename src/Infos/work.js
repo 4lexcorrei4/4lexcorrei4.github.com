@@ -1,5 +1,26 @@
 import {externalUrls} from "./urls";
 
+/*
+{
+        "company": "Caixa Mágica Software",
+        "url": externalUrls.caixaMagicaSoftware(),
+        "logo": "/img/work/caixa_magica_software.jpg",
+        "location": "Lisbon, Portugal",
+        "positions": [
+            {
+                "role": "Software Engineer",
+                "dates": {
+                    "start": Date.parse("2022-10"),
+                    "end": undefined
+                },
+                "description": [
+
+                ]
+            }
+        ]
+    },
+*/
+
 export const work = [
     {
         "company": "Happy Code Portugal",
