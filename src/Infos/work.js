@@ -1,7 +1,7 @@
 import {externalUrls} from "./urls";
 
-/*
-{
+export const work = [
+    {
         "company": "Caixa Mágica Software",
         "url": externalUrls.caixaMagicaSoftware(),
         "logo": "/img/work/caixa_magica_software.jpg",
@@ -19,9 +19,6 @@ import {externalUrls} from "./urls";
             }
         ]
     },
-*/
-
-export const work = [
     {
         "company": "Happy Code Portugal",
         "url": externalUrls.happyCodePortugal(),
