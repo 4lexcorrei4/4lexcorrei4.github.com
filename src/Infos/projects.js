@@ -2,9 +2,23 @@ import {internalUrls} from "./urls";
 
 export const projects = [
     {
+        "name": "Digitarq",
+        "codename": "digitarq",
+        "details": internalUrls.project("digitarq"),
+        "dates": {
+            "start": Date.parse("2022-10"),
+            "end": undefined
+        },
+        "url": undefined,
+        "logo": undefined,
+        "description": [
+            "In partnership with DGLAB, under development."
+        ]
+    },
+    {
         "name": "Thesis",
         "codename": "thesis",
-        "details": internalUrls.projectThesis(),
+        "details": internalUrls.project("thesis"),
         "dates": {
             "start": Date.parse("2021-07"),
             "end": Date.parse("2022-09")
@@ -23,7 +37,7 @@ export const projects = [
     {
         "name": "Simulador de Horários",
         "codename": "simulador-horarios",
-        "details": internalUrls.projectSimuladorHorarios(),
+        "details": internalUrls.project("simulador-horarios"),
         "dates": {
             "start": Date.parse("2021-02"),
             "end": Date.parse("2022-07")
@@ -42,7 +56,7 @@ export const projects = [
     {
         "name": "Aquarium Management",
         "codename": "aquarium-management",
-        "details": internalUrls.projectAquariumManagement(),
+        "details": internalUrls.project("aquarium-management"),
         "dates": {
             "start": Date.parse("2022-03"),
             "end": Date.parse("2022-06")
@@ -61,7 +75,7 @@ export const projects = [
     {
         "name": "CLIP Cadeiras",
         "codename": "clip-cadeiras",
-        "details": internalUrls.projectCLIPCadeiras(),
+        "details": internalUrls.project("clip-cadeiras"),
         "dates": {
             "start": Date.parse("2019-02"),
             "end": Date.parse("2021-07")
@@ -86,7 +100,7 @@ export const projects = [
     {
         "name": "Fashion Product Search",
         "codename": "fashion-product-search",
-        "details": internalUrls.projectFashionProductSearch(),
+        "details": internalUrls.project("fashion-product-search"),
         "dates": {
             "start": Date.parse("2021-03"),
             "end": Date.parse("2021-06")
@@ -104,7 +118,7 @@ export const projects = [
     {
         "name": "Samucar Website",
         "codename": "samucar-website",
-        "details": internalUrls.projectSamucarWebsite(),
+        "details": internalUrls.project("samucar-website"),
         "dates": {
             "start": Date.parse("2020-10"),
             "end": Date.parse("2021-02")
@@ -126,7 +140,7 @@ export const projects = [
     {
         "name": "WordBucket",
         "codename": "wordbucket",
-        "details": internalUrls.projectWordBucket(),
+        "details": internalUrls.project("wordbucket"),
         "dates": {
             "start": Date.parse("2020-03"),
             "end": Date.parse("2020-07")

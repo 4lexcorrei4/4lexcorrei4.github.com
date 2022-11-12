@@ -25,8 +25,9 @@ const Skills = () => {
         </ul>
         <h3>Web</h3>
         <ul className="cols-5">
-            <li><img src="https://github.com/devicons/devicon/raw/master/icons/flask/flask-original.svg"/>Flask</li>
             <li><img src="https://github.com/devicons/devicon/raw/master/icons/react/react-original.svg"/>React</li>
+            <li><img src="https://github.com/devicons/devicon/raw/master/icons/nextjs/nextjs-original.svg"/>Next.js</li>
+            <li><img src="https://github.com/devicons/devicon/raw/master/icons/flask/flask-original.svg"/>Flask</li>
             <li><img src="https://github.com/devicons/devicon/raw/master/icons/jquery/jquery-original.svg" />jQuery</li>
             <li><img src="/img/scrapy.svg"/>Scrapy</li>
             <li><img src="https://github.com/devicons/devicon/raw/master/icons/spring/spring-original.svg"/>Spring</li>
