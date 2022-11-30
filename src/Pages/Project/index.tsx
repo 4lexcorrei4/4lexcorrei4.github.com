@@ -40,14 +40,16 @@ const Project = ({codename}) => {
                 </div>
             </div>
         </div>
-        <h3>Description</h3>
-        <ul className="description">
         {
-            project.description.map(desc => {
-                return <li>{desc}</li>
-            })
+            project.description && <>
+                <h3>Description</h3>
+                <ul className="description">
+                {
+                    project.description.map(desc => <li>{desc}</li>)
+                }
+                </ul>
+            </>
         }
-        </ul>
         {
             project.screenshots && <>
                 <h3>Screenshots</h3>
