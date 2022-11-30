@@ -1,4 +1,4 @@
-import {internalUrls} from "./urls";
+import {externalUrls, internalUrls} from "./urls";
 
 export const projects = [
     {
@@ -10,10 +10,7 @@ export const projects = [
             "end": undefined
         },
         "url": undefined,
-        "logo": undefined,
-        "description": [
-            "In partnership with DGLAB, under development."
-        ]
+        "logo": undefined
     },
     {
         "name": "Thesis",
@@ -23,12 +20,11 @@ export const projects = [
             "start": Date.parse("2021-07"),
             "end": Date.parse("2022-09")
         },
-        "url": undefined,
+        "url": externalUrls.projectThesis(),
         "logo": "/img/projects/thesis/logo.svg",
         "description": [
-            "In partnership with Farfetch, CMU Portugal and Técnico, Farfetch is developing its own conversational assistant with the goal of having a virtual assistant that can mimic the Farfetch's in-store experience, being the assistant able to offer a more natural and personalized experience than the traditional conversational agents.",
-            "The work of this thesis focuses on efficiently retrieving the user's desired product, which is achieved by generating a sequence of clarifying questions and giving recommendations. The clarifying questions are chosen before each interaction, in real-time, and are capable of narrowing down the search space.",
-            "Additionally, this can be served as a module inside projects and lets the recommendation conversation to evolve in various directions: minimizing the number of interactions, minimizing the repetitiveness of used questions and minimizing the repetitiveness of used questions according to their feedback times."
+            "In partnership with Farfetch, CMU Portugal and Técnico, Farfetch is developing its own conversational assistant with the goal of having a virtual assistant that can mimic the Farfetch's in-store experience, being the assistant able to offer a more natural and personalized experience than the traditional conversational assistants.",
+            "My thesis focuses on efficiently retrieving the user's desired product, achieved by generating a sequence of clarifying questions and giving recommendations. The clarifying questions are chosen before each interaction with the user and are capable of narrowing down the search space in various directions: minimizing the number of interactions, minimizing the repetitiveness of used questions and minimizing the repetitiveness of used questions according to their feedback times."
         ],
         "screenshots": [
             "/img/projects/thesis/screenshot1.png"
@@ -42,7 +38,7 @@ export const projects = [
             "start": Date.parse("2021-02"),
             "end": Date.parse("2022-07")
         },
-        "url": "https://horarios.bitsys.tech",
+        "url": externalUrls.projectSimuladorHorarios(),
         "logo": "/img/projects/simulador-horarios/logo.png",
         "description": [
             "Allows FCT NOVA students to easily check the available schedule options and build an optimized and personalized timetable.",
@@ -80,7 +76,7 @@ export const projects = [
             "start": Date.parse("2019-02"),
             "end": Date.parse("2021-07")
         },
-        "url": "https://clipcadeiras.bitsys.tech",
+        "url": externalUrls.projectCLIPCadeiras(),
         "logo": "/img/projects/clip-cadeiras/logo.png",
         "description": [
             "Provides the students of FCT NOVA with easy access to all the relevant information about each of the curricular units of the courses they are enrolled in.",
@@ -123,7 +119,7 @@ export const projects = [
             "start": Date.parse("2020-10"),
             "end": Date.parse("2021-02")
         },
-        "url": "https://samucar.pt",
+        "url": externalUrls.projectSamucar(),
         "logo": "/img/projects/samucar-website/logo.png",
         "description": [
             "Allows the costumers of Samucar stand to easily and intuitively check for their next vehicle, with a redesigned website and with some new useful features (e.g. specifications comparison).",
@@ -145,7 +141,7 @@ export const projects = [
             "start": Date.parse("2020-03"),
             "end": Date.parse("2020-07")
         },
-        "url": "https://word-bucket.com",
+        "url": externalUrls.projectWordbucket(),
         "logo": "/img/projects/wordbucket/logo.ico",
         "description": [
             "Content management platform, allowing to store and control the contents of a project or app.",
