@@ -9,8 +9,11 @@ export const projects = [
             "start": Date.parse("2022-10"),
             "end": undefined
         },
-        "url": undefined,
-        "logo": undefined
+        "url": externalUrls.projectDigitarq(),
+        "logo": undefined,
+        "description": [
+            `Web development of a platform, Digitarq (<a href=\"${externalUrls.projectDigitarq()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectDigitarq()}</a>, replacing <a href=\"${externalUrls.projectDigitarqOld()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectDigitarqOld()}</a>), to efficiently search through the hundreds of thousands of documents the Portuguese Government archives, using a front-end with Next.js, a back-end with Node.js and database management with Python, Neo4J and Elasticsearch.`
+        ]
     },
     {
         "name": "Thesis",
@@ -21,32 +24,31 @@ export const projects = [
             "end": Date.parse("2022-09")
         },
         "url": externalUrls.projectThesis(),
-        "logo": "/img/projects/thesis/logo.svg",
+        "logo": "/assets/projects/thesis/logo.svg",
         "description": [
             "In partnership with Farfetch, CMU Portugal and Técnico, Farfetch is developing its own conversational assistant with the goal of having a virtual assistant that can mimic the Farfetch's in-store experience, being the assistant able to offer a more natural and personalized experience than the traditional conversational assistants.",
-            "My thesis focuses on efficiently retrieving the user's desired product, achieved by generating a sequence of clarifying questions and giving recommendations. The clarifying questions are chosen before each interaction with the user and are capable of narrowing down the search space in various directions: minimizing the number of interactions, minimizing the repetitiveness of used questions and minimizing the repetitiveness of used questions according to their feedback times."
+            "My thesis focused on efficiently retrieving the user's desired product, achieved by generating a sequence of clarifying questions and giving recommendations, using Python, PyTorch and PyTorch Lightning. The clarifying questions are chosen before each interaction with the user and are capable of narrowing down the search space in various directions: minimizing the number of interactions, minimizing the repetitiveness of used questions and minimizing the repetitiveness of used questions according to their feedback times.",
         ],
         "screenshots": [
-            "/img/projects/thesis/screenshot1.png"
+            "/assets/projects/thesis/screenshot1.png"
         ]
     },
     {
-        "name": "Simulador de Horários",
+        "name": "Schedule Simulator",
         "codename": "simulador-horarios",
         "details": internalUrls.project("simulador-horarios"),
         "dates": {
             "start": Date.parse("2021-02"),
             "end": Date.parse("2022-07")
         },
-        "url": externalUrls.projectSimuladorHorarios(),
-        "logo": "/img/projects/simulador-horarios/logo.png",
+        "url": undefined,
+        "logo": "/assets/projects/simulador-horarios/logo.png",
         "description": [
-            "Allows FCT NOVA students to easily check the available schedule options and build an optimized and personalized timetable.",
-            "Development of a front-end (React) and a back-end (Python and Flask), but also database management (MySQL) and information extraction through crawling (Scrapy)."
+            `Web development of a platform that allows <a href=\"${externalUrls.fctNova()}\" target=\"_blank\" rel=\"noopener noreferrer\">FCT NOVA</a> students to easily check the available schedule options and build an optimized and personalized timetable, using a front-end with React and a back-end with Python and Flask, but also database management with MySQL and information extraction through crawling with Scrapy.`
         ],
         "screenshots": [
-            "/img/projects/simulador-horarios/screenshot1.png",
-            "/img/projects/simulador-horarios/screenshot2.png"
+            "/assets/projects/simulador-horarios/screenshot1.png",
+            "/assets/projects/simulador-horarios/screenshot2.png"
         ]
     },
     {
@@ -58,39 +60,37 @@ export const projects = [
             "end": Date.parse("2022-06")
         },
         "url": undefined,
-        "logo": "/img/projects/aquarium-management/logo.svg",
+        "logo": "/assets/projects/aquarium-management/logo.svg",
         "description": [
-            "Provides the user an easy and intuitive way to, not only access each aquarium conditions in real-time, but also allows him to set, in real-time, some of the characteristics of the aquarium(s) either locally (same network) or remotely (different networks).",
-            "Development of the physical simulator (ESP32 and C++), of the mobile application (Android) and data management (Firebase Realtime Database)."
+            "Development of a platform that provides the user an easy and intuitive way to, not only access each aquarium conditions in real-time, but also allows him to set, in real-time, some of the characteristics of the aquarium(s) either locally (same network) or remotely (different networks), using a physical simulator with ESP32 and C++, a mobile application for Android and data management with Firebase Realtime Database."
         ],
         "screenshots": [
-            "/img/projects/aquarium-management/screenshot1.png",
-            "/img/projects/aquarium-management/screenshot2.svg"
+            "/assets/projects/aquarium-management/screenshot1.png",
+            "/assets/projects/aquarium-management/screenshot2.svg"
         ]
     },
     {
-        "name": "CLIP Cadeiras",
+        "name": "CLIP Curricular Units",
         "codename": "clip-cadeiras",
         "details": internalUrls.project("clip-cadeiras"),
         "dates": {
             "start": Date.parse("2019-02"),
             "end": Date.parse("2021-07")
         },
-        "url": externalUrls.projectCLIPCadeiras(),
-        "logo": "/img/projects/clip-cadeiras/logo.png",
+        "url": undefined,
+        "logo": "/assets/projects/clip-cadeiras/logo.png",
         "description": [
-            "Provides the students of FCT NOVA with easy access to all the relevant information about each of the curricular units of the courses they are enrolled in.",
-            "Development of a front-end together with a back-end (PHP) and database management (MySQL)."
+            `Web development of a platform that provides the students of <a href=\"${externalUrls.fctNova()}\" target=\"_blank\" rel=\"noopener noreferrer\">FCT NOVA</a> with easy access to all the relevant information about each of the curricular units of the courses they are enrolled in, using a front-end together with a back-end with PHP, and database management with MySQL.`
         ],
         "screenshots": [
-            "/img/projects/clip-cadeiras/screenshot1.png",
-            "/img/projects/clip-cadeiras/screenshot2.png",
-            "/img/projects/clip-cadeiras/screenshot3.png",
-            "/img/projects/clip-cadeiras/screenshot4.png",
-            "/img/projects/clip-cadeiras/screenshot5.png",
-            "/img/projects/clip-cadeiras/screenshot6.png",
-            "/img/projects/clip-cadeiras/screenshot7.png",
-            "/img/projects/clip-cadeiras/screenshot8.png"
+            "/assets/projects/clip-cadeiras/screenshot1.png",
+            "/assets/projects/clip-cadeiras/screenshot2.png",
+            "/assets/projects/clip-cadeiras/screenshot3.png",
+            "/assets/projects/clip-cadeiras/screenshot4.png",
+            "/assets/projects/clip-cadeiras/screenshot5.png",
+            "/assets/projects/clip-cadeiras/screenshot6.png",
+            "/assets/projects/clip-cadeiras/screenshot7.png",
+            "/assets/projects/clip-cadeiras/screenshot8.png"
         ]
     },
     {
@@ -104,11 +104,10 @@ export const projects = [
         "url": undefined,
         "logo": undefined,
         "description": [
-            "Provides the user an efficient luxury product search using either a description or an image showing the desired characteristics.",
-            "Development of a back-end to serve as an API of the developed machine learning model (Python, PyTorch and Faiss) and data management (Elasticsearch)."
+            "Web development of an efficient luxury product search using either a description or an image showing the desired characteristics, using a back-end to serve as an API of the developed machine learning model with Python, PyTorch and Faiss, and data management with Elasticsearch."
         ],
         "screenshots": [
-            "/img/projects/fashion-product-search/screenshot1.png"
+            "/assets/projects/fashion-product-search/screenshot1.png"
         ]
     },
     {
@@ -120,17 +119,16 @@ export const projects = [
             "end": Date.parse("2021-02")
         },
         "url": externalUrls.projectSamucar(),
-        "logo": "/img/projects/samucar-website/logo.png",
+        "logo": "/assets/projects/samucar-website/logo.png",
         "description": [
-            "Allows the costumers of Samucar stand to easily and intuitively check for their next vehicle, with a redesigned website and with some new useful features (e.g. specifications comparison).",
-            "Development of a front-end (HTML, CSS and JavaScript) using information provided by Standvirtual's API (XML)."
+            "Web development of a website for Samucar stand, allowing their costumers to easily and intuitively check for their next vehicle, with a redesigned website and with some new useful features (e.g. specifications comparison), using a front-end with HTML, CSS and JavaScript, and with information provided by Standvirtual's API (XML)."
         ],
         "screenshots": [
-            "/img/projects/samucar-website/screenshot1.png",
-            "/img/projects/samucar-website/screenshot2.png",
-            "/img/projects/samucar-website/screenshot3.png",
-            "/img/projects/samucar-website/screenshot4.png",
-            "/img/projects/samucar-website/screenshot5.png"
+            "/assets/projects/samucar-website/screenshot1.png",
+            "/assets/projects/samucar-website/screenshot2.png",
+            "/assets/projects/samucar-website/screenshot3.png",
+            "/assets/projects/samucar-website/screenshot4.png",
+            "/assets/projects/samucar-website/screenshot5.png"
         ]
     },
     {
@@ -142,15 +140,31 @@ export const projects = [
             "end": Date.parse("2020-07")
         },
         "url": externalUrls.projectWordbucket(),
-        "logo": "/img/projects/wordbucket/logo.ico",
+        "logo": "/assets/projects/wordbucket/logo.ico",
         "description": [
-            "Content management platform, allowing to store and control the contents of a project or app.",
-            "Development of a back-end (Python), a front-end (React), a command line interface (Node.js) and database management (SQLite)."
+            `Full stack development of a content management platform, WordBucket (<a href=\"${externalUrls.projectWordbucket()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectWordbucket()}</a>), using a back-end with Python, a front-end with React, a command line interface with Node.js and database management using SQLite.`
         ],
         "screenshots": [
-            "/img/projects/wordbucket/screenshot1.png",
-            "/img/projects/wordbucket/screenshot2.png",
-            "/img/projects/wordbucket/screenshot3.png"
+            "/assets/projects/wordbucket/screenshot1.png",
+            "/assets/projects/wordbucket/screenshot2.png",
+            "/assets/projects/wordbucket/screenshot3.png"
+        ]
+    },
+    {
+        "name": "Forall Family",
+        "codename": "forall-family",
+        "details": internalUrls.project("forall-family"),
+        "dates": {
+            "start": Date.parse("2018-04"),
+            "end": Date.parse("2018-06")
+        },
+        "url": externalUrls.projectForallFamily(),
+        "logo": "/assets/projects/forall-family/logo.ico",
+        "description": [
+            `Development of the company’s community/ambassador website, Forall Family (<a href=\"${externalUrls.projectForallFamily()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectForallFamily()}</a>), using WordPress.`
+        ],
+        "screenshots": [
+            "/assets/projects/forall-family/screenshot1.png"
         ]
     }
 ];

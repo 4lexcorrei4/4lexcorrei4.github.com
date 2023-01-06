@@ -12,7 +12,7 @@ const Projects = () => {
             projects.map(project => {
                 return <NavLink to={project.details}>
                     <div>
-                        <img src={project.logo ? project.logo : "/img/white_square.jpg"}/>
+                        <img src={project.logo || "/assets/white_square.jpg"}/>
                         <div>
                             <span className="name">{project.name}</span>
                             <span className="date">

@@ -4,6 +4,7 @@ import {internalUrls} from "../../Infos/urls";
 import {NavLink} from "react-router-dom";
 import {projects} from "../../Infos/projects";
 import {IoCalendarClear, IoGlobeOutline} from "react-icons/io5";
+import parser from "html-react-parser";
 
 // @ts-ignore
 const Project = ({codename}) => {
@@ -20,9 +21,9 @@ const Project = ({codename}) => {
     )
 
     return <div id="project" className="page bgcolor">
-        <NavLink to={internalUrls.projects()} id="back">&#8592;Projects</NavLink>
+        <NavLink to={internalUrls.projects()} id="back">&#8592;&nbsp;Projects</NavLink>
         <div className="header">
-            <img src={project.logo ? project.logo : "/img/white_square.jpg"}/>
+            <img src={project.logo || "/assets/white_square.jpg"}/>
             <div>
                 <p className="name">{project.name}</p>
                 <div className="info">
@@ -43,11 +44,11 @@ const Project = ({codename}) => {
         {
             project.description && <>
                 <h3>Description</h3>
-                <ul className="description">
+                <div className="description">
                 {
-                    project.description.map(desc => <li>{desc}</li>)
+                    project.description.map(desc => <p>{parser(desc)}</p>)
                 }
-                </ul>
+                </div>
             </>
         }
         {

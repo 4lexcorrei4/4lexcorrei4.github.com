@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css"
 import {work} from "../../Infos/work";
 import {IoCalendarClear, IoLocationSharp} from "react-icons/io5";
+import parse from "html-react-parser";
 
 const Work = () => {
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -34,11 +35,11 @@ const Work = () => {
                                             }
                                         </span>
                                     </h3>
-                                    <ul className="description">
+                                    <div className="description">
                                         {
-                                            position.description.map(desc => <li>{desc}</li>)
+                                            position.description.map(desc => <p>{parse(desc)}</p>)
                                         }
-                                    </ul>
+                                    </div>
                                 </li>
                         })
                     }

@@ -17,13 +17,13 @@ body {
 }
 
 #root {
-  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('/public/img/cover.png');
+  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('/public/assets/cover.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-  height: 80vh;
-  width: calc(100% - 20vh);
-  padding: 12vh 10vh 8vh 10vh;
+  height: 93vh;
+  width: calc(100% - 10vw);
+  padding: 5vh 5vw 2vh 5vw;
   display: flex;
   align-items: stretch;
   justify-content: stretch;
@@ -31,20 +31,63 @@ body {
 
 .App {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: stretch;
+  flex-direction: column;
   width: 100%;
 }
 
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+#menu {
+  font-size: 20px;
+  top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#menu .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-right: 1px dashed #000;
+  padding: 0 10px;
+  text-align: center;
+}
+#menu .links:last-child {
+  border-right: none;
+}
+
+#menu a,
+#menu span {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.5s;
+  text-transform: uppercase;
+  padding: 0 5px;
+}
+#menu span {
+  font-size: 70%;
+}
+#menu a {
+  font-weight: bold;
+}
+#menu a:hover,
+#menu .active {
+  color: var(--main-color);
+}
+
+#menu-open,
+#menu-close {
+  display: none;
 }
 
 .page {
+  flex-grow: 1;
   width: calc(100% - 40px);
+  margin: 10px 0 20px 0;
   padding: 20px;
   overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 10px;
   animation-name: fadeIn;
   animation-duration: 1s;
@@ -53,6 +96,42 @@ body {
 .page.bgcolor {
   background-color: var(--background-color);
   box-shadow: 0 0 1px 1px gray;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#social a {
+  margin-right: 5px;
+}
+#social a:last-child {
+  margin-right: 0;
+}
+
+#social svg {
+  height: 25px;
+  width: 25px;
+  fill: #000;
+  transition: fill 0.5s;
+}
+#social svg:hover {
+  fill: var(--main-color);
+}
+
+#copyright {
+  margin-top: 5px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 a {
@@ -135,64 +214,18 @@ ul.cols-6 li {
   width: calc(100% / 6);
 }
 
-#menu {
-  position: absolute;
-  font-size: 20px;
-  top: 5vh;
-  width: calc(100% - 20vh - 40px);
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-}
-
-#menu .links {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  border-right: 1px dashed #000;
-  padding: 0 10px;
-  text-align: center;
-}
-#menu .links:last-child {
-  border-right: none;
-}
-
-#menu a,
-#menu span {
-  color: #000;
-  text-decoration: none;
-  transition: color 0.5s;
-  text-transform: uppercase;
-  padding: 0 5px;
-}
-#menu span {
-  font-size: 70%;
-}
-#menu a {
-  font-weight: bold;
-}
-#menu a:hover,
-#menu .active {
-  color: var(--main-color);
-}
-
-#menu-open,
-#menu-close {
-  display: none;
-}
-
 @media(max-width: 500px) {
   #root {
-    height: 90vh;
-    width: calc(100% - 5vh);
-    padding: 6vh 2.5vh 4vh 2.5vh;
+    position: relative;
+    height: 93vh;
+    width: calc(100% - 10vw);
+    padding: 7vh 5vw 0 5vw;
   }
 
   #menu-open,
   #menu-close {
     position: fixed;
-    top: 2.5vh;
+    top: 3vh;
     font-size: 30px;
     width: calc(100% - 40px);
     text-align: center;
@@ -206,13 +239,15 @@ ul.cols-6 li {
 
   #menu {
     display: none;
-    position: fixed;
-    height: 90vh;
-    width: calc(100% - 5vh - 40px);
-    top: 6vh;
+    position: absolute;
+    height: calc(89vh + 3px - 40px);
+    width: calc(100% - 5vw - 20px);
+    padding: 20px 0;
+    top: calc(8vh + 2px);
     left: 2.5vh;
     background-color: var(--menu-background-color);
     flex-direction: column;
+    justify-content: center;
     z-index: 900;
     border-radius: 10px;
     animation-name: fadeIn;
@@ -235,6 +270,13 @@ ul.cols-6 li {
   #menu .links .submenu {
     display: flex;
     flex-direction: column;
+  }
+
+  #footer {
+    position: absolute;
+    bottom: 4vh;
+    z-index: 900;
+    display: none;
   }
 
   ul.cols-2 li,

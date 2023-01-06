@@ -47,8 +47,11 @@
     color: #000;
 }
 
-#project .description li {
+#project .description p {
     text-align: justify;
+    margin: 0;
+    padding: 0 0 0 10px;
+    text-indent: 10px;
 }
 
 #project #screenshot-pagination {
@@ -115,6 +118,13 @@
     }
 
     #project .description {
-        padding: 0 0 0 20px;
+        padding: 0;
+    }
+
+    #project .description p {
+        text-align: justify;
+        margin: 0;
+        padding: 0;
+        text-indent: 10px;
     }
 }

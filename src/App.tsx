@@ -1,6 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
 import {BrowserRouter as Router, Routes, Route, Navigate, NavLink} from "react-router-dom";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
@@ -11,7 +9,7 @@ import Work from "./Pages/Work";
 import Projects from "./Pages/Projects";
 import Project from "./Pages/Project";
 import {projects} from "./Infos/projects";
-import {IoClose, IoMenu} from "react-icons/io5";
+import {IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoLogoFacebook, IoMenu, IoClose} from "react-icons/io5";
 
 function App() {
     const openMenu = () => {
@@ -22,6 +20,8 @@ function App() {
             document.getElementById("menu-close").style.display = "block";
             // @ts-ignore
             document.getElementById("menu").style.display = "flex";
+            // @ts-ignore
+            document.getElementById("footer").style.display = "flex";
         }
     }
 
@@ -33,23 +33,14 @@ function App() {
             document.getElementById("menu-close").style.display = "none";
             // @ts-ignore
             document.getElementById("menu").style.display = "none";
+            // @ts-ignore
+            document.getElementById("footer").style.display = "none";
         }
     }
 
   return (
       <Router basename={process.env.PUBLIC_URL}>
           <div className="App">
-              <Routes>
-                  <Route path={internalUrls.home()} element={<Home />} />
-                  <Route path={internalUrls.profile()} element={<Profile />} />
-                  <Route path={internalUrls.skills()} element={<Skills />} />
-                  <Route path={internalUrls.work()} element={<Work />} />
-                  <Route path={internalUrls.projects()} element={<Projects />} />
-                  {
-                      projects.map(project => <Route path={project.details} element={<Project codename={project.codename} />} />)
-                  }
-                  <Route path="*" element={<Navigate to={internalUrls.home()} />} />
-              </Routes>
               <div id="menu-open" onClick={openMenu}><IoMenu /></div>
               <div id="menu-close" onClick={closeMenu}><IoClose /></div>
               <div id="menu">
@@ -74,6 +65,26 @@ function App() {
                           </div>
                       })
                   }
+              </div>
+              <Routes>
+                  <Route path={internalUrls.home()} element={<Home />} />
+                  <Route path={internalUrls.profile()} element={<Profile />} />
+                  <Route path={internalUrls.skills()} element={<Skills />} />
+                  <Route path={internalUrls.work()} element={<Work />} />
+                  <Route path={internalUrls.projects()} element={<Projects />} />
+                  {
+                      projects.map(project => <Route path={project.details} element={<Project codename={project.codename} />} />)
+                  }
+                  <Route path="*" element={<Navigate to={internalUrls.home()} />} />
+              </Routes>
+              <div id="footer">
+                  <div id="social">
+                      <a href={"https://www.linkedin.com/in/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoLinkedin /></a>
+                      <a href={"https://www.instagram.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoInstagram /></a>
+                      <a href={"https://github.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoGithub /></a>
+                      <a href={"https://facebook.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoFacebook /></a>
+                  </div>
+                  <div id="copyright">&copy; {new Date().getFullYear()} Alexandre Correia</div>
               </div>
           </div>
       </Router>

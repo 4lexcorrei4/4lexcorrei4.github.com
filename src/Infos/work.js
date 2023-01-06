@@ -4,7 +4,7 @@ export const work = [
     {
         "company": "Caixa Mágica Software",
         "url": externalUrls.caixaMagicaSoftware(),
-        "logo": "/img/work/caixa_magica_software.jpg",
+        "logo": "/assets/work/caixa_magica_software.jpg",
         "location": "Lisbon, Portugal",
         "positions": [
             {
@@ -14,7 +14,7 @@ export const work = [
                     "end": undefined
                 },
                 "description": [
-
+                    `Web development of a platform, Digitarq (<a href=\"${externalUrls.projectDigitarq()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectDigitarq()}</a>, replacing <a href=\"${externalUrls.projectDigitarqOld()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectDigitarqOld()}</a>), to efficiently search through the hundreds of thousands of documents the Portuguese Government archives, using a front-end with Next.js, a back-end with Node.js and database management with Python, Neo4J and Elasticsearch.`
                 ]
             }
         ]
@@ -22,7 +22,7 @@ export const work = [
     {
         "company": "Happy Code Portugal",
         "url": externalUrls.happyCodePortugal(),
-        "logo": "/img/work/happy_code.jpg",
+        "logo": "/assets/work/happy_code.jpg",
         "location": "Lisbon, Portugal",
         "positions": [
             {
@@ -32,7 +32,7 @@ export const work = [
                     "end": Date.parse("2022-07")
                 },
                 "description": [
-                    "Development and maintenance of the company's main website, https://www.happycode.pt, using WordPress."
+                    `Development and maintenance of the company's main website, <a href=\"${externalUrls.projectHappyCode()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectHappyCode()}</a>, using WordPress.`
                 ]
             },{
                 "role": "Content Developer",
@@ -59,7 +59,7 @@ export const work = [
     {
         "company": "Betacode",
         "url": externalUrls.betacode(),
-        "logo": "/img/work/betacode.jpg",
+        "logo": "/assets/work/betacode.jpg",
         "location": "Setúbal, Portugal",
         "positions": [
             {
@@ -69,8 +69,7 @@ export const work = [
                     "end": Date.parse("2020-07")
                 },
                 "description": [
-                    "Full stack development of a content management platform, WordBucket (https://word-bucket.com).",
-                    "Development of a back-end with Python, a front-end with React, a command line interface with Node.js and database management using SQLite."
+                    `Full stack development of a content management platform, WordBucket (<a href=\"${externalUrls.projectWordbucket()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectWordbucket()}</a>), using a back-end with Python, a front-end with React, a command line interface with Node.js and database management using SQLite.`
                 ]
             }
         ]
@@ -78,7 +77,7 @@ export const work = [
     {
         "company": "Forall Phones",
         "url": externalUrls.forallPhones(),
-        "logo": "/img/work/forall_phones.jpg",
+        "logo": "/assets/work/forall_phones.jpg",
         "location": "Lisbon, Portugal",
         "positions": [
             {
@@ -98,7 +97,7 @@ export const work = [
                     "end": Date.parse("2018-06")
                 },
                 "description": [
-                    "Development of the company’s community/ambassador website, Forall Family (https://www.forallfamily.com)."
+                    `Development of the company’s community/ambassador website, Forall Family (<a href=\"${externalUrls.projectForallFamily()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectForallFamily()}</a>), using WordPress.`
                 ]
             }
         ]

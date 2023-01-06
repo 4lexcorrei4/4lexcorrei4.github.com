@@ -62,8 +62,14 @@
 
 #work .positions .description {
     margin: 0;
-    padding: 0 0 0 20px;
+    padding: 0;
     text-align: justify;
+}
+
+#work .positions .description p {
+    margin: 0;
+    padding: 0 0 0 10px;
+    text-indent: 10px;
 }
 
 @media(max-width: 500px) {
@@ -102,10 +108,9 @@
         flex-direction: column;
     }
 
-    #work .positions li {
-        margin-bottom: 10px;
-    }
-    #work .positions li:last-child {
-        margin-bottom: 0;
+    #work .positions .description p {
+        margin: 0;
+        padding: 0;
+        text-indent: 10px;
     }
 }
