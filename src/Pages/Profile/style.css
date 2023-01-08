@@ -1,12 +1,18 @@
-#profile #profile-picture {
+#profile #picture {
     display: block;
     height: 200px;
     border-radius: 50%;
     margin: 0 auto;
 }
 
-#profile p {
+#profile #description {
+    margin: 40px 0 0 0;
+}
+
+#profile #description p {
     text-align: justify;
+    text-indent: 10px;
+    margin: 5px 0 0 0;
 }
 
 #profile ul {
