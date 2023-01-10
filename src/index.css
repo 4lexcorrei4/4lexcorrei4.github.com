@@ -226,15 +226,24 @@ ul.cols-6 li {
   #menu-close {
     position: fixed;
     top: 3vh;
+    right: 5vw;
+    height: 30px;
     font-size: 30px;
-    width: calc(100% - 40px);
+    padding: 5px;
     text-align: center;
     animation-name: fadeIn;
-    animation-duration: 1s;
+    animation-duration: .5s;
+    background-color: var(--menu-background-color);
+    border-radius: 10px;
+    transition: all .2s;
   }
 
   #menu-open {
     display: block;
+  }
+
+  #menu-close {
+    border-radius: 10px 10px 0 0;
   }
 
   #menu {
@@ -249,7 +258,7 @@ ul.cols-6 li {
     flex-direction: column;
     justify-content: center;
     z-index: 900;
-    border-radius: 10px;
+    border-radius: 10px 0 10px 10px;
     animation-name: fadeIn;
     animation-duration: 0.5s;
   }
