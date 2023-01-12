@@ -9,7 +9,7 @@ import Work from "./Pages/Work";
 import Projects from "./Pages/Projects";
 import Project from "./Pages/Project";
 import {projects} from "./Infos/projects";
-import {IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoLogoFacebook, IoMenu, IoClose} from "react-icons/io5";
+import {IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoMenu, IoClose} from "react-icons/io5";
 
 function App() {
     const openMenu = () => {
@@ -82,7 +82,6 @@ function App() {
                       <a href={"https://www.linkedin.com/in/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoLinkedin /></a>
                       <a href={"https://www.instagram.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoInstagram /></a>
                       <a href={"https://github.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoGithub /></a>
-                      <a href={"https://facebook.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoFacebook /></a>
                   </div>
                   <div id="copyright">&copy; {new Date().getFullYear()} Alexandre Correia</div>
               </div>
