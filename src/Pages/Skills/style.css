@@ -1,3 +1,118 @@
+#skills .carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 0 20px 0;
+}
+
+#skills .carousel li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 40px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+    padding: 2px 17px 2px 12px;
+    gap: 10px;
+    height: 40px;
+    width: fit-content;
+    transition: all .2s;
+    cursor: default;
+}
+#skills .carousel li:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+#skills img {
+    height: 30px;
+    width: 30px;
+    display: block;
+    object-fit: cover;
+}
+
+#skills p {
+    margin: 0;
+}
+
+/*#skills .carousel {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    padding: 10px 0;
+    margin: 10px 0 20px 0;
+}
+
+#skills .carousel ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: fit-content;
+    gap: 60px;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+#skills .carousel ul li {
+    list-style: none;
+    text-align: center;
+}
+
+#skills img {
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: 0 0 10px 0;
+    object-fit: cover;
+}
+
+#skills p {
+    margin: 0;
+    width: 100px;
+}*/
+
+#skills span {
+     font-weight: bold;
+     font-size: 25px;
+     display: block;
+     text-transform: uppercase;
+}
+
+#skills .cols {
+    padding: 0;
+    margin: 0;
+}
+
+#skills .cols li {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0 0 0;
+    display: inline-block;
+}
+
+@media(max-width: 500px) {
+    #skills .carousel {
+        gap: 10px;
+    }
+
+    #skills .carousel li {
+        width: 100%;
+    }
+
+    #skills .cols:last-child li {
+        width: 100%;
+    }
+
+    #skills .cols:last-child span {
+        font-size: 15px;
+    }
+}
+
+/*
 #skills ul {
     padding: 0;
     margin: 0;
@@ -33,4 +148,4 @@
     #skills ul:last-child span {
         font-size: 15px;
     }
-}
+}*/
