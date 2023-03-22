@@ -17,10 +17,11 @@ const Profile = () => {
             <li><img src="/assets/interests/distributed_systems.svg" />Distributed Systems</li>
         </ul>
         <h2>Hobbies</h2>
-        <ul className="cols-3">
+        <ul className="cols-4">
             <li><img src="/assets/hobbies/hiking.svg" />Hiking</li>
             <li><img src="/assets/hobbies/sailing.svg" />Sailing</li>
             <li><img src="/assets/hobbies/music.svg" />Music</li>
+            <li><img src="/assets/hobbies/photography.svg" />Photography</li>
         </ul>
     </div>
 };
