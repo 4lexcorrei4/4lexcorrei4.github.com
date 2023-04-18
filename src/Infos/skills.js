@@ -50,10 +50,6 @@ export const technicalSkills = [
                 "name": "Matplotlib",
             },
             {
-                "logo": "/assets/skills/flutter.svg",
-                "name": "Flutter",
-            },
-            {
                 "logo": "/assets/skills/wordpress.svg",
                 "name": "WordPress",
             },
