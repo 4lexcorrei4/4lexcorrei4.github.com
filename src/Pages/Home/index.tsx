@@ -5,7 +5,7 @@ import {IoLogoFacebook, IoLogoGithub, IoLogoInstagram, IoLogoLinkedin} from "rea
 const Home = () => {
     return <div id="home" className="page">
         <div id="name">Alexandre Correia</div>
-        <div id="about">Life is better with joy &#128515;</div>
+        <div id="about">Living with a smile &#128515;</div>
     </div>
 };
 
