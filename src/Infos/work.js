@@ -14,7 +14,8 @@ export const work = [
                     "end": undefined
                 },
                 "description": [
-                    `Web development of a platform, Digitarq (<a href=\"${externalUrls.projectDigitarq()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectDigitarq()}</a>, replacing <a href=\"${externalUrls.projectDigitarqOld()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectDigitarqOld()}</a>), to efficiently search through the hundreds of thousands of documents the Portuguese Government archives, using a front-end with React, a back-end with Node.js and database management with Python, Neo4J and Elasticsearch.`
+                    `Web development of a platform, Digitarq (<a href=\"${externalUrls.projectDigitarq()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectDigitarq()}</a>, replacing <a href=\"${externalUrls.projectDigitarqOld()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectDigitarqOld()}</a>), to efficiently search through the hundreds of thousands of documents the Portuguese Government archives, using a front-end with React, a back-end with Node.js and database management with Python, Neo4J and Elasticsearch.`,
+                    'Technical interviews for choosing summer internship candidates.'
                 ]
             }
         ]
