@@ -23,6 +23,5 @@ export const externalUrls = {
     projectCLIPCadeiras: () => "https://clipcadeiras.bitsys.tech",
     projectSimuladorHorarios: () => "https://horarios.bitsys.tech",
     projectThesis: () => "https://ifetch-chatbot.github.io",
-    projectDigitarq: () => "https://qlddigitarq.arquivos.pt",
-    projectDigitarqOld: () => "https://digitarq.arquivos.pt"
+    projectDigitarq: () => "https://digitarq.arquivos.pt"
 };
