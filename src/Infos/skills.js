@@ -99,33 +99,8 @@ export const technicalSkills = [
                 "name": "TypeScript",
             },
             {
-                "logo": "/assets/skills/scrapy.svg",
-                "name": "Scrapy",
-            },
-            {
                 "logo": "/assets/skills/spring.svg",
                 "name": "Spring",
-            },
-        ],
-    },
-    {
-        "type": "Machine Learning",
-        "skills": [
-            {
-                "logo": "/assets/skills/pytorch.svg",
-                "name": "PyTorch",
-            },
-            {
-                "logo": "/assets/skills/keras.png",
-                "name": "Keras",
-            },
-            {
-                "logo": "/assets/skills/scikit_learn.png",
-                "name": "Scikit-learn",
-            },
-            {
-                "logo": "/assets/skills/tensorflow.svg",
-                "name": "TensorFlow",
             },
         ],
     },
@@ -148,6 +123,10 @@ export const technicalSkills = [
             {
                 "logo": "/assets/skills/mysql.svg",
                 "name": "MySQL",
+            },
+            {
+                "logo": "/assets/skills/postgresql.svg",
+                "name": "PostgreSQL",
             },
             {
                 "logo": "/assets/skills/firebase.svg",
@@ -177,6 +156,27 @@ export const technicalSkills = [
             {
                 "logo": "/assets/skills/kubernetes.svg",
                 "name": "Kubernetes",
+            },
+        ],
+    },
+    {
+        "type": "Machine Learning",
+        "skills": [
+            {
+                "logo": "/assets/skills/pytorch.svg",
+                "name": "PyTorch",
+            },
+            {
+                "logo": "/assets/skills/keras.png",
+                "name": "Keras",
+            },
+            {
+                "logo": "/assets/skills/scikit_learn.png",
+                "name": "Scikit-learn",
+            },
+            {
+                "logo": "/assets/skills/tensorflow.svg",
+                "name": "TensorFlow",
             },
         ],
     },
