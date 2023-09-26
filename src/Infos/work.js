@@ -4,7 +4,7 @@ export const work = [
     {
         "company": "Caixa Mágica Software",
         "url": externalUrls.caixaMagicaSoftware(),
-        "logo": "/assets/work/caixa_magica_software.jpg",
+        "logo": "/assets/work/caixa_magica_software.jpeg",
         "location": "Lisbon, Portugal",
         "positions": [
             {
@@ -23,7 +23,7 @@ export const work = [
     {
         "company": "Happy Code Portugal",
         "url": externalUrls.happyCodePortugal(),
-        "logo": "/assets/work/happy_code.jpg",
+        "logo": "/assets/work/happy_code.jpeg",
         "location": "Lisbon, Portugal",
         "positions": [
             {
@@ -60,7 +60,7 @@ export const work = [
     {
         "company": "Betacode",
         "url": externalUrls.betacode(),
-        "logo": "/assets/work/betacode.jpg",
+        "logo": "/assets/work/betacode.jpeg",
         "location": "Setúbal, Portugal",
         "positions": [
             {
