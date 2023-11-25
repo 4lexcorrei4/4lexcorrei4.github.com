@@ -14,8 +14,8 @@ export const work = [
                     "end": undefined
                 },
                 "description": [
-                    `Web development of a platform, Digitarq (<a href=\"${externalUrls.projectDigitarq()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectDigitarq()}</a>), to efficiently search through the hundreds of thousands of documents the Portuguese Government archives, using a front-end with React, a back-end with Node.js and database management with Python, Neo4J and Elasticsearch. My focus has been on the front-end.`,
-                    'Technical interviews for choosing summer internship candidates.'
+                    "Web development using a front-end with React, a back-end with Node.js and database management with Python, Neo4J and Elasticsearch. The project I have been most involved with is Digitarq, where my focus has been on the front-end, which I am responsible for and team coordinator.",
+                    "Responsible for technical interviews for recruiting summer internship candidates."
                 ]
             }
         ]
@@ -33,7 +33,7 @@ export const work = [
                     "end": Date.parse("2022-07")
                 },
                 "description": [
-                    `Development and maintenance of the company's main website, <a href=\"${externalUrls.projectHappyCode()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectHappyCode()}</a>, using WordPress.`
+                    "Development and maintenance of the company's main website, using WordPress."
                 ]
             },{
                 "role": "Content Developer",
@@ -70,7 +70,7 @@ export const work = [
                     "end": Date.parse("2020-07")
                 },
                 "description": [
-                    `Full stack development of a content management platform, WordBucket (<a href=\"${externalUrls.projectWordbucket()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectWordbucket()}</a>), using a back-end with Python, a front-end with React, a command line interface with Node.js and database management using SQLite.`
+                    "Full stack development of a content management platform, WordBucket, using a back-end with Python, a front-end with React, a command line interface with Node.js and database management using SQLite."
                 ]
             }
         ]
@@ -98,7 +98,7 @@ export const work = [
                     "end": Date.parse("2018-06")
                 },
                 "description": [
-                    `Development of the company’s community/ambassador website, Forall Family (<a href=\"${externalUrls.projectForallFamily()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectForallFamily()}</a>), using WordPress.`
+                    "Development of the company’s community/ambassador website, Forall Family, using WordPress."
                 ]
             }
         ]

@@ -12,7 +12,7 @@ export const projects = [
         "url": externalUrls.projectDigitarq(),
         "logo": undefined,
         "description": [
-            `Web development of a platform, Digitarq (<a href=\"${externalUrls.projectDigitarq()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectDigitarq()}</a>), to efficiently search through the hundreds of thousands of documents the Portuguese Government archives, using a front-end with React, a back-end with Node.js and database management with Python, Neo4J and Elasticsearch. My focus has been on the front-end.`
+            "Web development of a platform to efficiently search through the hundreds of thousands of documents the Portuguese Government archives, using a front-end with React, a back-end with Node.js and database management with Python, Neo4J and Elasticsearch. My focus has been on the front-end."
         ]
     },
     {
@@ -142,7 +142,7 @@ export const projects = [
         "url": externalUrls.projectWordbucket(),
         "logo": "/assets/projects/wordbucket/logo.ico",
         "description": [
-            `Full stack development of a content management platform, WordBucket (<a href=\"${externalUrls.projectWordbucket()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectWordbucket()}</a>), using a back-end with Python, a front-end with React, a command line interface with Node.js and database management using SQLite.`
+            "Full stack development of a content management platform, using a back-end with Python, a front-end with React, a command line interface with Node.js and database management using SQLite."
         ],
         "screenshots": [
             "/assets/projects/wordbucket/screenshot1.png",
@@ -161,7 +161,7 @@ export const projects = [
         "url": externalUrls.projectForallFamily(),
         "logo": "/assets/projects/forall-family/logo.ico",
         "description": [
-            `Development of the company’s community/ambassador website, Forall Family (<a href=\"${externalUrls.projectForallFamily()}\" target=\"_blank\" rel=\"noopener noreferrer\">${externalUrls.projectForallFamily()}</a>), using WordPress.`
+            "Development of the company’s community/ambassador website, using WordPress."
         ],
         "screenshots": [
             "/assets/projects/forall-family/screenshot1.png"
