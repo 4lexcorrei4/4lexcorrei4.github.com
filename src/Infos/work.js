@@ -14,7 +14,9 @@ export const work = [
                     "end": undefined
                 },
                 "description": [
-                    "Web development using a front-end with React, a back-end with Node.js and database management with Python, Neo4J and Elasticsearch. The project I have been most involved with is Digitarq, where my focus has been on the front-end, which I am responsible for and team coordinator.",
+                    "Web development using front-end with React and AngularJS, back-end with Node.js, Python and Django, and database management with Python, Neo4J and Elasticsearch. The projects I have been most involved with are:",
+                    "- Digitarq: where my focus has been on the front-end, which I am responsible for and team coordinator;",
+                    "- CAP: where my focus has been on supporting the whole compatibility of the content management platform with the new content access point version.",
                     "Responsible for technical interviews for recruiting summer internship candidates."
                 ]
             }
