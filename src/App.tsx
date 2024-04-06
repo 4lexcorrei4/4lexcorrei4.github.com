@@ -81,7 +81,6 @@ function App() {
                   <div id="social">
                       <a href={"https://www.linkedin.com/in/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoLinkedin /></a>
                       <a href={"https://www.instagram.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoInstagram /></a>
-                      <a href={"https://github.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoGithub /></a>
                   </div>
                   <div id="copyright">&copy; {new Date().getFullYear()} Alexandre Correia</div>
               </div>
