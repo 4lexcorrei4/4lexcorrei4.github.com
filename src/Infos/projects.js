@@ -2,6 +2,20 @@ import {externalUrls, internalUrls} from "./urls";
 
 export const projects = [
     {
+        "name": "CAP",
+        "codename": "cap",
+        "details": internalUrls.project("cap"),
+        "dates": {
+            "start": Date.parse("2024-04"),
+            "end": undefined
+        },
+        "url": undefined,
+        "logo": undefined,
+        "description": [
+            "Web development support and integration of a content management platform into a content access point in order to understand the effective reach of technology in Kenya's education system and correlate this data with the students academic performance, using a front-end with AngularJS and a back-end with Python and Django. My focus has been on supporting the whole compatibility of the content management platform with JPIK's new content access point version."
+        ]
+    },
+    {
         "name": "Digitarq",
         "codename": "digitarq",
         "details": internalUrls.project("digitarq"),
