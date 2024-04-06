@@ -31,8 +31,8 @@ const Skills = () => {
         </ul>
         <h3>Languages</h3>
         <ul className="cols cols-2">
-            <li><span>Portuguese</span>Native Language</li>
-            <li><span>English</span>First Certificate in English</li>
+            <li><span>Portuguese</span>Native proficiency</li>
+            <li><span>English</span>Professional working proficiency</li>
         </ul>
     </div>
 };
