@@ -19,9 +19,9 @@ const Profile = () => {
         <h2>Hobbies</h2>
         <ul className="cols-4">
             <li><img src="/assets/hobbies/hiking.svg" />Hiking</li>
-            <li><img src="/assets/hobbies/sailing.svg" />Sailing</li>
             <li><img src="/assets/hobbies/photography.svg" />Photography</li>
             <li><img src="/assets/hobbies/music.svg" />Music</li>
+            <li><img src="/assets/hobbies/sailing.svg" />Sailing</li>
         </ul>
     </div>
 };
