@@ -6,8 +6,7 @@ const Profile = () => {
     return <div id="profile" className="page bgcolor">
         <img id="picture" src="/assets/profile.png" />
         <div id="description">
-            <p>I am a Software Engineer at <a href={externalUrls.currentCompany()} target="_blank" rel="noopener noreferrer">Caixa Mágica Software</a>, where I am doing web development.</p>
-            <p>I have always been very passionate about computers and lately the area that I have been focusing the most is the development of Web Applications, which includes (distributed) back-end, database management, information extraction (e.g. through crawling) and front-end. Also, I enjoy incorporating machine learning in the projects I develop, whenever needed.</p>
+            <p>I have always been very passionate about computers and I am a Software Engineer focused in the development of web applications, which includes back-end, database management and front-end. Also, I enjoy incorporating machine learning in the projects I develop, whenever needed.</p>
         </div>
         <h2>Interests</h2>
         <ul className="cols-4">
