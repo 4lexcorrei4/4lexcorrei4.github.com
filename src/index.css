@@ -261,6 +261,7 @@ ul.cols-6 li {
     border-radius: 10px 0 10px 10px;
     animation-name: fadeIn;
     animation-duration: 0.5s;
+    box-shadow: 0 0 1px 1px gray;
   }
 
   #menu .links {
