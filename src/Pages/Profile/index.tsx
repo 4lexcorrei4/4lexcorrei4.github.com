@@ -4,9 +4,9 @@ import {externalUrls, internalUrls} from "../../Infos/urls";
 
 const Profile = () => {
     return <div id="profile" className="page bgcolor">
-        <img id="picture" src="/assets/profile.png" />
-        <div id="description">
-            <p>I have always been very passionate about computers and I am a Software Engineer focused in the development of web applications, which includes back-end, database management and front-end. Also, I enjoy incorporating machine learning in the projects I develop, whenever needed.</p>
+        <div id="about">
+            <img id="picture" src="/assets/profile.png" />
+            <p id="description">I have always been very passionate about computers and I am a Software Engineer focused in the development of web applications, which includes back-end, database management and front-end. Also, I enjoy incorporating machine learning in the projects I develop, whenever needed.</p>
         </div>
         <h2>Interests</h2>
         <ul className="cols-4">

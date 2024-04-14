@@ -1,3 +1,12 @@
+#profile #about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 70%;
+    margin: 0 auto;
+}
+
 #profile #picture {
     display: block;
     height: 200px;
@@ -6,13 +15,12 @@
 }
 
 #profile #description {
-    margin: 40px 0 0 0;
-}
-
-#profile #description p {
     text-align: justify;
     text-indent: 10px;
-    margin: 5px 0 0 0;
+}
+
+#profile h2 {
+    margin-top: 40px;
 }
 
 #profile ul {
@@ -35,8 +43,13 @@
 }
 
 @media(max-width: 500px) {
-    #profile #profile-picture {
+    #profile #about {
+        flex-direction: column;
         width: 100%;
-        height: auto;
+        gap: 10px;
+    }
+    
+    #profile #description p {
+        margin: 5px 0 0 0;
     }
 }
