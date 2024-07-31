@@ -11,7 +11,7 @@ export const work = [
                 "role": "Software Engineer",
                 "dates": {
                     "start": Date.parse("2022-10"),
-                    "end": undefined
+                    "end": Date.parse("2024-08")
                 },
                 "description": [
                     "Web development using front-end with React and AngularJS, back-end with Node.js, Python and Django, and database management with Python, Neo4J and Elasticsearch. The projects I have been most involved with are:",
