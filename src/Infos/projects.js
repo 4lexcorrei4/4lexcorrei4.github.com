@@ -2,31 +2,31 @@ import {externalUrls, internalUrls} from "./urls";
 
 export const projects = [
     {
-        "name": "CAP",
-        "codename": "cap",
-        "details": internalUrls.project("cap"),
-        "dates": {
-            "start": Date.parse("2024-04"),
-            "end": undefined
-        },
-        "url": undefined,
-        "logo": undefined,
-        "description": [
-            "Web development support and integration of a content management platform into a content access point in order to understand the effective reach of technology in Kenya's education system and correlate this data with the students academic performance, using a front-end with AngularJS and a back-end with Python and Django. My focus has been on supporting the whole compatibility of the content management platform with JPIK's new content access point version."
-        ]
-    },
-    {
         "name": "Digitarq",
         "codename": "digitarq",
         "details": internalUrls.project("digitarq"),
         "dates": {
             "start": Date.parse("2022-10"),
-            "end": undefined
+            "end": Date.parse("2024-08")
         },
         "url": externalUrls.projectDigitarq(),
         "logo": undefined,
         "description": [
             "Web development of a platform to efficiently search through the hundreds of thousands of documents the Portuguese Government archives, using a front-end with React, a back-end with Node.js and database management with Python, Neo4J and Elasticsearch. My focus has been on the front-end."
+        ]
+    },
+    {
+        "name": "CAP",
+        "codename": "cap",
+        "details": internalUrls.project("cap"),
+        "dates": {
+            "start": Date.parse("2024-04"),
+            "end": Date.parse("2024-05")
+        },
+        "url": undefined,
+        "logo": undefined,
+        "description": [
+            "Web development support and integration of a content management platform into a content access point in order to understand the effective reach of technology in Kenya's education system and correlate this data with the students academic performance, using a front-end with AngularJS and a back-end with Python and Django. My focus has been on supporting the whole compatibility of the content management platform with JPIK's new content access point version."
         ]
     },
     {
