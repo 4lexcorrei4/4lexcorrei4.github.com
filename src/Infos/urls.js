@@ -8,9 +8,8 @@ export const internalUrls = {
 };
 
 export const externalUrls = {
-    currentCompany: () => externalUrls.caixaMagicaSoftware(),
-
     fctNova: () => "https://www.fct.unl.pt",
+    skyPortugal: () => "https://www.skygroup.sky",
     caixaMagicaSoftware: () => "https://www.caixamagica.pt",
     happyCodePortugal: () => "https://www.happycode.pt",
     betacode: () => "https://www.betacode.tech",

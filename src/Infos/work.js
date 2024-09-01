@@ -2,6 +2,22 @@ import {externalUrls} from "./urls";
 
 export const work = [
     {
+        "company": "Sky Portugal",
+        "url": externalUrls.skyPortugal(),
+        "logo": "/assets/work/sky.png",
+        "location": "Lisbon, Portugal",
+        "positions": [
+            {
+                "role": "Software Engineer",
+                "dates": {
+                    "start": Date.parse("2024-09"),
+                    "end": undefined
+                },
+                "description": []
+            }
+        ]
+    },
+    {
         "company": "Caixa Mágica Software",
         "url": externalUrls.caixaMagicaSoftware(),
         "logo": "/assets/work/caixa_magica_software.jpeg",

@@ -12,7 +12,10 @@ const Work = () => {
             work.map(company => {
                 return <>
                 <div className="company">
-                    <img src={company.logo}/>
+                    <div
+                        className="logo"
+                        style={{ backgroundImage: `url(${company.logo})` }}
+                    />
                     <div>
                         <a href={company.url} target="_blank" rel="noopener noreferrer" className="name">{company.company}</a>
                         <p className="location"><IoLocationSharp />{company.location}</p>

@@ -2,8 +2,12 @@
     display: flex;
 }
 
-#work .company img {
+#work .company .logo {
     height: 70px;
+    width: 70px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 10px;
     margin-right: 20px;
 }
@@ -85,9 +89,7 @@
         border-top: none;
     }
 
-    #work .company img {
-        width: 70px;
-        height: auto;
+    #work .company .logo {
         margin: 0 auto;
     }
 
