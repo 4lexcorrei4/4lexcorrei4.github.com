@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route, Navigate, NavLink} from "react-router-dom";
 import Home from "./Pages/Home";
-import Profile from "./Pages/Profile";
+import About from "./Pages/About";
 import {internalUrls} from "./Infos/urls";
 import {pages} from "./Infos/pages";
 import Skills from "./Pages/Skills";
@@ -10,6 +10,7 @@ import Projects from "./Pages/Projects";
 import Project from "./Pages/Project";
 import {projects} from "./Infos/projects";
 import {IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoMenu, IoClose} from "react-icons/io5";
+import Photography from './Pages/Photography';
 
 function App() {
     const openMenu = () => {
@@ -68,12 +69,13 @@ function App() {
               </div>
               <Routes>
                   <Route path={internalUrls.home()} element={<Home />} />
-                  <Route path={internalUrls.profile()} element={<Profile />} />
+                  <Route path={internalUrls.about()} element={<About />} />
                   <Route path={internalUrls.skills()} element={<Skills />} />
-                  <Route path={internalUrls.work()} element={<Work />} />
-                  <Route path={internalUrls.projects()} element={<Projects />} />
+                  <Route path={internalUrls.workJobs()} element={<Work />} />
+                  <Route path={internalUrls.workProjects()} element={<Projects />} />
+                  <Route path={internalUrls.photography()} element={<Photography />} />
                   {
-                      projects.map(project => <Route path={project.details} element={<Project codename={project.codename} />} />)
+                      projects.map(project => <Route path={internalUrls.workProject(project.codename)} element={<Project codename={project.codename} />} />)
                   }
                   <Route path="*" element={<Navigate to={internalUrls.home()} />} />
               </Routes>

@@ -1,4 +1,4 @@
-import {internalUrls} from "./urls";
+import { internalUrls } from "./urls";
 
 export const pages = [
     {
@@ -6,31 +6,37 @@ export const pages = [
         "link": internalUrls.home()
     },
     {
-        "name": "About Me",
+        "name": "Me",
         "link": undefined,
         "subpages": [
             {
-                "name": "Profile",
-                "link": internalUrls.profile()
+                "name": "About",
+                "link": internalUrls.about(),
+            },
+        ],
+    },
+    {
+        "name": "Work",
+        "link": undefined,
+        "subpages": [
+            {
+                "name": "Jobs",
+                "link": internalUrls.workJobs()
             },
             {
-                "name": "Skills",
-                "link": internalUrls.skills()
+                "name": "Projects",
+                "link": internalUrls.workProjects()
             }
         ]
     },
     {
-        "name": "Experience",
+        "name": "Hobbies",
         "link": undefined,
         "subpages": [
             {
-                "name": "Work",
-                "link": internalUrls.work()
+                "name": "Photography",
+                "link": internalUrls.photography(),
             },
-            {
-                "name": "Projects",
-                "link": internalUrls.projects()
-            }
-        ]
-    }
+        ],
+    },
 ];

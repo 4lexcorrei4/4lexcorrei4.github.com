@@ -3,6 +3,7 @@ import "./style.css"
 import {NavLink} from "react-router-dom";
 import {projects} from "../../Infos/projects";
 import {IoCalendarClear} from "react-icons/io5";
+import { internalUrls } from "../../Infos/urls";
 
 const Projects = () => {
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -10,7 +11,7 @@ const Projects = () => {
     return <div id="projects" className="page bgcolor">
         {
             projects.map(project => {
-                return <NavLink to={project.details}>
+                return <NavLink to={internalUrls.workProject(project.codename)}>
                     <div>
                         <img src={project.logo || "/assets/white_square.jpg"}/>
                         <div>

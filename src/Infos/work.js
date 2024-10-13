@@ -1,4 +1,4 @@
-import {externalUrls} from "./urls";
+import {externalUrls, internalUrls} from "./urls";
 
 export const work = [
     {
@@ -31,8 +31,8 @@ export const work = [
                 },
                 "description": [
                     "Web development using front-end with React and AngularJS, back-end with Node.js, Python and Django, and database management with Python, Neo4J and Elasticsearch. The projects I have been most involved with are:",
-                    "- Digitarq: where my focus has been on the front-end, which I am responsible for and team coordinator;",
-                    "- CAP: where my focus has been on supporting the whole compatibility of the content management platform with the new content access point version.",
+                    "- <a href='" + internalUrls.workProject('digitarq') + "'>Digitarq</a>: where my focus has been on the front-end, which I am responsible for and team coordinator;",
+                    "- <a href='" + internalUrls.workProject('cap') + "'>CAP</a>: where my focus has been on supporting the whole compatibility of the content management platform with the new content access point version.",
                     "Responsible for technical interviews for recruiting summer internship candidates."
                 ]
             }
@@ -88,7 +88,7 @@ export const work = [
                     "end": Date.parse("2020-07")
                 },
                 "description": [
-                    "Full stack development of a content management platform, WordBucket, using a back-end with Python, a front-end with React, a command line interface with Node.js and database management using SQLite."
+                    "Full stack development of a content management platform, <a href='" + internalUrls.workProject('wordbucket') + "'>WordBucket</a>, using a back-end with Python, a front-end with React, a command line interface with Node.js and database management using SQLite."
                 ]
             }
         ]
@@ -116,7 +116,7 @@ export const work = [
                     "end": Date.parse("2018-06")
                 },
                 "description": [
-                    "Development of the company’s community/ambassador website, Forall Family, using WordPress."
+                    "Development of the company’s community/ambassador website, <a href='" + internalUrls.workProject('forall-family') + "'>Forall Family</a>, using WordPress."
                 ]
             }
         ]

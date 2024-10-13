@@ -21,7 +21,7 @@ const Project = ({codename}) => {
     )
 
     return <div id="project" className="page bgcolor">
-        <NavLink to={internalUrls.projects()} id="back">&#8592;&nbsp;Projects</NavLink>
+        <NavLink to={internalUrls.workProjects()} id="back">&#8592;&nbsp;Projects</NavLink>
         <div className="header">
             <img src={project.logo || "/assets/white_square.jpg"}/>
             <div>
