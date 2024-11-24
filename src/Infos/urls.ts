@@ -1,10 +1,10 @@
 export const internalUrls = {
     home: () => "/",
-    profile: () => "/profile",
+    about: () => "/about",
     skills: () => "/skills",
-    work: () => "/work",
+    jobs: () => "/jobs",
     projects: () => "/projects",
-    project: (codename) => `${internalUrls.projects()}/${codename}`
+    project: (codename: string) => `${internalUrls.projects()}#${codename}`,
 };
 
 export const externalUrls = {
