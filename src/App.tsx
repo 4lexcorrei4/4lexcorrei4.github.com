@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route, Navigate, NavLink} from "react-router-dom";
 import Home from "./Pages/Home";
-import Profile from "./Pages/Profile";
+import About from "./Pages/About";
 import {internalUrls} from "./Infos/urls";
 import {pages} from "./Infos/pages";
 import Skills from "./Pages/Skills";
@@ -68,9 +68,7 @@ function App() {
               </div>
               <Routes>
                   <Route path={internalUrls.home()} element={<Home />} />
-                  <Route path={internalUrls.profile()} element={<Profile />} />
-                  <Route path={internalUrls.skills()} element={<Skills />} />
-                  <Route path={internalUrls.work()} element={<Work />} />
+                  <Route path={internalUrls.about()} element={<About />} />
                   <Route path={internalUrls.projects()} element={<Projects />} />
                   {
                       projects.map(project => <Route path={project.details} element={<Project codename={project.codename} />} />)

@@ -1,0 +1,128 @@
+#profile #about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 0 10px 0;
+}
+
+#profile #picture {
+    display: block;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+#profile #description {
+    text-align: justify;
+    text-indent: 10px;
+}
+
+#profile .languages {
+    display: flex;
+    padding: 0 20%;
+}
+#profile .languages li {
+    box-shadow: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#profile .languages li .short {
+    font-size: 32px;
+    font-family: 'Kalam';
+}
+#profile .languages li .lang-level {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#profile .languages li .level {
+    font-size: 12px;
+    text-align: left;
+}
+
+#profile .carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 20px;
+    padding: 0;
+    margin: 0;
+}
+
+#profile .carousel li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 40px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+    padding: 2px 17px;
+    gap: 10px;
+    height: 30px;
+    width: fit-content;
+    transition: all .2s;
+    cursor: default;
+}
+#profile .carousel li:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+#profile h2 {
+    margin-top: 40px;
+}
+
+#profile ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#profile ul li {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#profile ul li img {
+    display: block;
+    margin: 0 auto;
+    height: 80px;
+    width: 80px;
+}
+
+@media(max-width: 500px) {
+    #profile #about {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    #profile #description p {
+        margin: 5px 0 0 0;
+    }
+
+    #profile .strengths {
+        padding: 10px 0 0 0;
+    }
+
+    #profile .languages {
+        flex-wrap: wrap;
+        padding: 10px 10% 0 10%;
+    }
+
+    #profile .languages li {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    #profile .languages li .short {
+        width: 40px;
+    }
+}
