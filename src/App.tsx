@@ -6,8 +6,6 @@ import {internalUrls} from "./Infos/urls";
 import {pages} from "./Infos/pages";
 import Jobs from "./Pages/Work";
 import Projects from "./Pages/Projects";
-import Project from "./Pages/Project";
-import {projects} from "./Infos/projects";
 import {IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoMenu, IoClose} from "react-icons/io5";
 
 function App() {
@@ -70,9 +68,6 @@ function App() {
                   <Route path={internalUrls.about()} element={<About />} />
                   <Route path={internalUrls.jobs()} element={<Jobs />} />
                   <Route path={internalUrls.projects()} element={<Projects />} />
-                  {
-                      projects.map(project => <Route path={project.details} element={<Project codename={project.codename} />} />)
-                  }
                   <Route path="*" element={<Navigate to={internalUrls.home()} />} />
               </Routes>
               <div id="footer">
