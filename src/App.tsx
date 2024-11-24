@@ -4,8 +4,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import {internalUrls} from "./Infos/urls";
 import {pages} from "./Infos/pages";
-import Skills from "./Pages/Skills";
-import Work from "./Pages/Work";
+import Jobs from "./Pages/Work";
 import Projects from "./Pages/Projects";
 import Project from "./Pages/Project";
 import {projects} from "./Infos/projects";
@@ -69,6 +68,7 @@ function App() {
               <Routes>
                   <Route path={internalUrls.home()} element={<Home />} />
                   <Route path={internalUrls.about()} element={<About />} />
+                  <Route path={internalUrls.jobs()} element={<Jobs />} />
                   <Route path={internalUrls.projects()} element={<Projects />} />
                   {
                       projects.map(project => <Route path={project.details} element={<Project codename={project.codename} />} />)
