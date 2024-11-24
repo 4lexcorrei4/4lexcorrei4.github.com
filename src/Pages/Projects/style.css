@@ -1,10 +1,342 @@
-#projects {
+.projects {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.projects .filters ul {
+    padding: .5px;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.projects .filters li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid rgba(0, 0, 0, .2); */
+    border-radius: 40px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
+    padding: 0 17px;
+    gap: 4px;
+    height: 20px;
+    width: fit-content;
+    transition: all .2s;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+.projects .filters li:hover,
+.projects .filters li.selected {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.projects .filters li span {
+    font-size: 12px;
+}
+
+.projects .content {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    height: calc(100% - 24px - 10px);
+}
+
+.projects .navigation {
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-shrink: 0;
+    font-size: 18px;
+    overflow-y: auto;
+}
+.projects .navigation li a {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 10px;
+    text-decoration: none;
+    gap: 10px;
+    align-items: center;
+}
+.projects .navigation li:last-child a {
+    border-bottom: none;
+}
+
+.projects .navigation li .logo {
+    height: 28px;
+    width: 28px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.projects .navigation li .categories {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+}
+
+.projects .projects-list {
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+.projects .projects-list li {
+    display: block;
+    min-height: 100%;
+    padding: 10px 0;
+}
+
+.project .header {
+    display: flex;
+    align-items: center;
+}
+
+.project .header .logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.project .header .name {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.project .header div {
+    width: 100%;
+}
+
+.project .header .info {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 80%;
+}
+
+.project .header .info a,
+.project .header .info span {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.project .header .info svg {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    color: #000;
+}
+
+.project .description p {
+    text-align: justify;
+    margin: 0;
+    padding: 0 0 0 10px;
+    text-indent: 10px;
+}
+
+.project .carousel {
+    height: 470px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.project .carousel .img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project .carousel img {
+    max-height: 470px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.project #screenshot-pagination {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.project #screenshot-pagination li {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.project #screenshot-pagination li.active {
+    color: var(--main-color);
+}
+.project #screenshot-pagination li:last-child {
+    margin-right: 0;
+}
+
+.project #screenshot {
+    width: 100%;
+}
+
+#list-open,
+#list-close {
+    display: none;
+    position: absolute;
+    top: -32px;
+    left: 0;
+}
+
+#list-open svg,
+#list-close svg {
+    height: 24px;
+    width: 24px;
+}
+
+@media(max-width: 500px) {
+    .projects .filters {
+        margin-left: 28px;
+        overflow-x: scroll;
+        width: calc(100% - 74px);
+    }
+
+    .projects .filters ul {
+        width: fit-content;
+    }
+
+    #list-open,
+    #list-close {
+        display: block;
+        z-index: 5;
+    }
+
+    .projects .filters li:hover {
+        background-color: unset;
+    }
+
+    .projects .filters li.selected {
+        background-color: rgba(255, 255, 255, .9);
+    }
+
+    .projects .navigation {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--second-menu-background-color);
+        box-shadow: 0 0 1px 1px gray;
+        border-right: none;
+    }
+
+    .project .header {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .project .header .logo {
+        height: 60px;
+        width: 60px;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .project .header div {
+        width: 100%;
+    }
+
+    .project .header .name {
+        text-align: center;
+    }
+
+    .project .header .info {
+        flex-direction: column;
+        margin: 5px 0;
+    }
+
+    .project .header .info a,
+    .project .header .info span {
+        margin-right: 0;
+    }
+
+    .project .header .url {
+        justify-content: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .project .description {
+        padding: 0;
+    }
+
+    .project .description p {
+        text-align: justify;
+        margin: 0;
+        padding: 0;
+        text-indent: 10px;
+    }
+
+    .project .carousel {
+        height: max-content;
+    }
+}
+
+
+
+
+
+
+
+
+.projects .galleries {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.projects .gallery-wrapper {
+    padding: 0;
+}
+
+.projects .gallery {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* .projects {
     display: flex;
     flex-direction: column;
     align-items: stretch;
 }
 
-#projects a {
+.projects a {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,7 +348,7 @@
     margin-bottom: 10px;
     transition: all 0.5s;
 }
-#projects a div {
+.projects a div {
     display: flex;
     align-items: center;
 }
@@ -86,4 +418,4 @@
         margin: 0 auto;
         height: 60px;
     }
-}
+} */

@@ -4,7 +4,7 @@ import {work} from "../../Infos/work";
 import {IoCalendarClear, IoLocationSharp} from "react-icons/io5";
 import parse from "html-react-parser";
 
-const Work = () => {
+const Jobs = () => {
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
     return <div id="work" className="page bgcolor">
@@ -53,4 +53,4 @@ const Work = () => {
     </div>
 };
 
-export default Work;
+export default Jobs;
