@@ -88,7 +88,7 @@ export const projects: Project[] = [
             'web-development',
         ],
         description: [
-            `Development of a web platform to efficiently see, edit and create channels and its contents for <a href=\"${externalUrls.skyPortugal()}\" target=\"_blank\" rel=\"noopener noreferrer\">Sky</a>'s products.`
+            `Development of a web platform to efficiently see, edit and create channels and its contents for <a href=\"${externalUrls.skyPortugal()}\" target=\"_blank\" rel=\"noopener noreferrer\">Sky</a>'s products, using a front-end with React, back-end with Spring and Kotlin, and database management with Couchbase and Kafka.`
         ]
     },
     {
