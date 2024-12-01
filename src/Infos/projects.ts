@@ -99,6 +99,7 @@ export const projects: Project[] = [
             end: Date.parse("2024-08")
         },
         url: externalUrls.projectDigitarq(),
+        logo: "/assets/projects/digitarq/logo.ico",
         categories: [
             'web-development',
         ],
