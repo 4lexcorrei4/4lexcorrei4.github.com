@@ -50,7 +50,7 @@ export const projects: Project[] = [
             'photography',
         ],
         description: [
-            "Hyperlapse of Lisbon's Liberty Avenue statues."
+            "Hyperlapse highlighting the statues of Lisbon's Liberty Avenue, blending their artistic elegance with the vibrant energy of the city's streetscape."
         ],
         screenshots: [
             "/assets/projects/avenue-statues-hyperlapse/screenshot1.png",
