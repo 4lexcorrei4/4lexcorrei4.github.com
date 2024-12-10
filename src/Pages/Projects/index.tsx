@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./style.css"
 import { categories, category, projects } from "../../Infos/projects";
 import { IoCalendarClear, IoGlobeOutline } from "react-icons/io5";
 import { internalUrls } from "../../Infos/urls";
 import { NavHashLink } from "react-router-hash-link";
 import parser from "html-react-parser";
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import Box from "@mui/material/Box";
-import { Button } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import { IoList, IoClose } from "react-icons/io5";
+import { useSearchParams } from "react-router-dom";
 
 const Projects = () => {
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -29,13 +26,14 @@ const Projects = () => {
     
     const isMobile = width <= 500;
 
+    const [searchParams] = useSearchParams();
+    const projectCodename = searchParams.get('p');
     useEffect(() => {
-        const hash = window.location.hash;
-        if (!hash) return;
-        const anchor = document.getElementById(hash.slice(1));
+        if (!projectCodename) return;
+        const anchor = document.getElementById(projectCodename);
         if (!anchor) return;
-        anchor.scrollIntoView();
-    }, []);
+        anchor.scrollIntoView({ behavior: 'smooth' });
+    }, [projectCodename]);
 
     return <div className="projects page bgcolor">
         <div className="filters">
