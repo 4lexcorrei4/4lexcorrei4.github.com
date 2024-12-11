@@ -8,6 +8,7 @@ import parser from "html-react-parser";
 import Carousel from "react-material-ui-carousel";
 import { IoList, IoClose } from "react-icons/io5";
 import { useSearchParams } from "react-router-dom";
+import { CreateHead } from "../../Head/Helper";
 
 const Projects = () => {
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -23,7 +24,7 @@ const Projects = () => {
             window.removeEventListener('resize', handleWindowSizeChange);
         }
     }, []);
-    
+
     const isMobile = width <= 500;
 
     const [searchParams] = useSearchParams();
@@ -35,88 +36,94 @@ const Projects = () => {
         anchor.scrollIntoView({ behavior: 'smooth' });
     }, [projectCodename]);
 
-    return <div className="projects page bgcolor">
-        <div className="filters">
-            <ul>
-                {
-                    (Object.keys(categories) as category[]).map((cat) => <li className={selectedCategory === cat ? 'selected' : ''} onClick={() => setSelectedCategory(selectedCategory === cat ? undefined : cat)}><span>{categories[cat].icon}</span> {categories[cat].label}</li>)
-                }
-            </ul>
-        </div>
-        <div className="content">
-            {!menuIsOpen && <div id="list-open" onClick={() => setMenuIsOpen((currentState) => !currentState)}><IoList /></div>}
-            {menuIsOpen && <div id="list-close" onClick={() => setMenuIsOpen((currentState) => !currentState)}><IoClose /></div>}
-            {
-                menuIsOpen && <ul className="navigation">
+    return <>
+        <CreateHead
+            title={projects.find((p) => p.codename === projectCodename)?.name}
+            description={projects.find((p) => p.codename === projectCodename)?.name}
+            image={projects.find((p) => p.codename === projectCodename)?.logo}
+        />
+        <div className="projects page bgcolor">
+            <div className="filters">
+                <ul>
                     {
-                        shownProjects.map((project) => (
-                            <li>
-                                <NavHashLink
-                                    to={internalUrls.project(project.codename)}
-                                    onClick={() => { if (isMobile) setMenuIsOpen(false) }}
-                                    smooth
-                                >
-                                    <div
-                                        className="logo"
-                                        style={{ backgroundImage: `url(${project.logo ?? "/assets/white_square.jpg"})` }}
-                                    />
-                                    {project.name}
-                                    <span className="categories">{project.categories.filter((cat) => cat !== selectedCategory).map((cat) => categories[cat].icon)}</span>
-                                </NavHashLink>
-                            </li>
-                        ))
+                        (Object.keys(categories) as category[]).map((cat) => <li className={selectedCategory === cat ? 'selected' : ''} onClick={() => setSelectedCategory(selectedCategory === cat ? undefined : cat)}><span>{categories[cat].icon}</span> {categories[cat].label}</li>)
                     }
                 </ul>
-            }
-            <ul className="projects-list">
+            </div>
+            <div className="content">
+                {!menuIsOpen && <div id="list-open" onClick={() => setMenuIsOpen((currentState) => !currentState)}><IoList /></div>}
+                {menuIsOpen && <div id="list-close" onClick={() => setMenuIsOpen((currentState) => !currentState)}><IoClose /></div>}
                 {
-                    shownProjects.map((project) => <li id={project.codename} className="project">
-                        <div className="header">
-                            <div
-                                className="logo"
-                                style={{ backgroundImage: `url(${project.logo ?? "/assets/white_square.jpg"})` }}
-                            />
-                            <div>
-                                <p className="name">{project.name}</p>
-                                <div className="info">
-                                    <span>
-                                        <IoCalendarClear />
-                                        {monthNames[new Date(project.dates.start).getMonth()]} {new Date(project.dates.start).getFullYear()}
-                                        &nbsp;-&nbsp;
-                                        {
-                                            project.dates.end
-                                                ? <>{monthNames[new Date(project.dates.end).getMonth()]} {new Date(project.dates.end).getFullYear()}</>
-                                                : <>Present</>
-                                        }
-                                    </span>
-                                    {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer" className="url"><IoGlobeOutline />{project.urlLabel ?? project.url}</a>}
+                    menuIsOpen && <ul className="navigation">
+                        {
+                            shownProjects.map((project) => (
+                                <li>
+                                    <NavHashLink
+                                        to={internalUrls.project(project.codename)}
+                                        onClick={() => { if (isMobile) setMenuIsOpen(false) }}
+                                        smooth
+                                    >
+                                        <div
+                                            className="logo"
+                                            style={{ backgroundImage: `url(${project.logo ?? "/assets/white_square.jpg"})` }}
+                                        />
+                                        {project.name}
+                                        <span className="categories">{project.categories.filter((cat) => cat !== selectedCategory).map((cat) => categories[cat].icon)}</span>
+                                    </NavHashLink>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                }
+                <ul className="projects-list">
+                    {
+                        shownProjects.map((project) => <li id={project.codename} className="project">
+                            <div className="header">
+                                <div
+                                    className="logo"
+                                    style={{ backgroundImage: `url(${project.logo ?? "/assets/white_square.jpg"})` }}
+                                />
+                                <div>
+                                    <p className="name">{project.name}</p>
+                                    <div className="info">
+                                        <span>
+                                            <IoCalendarClear />
+                                            {monthNames[new Date(project.dates.start).getMonth()]} {new Date(project.dates.start).getFullYear()}
+                                            &nbsp;-&nbsp;
+                                            {
+                                                project.dates.end
+                                                    ? <>{monthNames[new Date(project.dates.end).getMonth()]} {new Date(project.dates.end).getFullYear()}</>
+                                                    : <>Present</>
+                                            }
+                                        </span>
+                                        {project.url && <a href={project.url} target="_blank" rel="noopener noreferrer" className="url"><IoGlobeOutline />{project.urlLabel ?? project.url}</a>}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        {
-                            project.description && <>
-                                <h3>Description</h3>
-                                <div className="description">
-                                    {
-                                        project.description.map(desc => <p>{parser(desc)}</p>)
-                                    }
-                                </div>
-                            </>
-                        }
-                        {
-                            project.screenshots?.length
-                                ? <Carousel className="carousel" navButtonsAlwaysVisible indicators={false}>
-                                    {
-                                        project.screenshots?.map((screenshot, idx) =>
-                                            <div className="img-wrapper">
-                                                <img src={screenshot} alt={`${project.name} screenshot ${idx + 1}`} />
-                                            </div>
-                                        )
-                                    }
-                                </Carousel>
-                                : <></>
-                        }
-                        {/* {
+                            {
+                                project.description && <>
+                                    <h3>Description</h3>
+                                    <div className="description">
+                                        {
+                                            project.description.map(desc => <p>{parser(desc)}</p>)
+                                        }
+                                    </div>
+                                </>
+                            }
+                            {
+                                project.screenshots?.length
+                                    ? <Carousel className="carousel" navButtonsAlwaysVisible indicators={false}>
+                                        {
+                                            project.screenshots?.map((screenshot, idx) =>
+                                                <div className="img-wrapper">
+                                                    <img src={screenshot} alt={`${project.name} screenshot ${idx + 1}`} />
+                                                </div>
+                                            )
+                                        }
+                                    </Carousel>
+                                    : <></>
+                            }
+                            {/* {
                         project.screenshots && <>
                             <h3>Screenshots</h3>
                             <ul id="screenshot-pagination">
@@ -141,12 +148,12 @@ const Projects = () => {
                             <img id="screenshot" src={project.screenshots[screenshot]} />
                         </>
                     } */}
-                    </li>
-                    )
-                }
-            </ul>
-        </div>
-        {/* {
+                        </li>
+                        )
+                    }
+                </ul>
+            </div>
+            {/* {
             projects.map(project => {
                 return <NavLink to={internalUrls.workProject(project.codename)}>
                     <div>
@@ -169,7 +176,8 @@ const Projects = () => {
                 </NavLink>
             })
         } */}
-    </div >
+        </div >
+    </>
 };
 
 export default Projects;
