@@ -8,7 +8,7 @@ import parser from "html-react-parser";
 import Carousel from "react-material-ui-carousel";
 import { IoList, IoClose } from "react-icons/io5";
 import { useSearchParams } from "react-router-dom";
-import { CreateHead } from "../../Head/Helper";
+import Head from "../../Head";
 
 const Projects = () => {
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -36,11 +36,13 @@ const Projects = () => {
         anchor.scrollIntoView({ behavior: 'smooth' });
     }, [projectCodename]);
 
+    const selectedProject = projects.find((p) => p.codename === projectCodename);
+
     return <>
-        <CreateHead
-            title={projects.find((p) => p.codename === projectCodename)?.name}
-            description={projects.find((p) => p.codename === projectCodename)?.name}
-            image={projects.find((p) => p.codename === projectCodename)?.logo}
+        <Head
+            title={`${selectedProject ? `Project ${selectedProject.name}` : 'Projects'} - Alexandre Correia`}
+            description={selectedProject ? `Project ${selectedProject.name}` : 'Projects'}
+            image={selectedProject?.logo}
         />
         <div className="projects page bgcolor">
             <div className="filters">

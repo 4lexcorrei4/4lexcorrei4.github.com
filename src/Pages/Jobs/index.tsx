@@ -3,11 +3,16 @@ import "./style.css"
 import {work} from "../../Infos/work";
 import {IoCalendarClear, IoLocationSharp} from "react-icons/io5";
 import parse from "html-react-parser";
+import Head from "../../Head";
 
 const Jobs = () => {
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
     return <div id="work" className="page bgcolor">
+        <Head
+            title={'Jobs - Alexandre Correia'}
+            description={'Jobs'}
+        />
         {
             work.map(company => {
                 return <>

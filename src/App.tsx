@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import {internalUrls} from "./Infos/urls";
 import {pages} from "./Infos/pages";
-import Jobs from "./Pages/Work";
+import Jobs from "./Pages/Jobs";
 import Projects from "./Pages/Projects";
 import {IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoMenu, IoClose} from "react-icons/io5";
 

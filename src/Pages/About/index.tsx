@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css"
 import { externalUrls, internalUrls } from "../../Infos/urls";
 import { Link } from "react-router-dom";
+import Head from "../../Head";
 
 const About = () => {
     const languages = [
@@ -11,6 +12,10 @@ const About = () => {
     const strengths = ["Knowledge lover", "Open-minded", "Ready-to-learn", "Resilient", "Responsible", "Team worker"];
 
     return <div id="profile" className="page bgcolor">
+        <Head
+            title={'About - Alexandre Correia'}
+            description={'About'}
+        />
         <div id="about">
             <img id="picture" src="/assets/profile.png" />
             <div id="description">
