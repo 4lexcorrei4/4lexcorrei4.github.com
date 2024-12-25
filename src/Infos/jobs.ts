@@ -1,6 +1,6 @@
 import {externalUrls, internalUrls} from "./urls";
 
-interface Work {
+interface Job {
     company: string,
     url: string,
     logo: string,
@@ -14,7 +14,7 @@ interface Work {
         description: string[]
     }[]
 }
-export const work: Work[] = [
+export const jobs: Job[] = [
     {
         company: "Sky Portugal",
         url: externalUrls.skyPortugal(),

@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css"
-import {work} from "../../Infos/work";
+import {jobs} from "../../Infos/jobs";
 import {IoCalendarClear, IoLocationSharp} from "react-icons/io5";
 import parse from "html-react-parser";
 import Head from "../../Head";
@@ -14,7 +14,7 @@ const Jobs = () => {
             description={'Jobs'}
         />
         {
-            work.map(company => {
+            jobs.map(company => {
                 return <>
                 <div className="company">
                     <div
