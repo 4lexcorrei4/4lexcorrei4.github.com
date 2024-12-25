@@ -68,6 +68,10 @@
     text-decoration: none;
     gap: 10px;
     align-items: center;
+    transition: all .2s;
+}
+.projects .navigation li a.selected {
+    background-color: var(--second-menu-background-color);
 }
 .projects .navigation li:last-child a {
     border-bottom: none;

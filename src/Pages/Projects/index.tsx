@@ -3,12 +3,12 @@ import "./style.css"
 import { categories, category, projects } from "../../Infos/projects";
 import { IoCalendarClear, IoGlobeOutline } from "react-icons/io5";
 import { internalUrls } from "../../Infos/urls";
-import { NavHashLink } from "react-router-hash-link";
 import parser from "html-react-parser";
 import Carousel from "react-material-ui-carousel";
 import { IoList, IoClose } from "react-icons/io5";
 import { useSearchParams } from "react-router-dom";
 import Head from "../../Head";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -20,6 +20,7 @@ const Projects = () => {
     const handleWindowSizeChange = () => setWidth(window.innerWidth);
     useEffect(() => {
         window.addEventListener('resize', handleWindowSizeChange);
+
         return () => {
             window.removeEventListener('resize', handleWindowSizeChange);
         }
@@ -60,10 +61,10 @@ const Projects = () => {
                         {
                             shownProjects.map((project) => (
                                 <li>
-                                    <NavHashLink
+                                    <Link
                                         to={internalUrls.project(project.codename)}
                                         onClick={() => { if (isMobile) setMenuIsOpen(false) }}
-                                        smooth
+                                        className={project?.codename === projectCodename ? 'selected' : ''}
                                     >
                                         <div
                                             className="logo"
@@ -71,7 +72,7 @@ const Projects = () => {
                                         />
                                         {project.name}
                                         <span className="categories">{project.categories.filter((cat) => cat !== selectedCategory).map((cat) => categories[cat].icon)}</span>
-                                    </NavHashLink>
+                                    </Link>
                                 </li>
                             ))
                         }
