@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 
 const TITLE = "Homepage";
 const DESCRIPTION = "Homepage";
-const IMAGE = "/assets/favico.ico";
 
 interface params {
   title?: string,
@@ -16,7 +15,6 @@ const Head = ({ title, image, description }: params) => <Helmet>
   <title>{title}</title>
   <meta property="og:title" content={title ?? TITLE} />
   <meta property="og:url" content={`${window.location.host}${window.location.pathname}${window.location.search}`} />
-  <meta property="og:image" content={image ?? IMAGE} />
   <meta property="og:description" content={description ?? DESCRIPTION} />
   <meta property="og:type" content="page" />
   <meta name="description" content={description ?? DESCRIPTION} />
