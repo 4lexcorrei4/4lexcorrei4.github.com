@@ -6,7 +6,7 @@ import {internalUrls} from "./Infos/urls";
 import {pages} from "./Infos/pages";
 import Jobs from "./Pages/Jobs";
 import Projects from "./Pages/Projects";
-import {IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoMenu, IoClose} from "react-icons/io5";
+import {IoLogoLinkedin, IoLogoInstagram, IoMail, IoMenu, IoClose} from "react-icons/io5";
 
 function App() {
     const openMenu = () => {
@@ -72,8 +72,9 @@ function App() {
               </Routes>
               <div id="footer">
                   <div id="social">
-                      <a href={"https://www.linkedin.com/in/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoLinkedin /></a>
-                      <a href={"https://www.instagram.com/4lexcorrei4/"} target="_blank" rel="noopener noreferrer"><IoLogoInstagram /></a>
+                      <a href="https://www.linkedin.com/in/4lexcorrei4/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin /></a>
+                      <a href="https://www.instagram.com/4lexcorrei4/" target="_blank" rel="noopener noreferrer"><IoLogoInstagram /></a>
+                      <a href="mailto:alexandre98correia@gmail.com" target="_blank" rel="noopener noreferrer"><IoMail /></a>
                   </div>
                   <div id="copyright">&copy; {new Date().getFullYear()} Alexandre Correia</div>
               </div>
