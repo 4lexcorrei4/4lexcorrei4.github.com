@@ -59,12 +59,14 @@ const Projects = () => {
                 {
                     menuIsOpen && <ul className="navigation">
                         {
-                            shownProjects.map((project) => (
+                            shownProjects.map((project, idx) => (
                                 <li>
                                     <Link
                                         to={internalUrls.project(project.codename)}
                                         onClick={() => { if (isMobile) setMenuIsOpen(false) }}
-                                        className={project?.codename === projectCodename ? 'selected' : ''}
+                                        className={
+                                            (projectCodename && project?.codename === projectCodename) || (!projectCodename && idx === 0) ? 'selected' : ''
+                                        }
                                     >
                                         <div
                                             className="logo"
