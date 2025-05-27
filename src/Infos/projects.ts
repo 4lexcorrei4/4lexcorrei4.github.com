@@ -84,6 +84,7 @@ export const projects: Project[] = [
         dates: {
             start: Date.parse("2024-09")
         },
+        logo: "/assets/projects/channel-manager/logo.svg",
         categories: [
             'web-development',
         ],
