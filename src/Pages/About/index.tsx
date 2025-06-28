@@ -51,8 +51,8 @@ const About = () => {
         <ul className="cols-5 over-effect">
             <li><img src="/assets/hobbies/hiking.svg" />Hiking</li>
             <li><img src="/assets/hobbies/photography.svg" />Photography</li>
-            <li><img src="/assets/hobbies/music.svg" />Music</li>
             <li><img src="/assets/hobbies/dancing.svg" />Dancing</li>
+            <li><img src="/assets/hobbies/music.svg" />Music</li>
             <li><img src="/assets/hobbies/sailing.svg" />Sailing</li>
         </ul>
     </div>
