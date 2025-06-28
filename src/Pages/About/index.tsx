@@ -19,9 +19,9 @@ const About = () => {
         <div id="about">
             <img id="picture" src="/assets/profile.png" />
             <div id="description">
-                <p>I have always been very passionate about technology and arts, particularly in areas like software development and photography.</p>
-                <p>As a Software Engineer, I specialize in the development of web applications, handling everything from back-end and database management to front-end. Also, I enjoy incorporating machine learning into projects, whenever it adds value.</p>
-                <p>Beyond technology, I have a keen interest for photography, with a particular focus on street and landscape scenes. My passion for photography comes from a desire to capture and preserve the beauty and fleeting moments of everyday life.</p>
+                <p>I have always been very passionate about technology and arts, particularly in areas like software development, photography and dance.</p>
+                <p>As a Software Engineer, I specialise in the development of web applications, handling everything from back-end and database management to front-end. Also, I enjoy incorporating machine learning into projects, whenever it adds value.</p>
+                <p>Beyond technology, I find creative expression through photography and dance. My focus in photography is on street and landscape scenes, driven by a desire to capture and preserve the fleeting beauty of everyday life. Dancing, especially to the rhythm of upbeat Latin music, allows me to express joy and gratitude in a more spontaneous, physical way.</p>
             </div>
         </div>
         <ul className="cols-2 languages">
