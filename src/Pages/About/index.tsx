@@ -49,11 +49,11 @@ const About = () => {
         </ul>
         <h2>Hobbies</h2>
         <ul className="cols-5 over-effect">
-            <li><img src="/assets/hobbies/hiking.svg" />Hiking</li>
+            <li><img src="/assets/hobbies/hike.svg" />Hike</li>
             <li><img src="/assets/hobbies/photography.svg" />Photography</li>
-            <li><img src="/assets/hobbies/dancing.svg" />Dancing</li>
+            <li><img src="/assets/hobbies/dance.svg" />Dance</li>
             <li><img src="/assets/hobbies/music.svg" />Music</li>
-            <li><img src="/assets/hobbies/sailing.svg" />Sailing</li>
+            <li><img src="/assets/hobbies/sail.svg" />Sail</li>
         </ul>
     </div>
 };
