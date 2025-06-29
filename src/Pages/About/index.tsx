@@ -19,9 +19,9 @@ const About = () => {
         <div id="about">
             <img id="picture" src="/assets/profile.png" />
             <div id="description">
-                <p>I have always been very passionate about technology and arts, particularly in areas like software development, photography and dance.</p>
+                <p>I am deeply passionate about both technology and arts, with a strong focus on software development, photography and dance.</p>
                 <p>As a Software Engineer, I specialise in the development of web applications, handling everything from back-end and database management to front-end. Also, I enjoy incorporating machine learning into projects, whenever it adds value.</p>
-                <p>Beyond technology, I find creative expression through photography and dance. My focus in photography is on street and landscape scenes, driven by a desire to capture and preserve the fleeting beauty of everyday life. Dancing, especially to the rhythm of upbeat Latin music, allows me to express joy and gratitude in a more spontaneous, physical way.</p>
+                <p>Beyond technology, I express creativity through photography and dance. I enjoy capturing street and landscape scenes that reflect the beauty of everyday life, while dancing allows me to connect with music and express joy through movement.</p>
             </div>
         </div>
         <ul className="cols-2 languages">
