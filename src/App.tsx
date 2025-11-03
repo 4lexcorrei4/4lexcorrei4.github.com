@@ -7,6 +7,7 @@ import {pages} from "./Infos/pages";
 import Jobs from "./Pages/Jobs";
 import Projects from "./Pages/Projects";
 import {IoLogoLinkedin, IoLogoInstagram, IoLogoGithub, IoMenu, IoClose} from "react-icons/io5";
+import Project from './Pages/Project';
 
 function App() {
     const openMenu = () => {
@@ -63,13 +64,14 @@ function App() {
                       })
                   }
               </div>
-              <Routes>
-                  <Route path={internalUrls.home()} element={<Home />} />
-                  <Route path={internalUrls.about()} element={<About />} />
-                  <Route path={internalUrls.jobs()} element={<Jobs />} />
-                  <Route path={internalUrls.projects()} element={<Projects />} />
-                  <Route path="*" element={<Navigate to={internalUrls.home()} />} />
-              </Routes>
+                <Routes>
+                    <Route path={internalUrls.home()} element={<Home />} />
+                    <Route path={internalUrls.about()} element={<About />} />
+                    <Route path={internalUrls.jobs()} element={<Jobs />} />
+                    <Route path={internalUrls.projects()} element={<Projects />} />
+                    <Route path={internalUrls.project(':codename')} element={<Project />} />
+                    <Route path="*" element={<Navigate to={internalUrls.home()} />} />
+                </Routes>
               <div id="footer">
                   <div id="social">
                       <a href="https://www.linkedin.com/in/4lexcorrei4/" target="_blank" rel="noopener noreferrer"><IoLogoLinkedin /></a>

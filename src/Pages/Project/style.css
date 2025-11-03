@@ -1,102 +1,3 @@
-.projects {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.projects .filters ul {
-    padding: .5px;
-    margin: 0;
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.projects .filters li {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    border-radius: 40px;
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
-    padding: 0 17px;
-    gap: 4px;
-    height: 30px;
-    width: fit-content;
-    transition: all .2s;
-    cursor: pointer;
-    text-wrap: nowrap;
-}
-.projects .filters li:hover,
-.projects .filters li.selected {
-    background-color: rgba(255, 255, 255, .9);
-}
-
-.projects .filters li span {
-    font-size: 12px;
-}
-
-.projects .content {
-    display: flex;
-    gap: 10px;
-    height: calc(100% - 24px - 10px);
-}
-
-.projects .navigation {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: stretch;
-    font-size: 18px;
-    row-gap: 4px;
-    overflow-y: auto;
-}
-.projects .navigation li {
-    width: calc(33% - 4px);
-    height: fit-content;
-    margin: 0 2px;
-}
-.projects .navigation li a {
-    display: flex;
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-radius: 8px;
-    padding: 10px;
-    text-decoration: none;
-    gap: 10px;
-    align-items: center;
-    transition: all .2s;
-}
-.projects .navigation li a:hover {
-    background-color: var(--second-menu-background-color);
-}
-
-.projects .navigation li .logo {
-    height: 60px;
-    width: 60px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-}
-
-.projects .navigation li .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: calc(100% - 70px);
-    gap: 4px;
-}
-
-.projects .navigation li .categories {
-    font-size: 12px;
-}
-
 .projects .projects-list {
     flex-direction: column;
     list-style: none;
@@ -109,6 +10,12 @@
     display: block;
     min-height: 100%;
     padding: 10px 0;
+}
+
+.project .back {
+    display: inline-block;
+    text-decoration: none;
+    padding-bottom: 20px;
 }
 
 .project .header {
@@ -134,8 +41,11 @@
     margin: 0;
 }
 
-.project .header div {
+.project .header > div {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .project .header .info {
@@ -248,45 +158,57 @@
         background-color: rgba(255, 255, 255, .9);
     }
 
-    .projects .navigation li {
-        width: calc(100% - 4px);
-    }
-
-    .projects .navigation li .logo {
-        height: 40px;
-        width: 40px;
-    }
-
-    .projects .navigation li .info {
-        flex-direction: row;
-        justify-content: space-between;
+    .project .header {
+        flex-direction: column;
         align-items: center;
-        flex-grow: 1;
+        margin-bottom: 10px;
     }
-}
 
+    .project .header .logo {
+        height: 60px;
+        width: 60px;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
 
+    .project .header div {
+        width: 100%;
+    }
 
+    .project .header .name {
+        text-align: center;
+    }
 
+    .project .header .info {
+        flex-direction: column;
+        gap: 5px;
+        margin: 5px 0;
+    }
 
+    .project .header .info a,
+    .project .header .info span {
+        margin-right: 0;
+    }
 
+    .project .header .url {
+        justify-content: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
+    .project .description {
+        padding: 0;
+    }
 
-.projects .galleries {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-}
+    .project .description p {
+        text-align: justify;
+        margin: 0;
+        padding: 0;
+        text-indent: 10px;
+    }
 
-.projects .gallery-wrapper {
-    padding: 0;
-}
-
-.projects .gallery {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4px;
+    .project .carousel {
+        height: max-content;
+    }
 }

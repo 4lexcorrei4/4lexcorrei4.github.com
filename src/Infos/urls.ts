@@ -4,7 +4,7 @@ export const internalUrls = {
     skills: () => "/skills",
     jobs: () => "/jobs",
     projects: () => "/projects",
-    project: (codename: string) => `${internalUrls.projects()}?p=${codename}`,
+    project: (codename: string) => `${internalUrls.projects()}/${codename}`,
 };
 
 export const externalUrls = {
