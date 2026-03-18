@@ -27,7 +27,7 @@ export const jobs: Job[] = [
                     start: Date.parse("2024-09"),
                 },
                 description: [
-                    "Web development using front-end with React, back-end with Spring and Kotlin, and database management with Couchbase and Kafka. The project I have been most involved with is <a href='" + internalUrls.project('channel-manager') + "'>Channel Manager</a>, where my focus has been on the front-end.",
+                    "Web development using front-end with React, back-end with Spring and Kotlin, and database management with MongoDB and Kafka. The project I have been most involved with is <a href='" + internalUrls.project('channel-manager') + "'>Channel Manager</a>, where my focus has been on the front-end.",
                     "Partipation on the November 2024's Global Streaming Hackathon where my team was selected for developing a trivia mode on Peacock's streaming content, to enhance costumer engagement, by generating questions related to the content being watched."
                 ]
             }
