@@ -2,8 +2,11 @@ import "./style.css"
 import { projects } from "../../Infos/projects";
 import { IoCalendarClear, IoGlobeOutline } from "react-icons/io5";
 import parser from "html-react-parser";
-import Carousel from "react-material-ui-carousel";
 import { Link, Navigate, useParams } from "react-router-dom";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
 import Head from "../../Head";
 import { internalUrls } from "../../Infos/urls";
 
@@ -47,22 +50,24 @@ const Project = () => {
                     <h3>Description</h3>
                     <div className="description">
                         {
-                            selectedProject.description.map(desc => <p>{parser(desc)}</p>)
+                            selectedProject.description.map((desc, idx) => <p key={idx}>{parser(desc)}</p>)
                         }
                     </div>
                 </>
             }
             {
                 selectedProject.screenshots?.length
-                    ? <Carousel className="carousel" navButtonsAlwaysVisible indicators={false}>
+                    ? <Swiper className="carousel" modules={[Navigation]} navigation>
                         {
                             selectedProject.screenshots?.map((screenshot, idx) =>
-                                <div className="img-wrapper">
-                                    <img src={screenshot} alt={`${selectedProject.name} screenshot ${idx + 1}`} />
-                                </div>
+                                <SwiperSlide key={idx}>
+                                    <div className="img-wrapper">
+                                        <img src={screenshot} alt={`${selectedProject.name} screenshot ${idx + 1}`} />
+                                    </div>
+                                </SwiperSlide>
                             )
                         }
-                    </Carousel>
+                    </Swiper>
                     : <></>
             }
         </div>

@@ -37,7 +37,7 @@ function App() {
     }
 
   return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename={import.meta.env.BASE_URL}>
           <div className="App">
               <div id="menu-open" onClick={openMenu}><IoMenu /></div>
               <div id="menu-close" onClick={closeMenu}><IoClose /></div>
