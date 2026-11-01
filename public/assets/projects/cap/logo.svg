@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>CAP</title>
+  <path d="M24 18c4.4-4 11.6-4 16 0" stroke="#1e3a5f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M28 23c2.4-2.2 5.6-2.2 8 0" stroke="#1e3a5f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M20 36V26" stroke="#1e3a5f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M44 36V26" stroke="#1e3a5f" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="20" cy="24" r="2" fill="#1e3a5f"/>
+  <circle cx="44" cy="24" r="2" fill="#1e3a5f"/>
+  <rect x="10" y="36" width="44" height="16" rx="4" fill="#1e3a5f"/>
+  <circle cx="20" cy="44" r="2" fill="#3ddc84"/>
+  <circle cx="28" cy="44" r="2" fill="#f5c451"/>
+  <circle cx="36" cy="44" r="2" fill="#d6e2f0"/>
+</svg>

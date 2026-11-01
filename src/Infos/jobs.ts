@@ -27,8 +27,9 @@ export const jobs: Job[] = [
                     start: Date.parse("2024-09"),
                 },
                 description: [
-                    "Web development using front-end with React, back-end with Spring and Kotlin, and database management with MongoDB and Kafka. The project I have been most involved with is <a href='" + internalUrls.project('channel-manager') + "'>Channel Manager</a>, where my focus has been on the front-end and the management of its delivery, including alignment with stakeholders.",
-                    "Partipation on the November 2024's Global Streaming Hackathon where my team was selected for developing a trivia mode on Peacock's streaming content, to enhance costumer engagement, by generating questions related to the content being watched."
+                    `Led the UI for <a href='${internalUrls.project("channel-manager")}'>Channel Manager</a> and the <a href='${internalUrls.project("taxonomy-feedback-loop-dashboard")}'>Taxonomy Feedback Loop Dashboard</a>, turning stakeholder requirements into screens teams use to manage channels and taxonomy feedback.`,
+                    "Took those features across the API boundary: shaped the requests, responses, and error states the UI needed, and followed the data into the Spring/Kotlin services, MongoDB, and Kafka topics behind them.",
+                    "Built a Peacock trivia proof of concept at the 2024 Global Streaming Hackathon, generating questions from each title's Peacock metadata, closed captions, and frames with Azure OpenAI."
                 ]
             }
         ]
@@ -36,7 +37,7 @@ export const jobs: Job[] = [
     {
         company: "Caixa Mágica Software",
         url: externalUrls.caixaMagicaSoftware(),
-        logo: "/assets/work/caixa_magica_software.jpeg",
+        logo: "/assets/work/caixa_magica_software.png",
         location: "Lisbon, Portugal",
         positions: [
             {
@@ -46,10 +47,9 @@ export const jobs: Job[] = [
                     end: Date.parse("2024-08")
                 },
                 description: [
-                    "Web development using front-end with React and AngularJS, back-end with Node.js, Python and Django, and database management with Python, Neo4J and Elasticsearch. The projects I have been most involved with are:",
-                    "- <a href='" + internalUrls.project('digitarq') + "'>Digitarq</a>: where my focus has been on the front-end, which I am responsible for and team coordinator;",
-                    "- <a href='" + internalUrls.project('cap') + "'>CAP</a>: where my focus has been on supporting the whole compatibility of the content management platform with the new content access point version.",
-                    "Responsible for technical interviews for recruiting summer internship candidates."
+                    `Led the React UI for the new <a href='${internalUrls.project("digitarq")}'>Digitarq</a>, the public catalog for Portugal's archives (Torre do Tombo, the district archives, and 100+ km of documents). It included search over Elasticsearch and Neo4j, preview of audio, video, and images, and the forms editors use to describe a document and approve or reject changes.`,
+                    `Built the Content Access Point (<a href='${internalUrls.project("cap")}'>CAP</a>) full-stack for the on-site routers, from the interface through services and data, and migrated it to the newer hardware.`,
+                    "Coordinated delivery with partner teams on integration and performance, and interviewed engineering candidates."
                 ]
             }
         ]
@@ -57,7 +57,7 @@ export const jobs: Job[] = [
     {
         company: "Happy Code Portugal",
         url: externalUrls.happyCodePortugal(),
-        logo: "/assets/work/happy_code.jpeg",
+        logo: "/assets/work/happy_code.png",
         location: "Lisbon, Portugal",
         positions: [
             {
@@ -67,16 +67,19 @@ export const jobs: Job[] = [
                     end: Date.parse("2022-07")
                 },
                 description: [
-                    "Development and maintenance of the company's main website, using WordPress."
+                    `Owned, built, and maintained the <a href='${externalUrls.happyCodePortugal()}' target='_blank' rel='noopener noreferrer'>company's public website</a> (WordPress, PHP, JavaScript), including course, location, and enrollment pages the team could update safely.`,
+                    "Migrated the full website from the Brazil server to the Portugal server, and kept the live site fast and stable in production."
                 ]
-            },{
+            },
+            {
                 role: "Content Developer",
                 dates: {
                     start: Date.parse("2021-02"),
                     end: Date.parse("2021-09")
                 },
                 description: [
-                    "Planning and development of a new course: Web Development Kids."
+                    "Planned and developed the Web Development Kids programme, including the curriculum, learning materials, and practical exercises.",
+                    "Introduced young learners to programming and web technologies through those exercises."
                 ]
             },
             {
@@ -86,7 +89,8 @@ export const jobs: Job[] = [
                     end: Date.parse("2021-07")
                 },
                 description: [
-                    "Programming teacher of Python, Unity and Web to children and teenagers between 7 and 17 years old."
+                    "Taught Python, Unity, and Web Development to students aged 7–17, with practical courses tailored to each age group.",
+                    "Designed project-based activities and mentored students in programming fundamentals, game development, and web technologies."
                 ]
             }
         ]
@@ -94,7 +98,7 @@ export const jobs: Job[] = [
     {
         company: "Betacode",
         url: externalUrls.betacode(),
-        logo: "/assets/work/betacode.jpeg",
+        logo: "/assets/work/betacode.png",
         location: "Setúbal, Portugal",
         positions: [
             {
@@ -104,7 +108,7 @@ export const jobs: Job[] = [
                     end: Date.parse("2020-07")
                 },
                 description: [
-                    "Full stack development of a content management platform, <a href='" + internalUrls.project('wordbucket') + "'>WordBucket</a>, using a back-end with Python, a front-end with React, a command line interface with Node.js and database management using SQLite."
+                    `Developed <a href='${internalUrls.project("wordbucket")}'>WordBucket</a>, a content management platform, across the stack: Python and Node.js services, a React editor, SQLite persistence, and a CLI for managing content outside the UI.`
                 ]
             }
         ]
@@ -112,17 +116,17 @@ export const jobs: Job[] = [
     {
         company: "Forall Phones",
         url: externalUrls.forallPhones(),
-        logo: "/assets/work/forall_phones.jpg",
+        logo: "/assets/work/forall_phones.png",
         location: "Lisbon, Portugal",
         positions: [
             {
-                role: "Shaper/Ambassador",
+                role: "Shaper / Ambassador",
                 dates: {
                     start: Date.parse("2018-03"),
                     end: Date.parse("2018-11")
                 },
                 description: [
-                    "Selling of iPhones and some of its accessories."
+                    "Advised customers on iPhones and Apple accessories, matching products to their needs and explaining features in plain language."
                 ]
             },
             {
@@ -132,7 +136,7 @@ export const jobs: Job[] = [
                     end: Date.parse("2018-06")
                 },
                 description: [
-                    "Development of the company’s community/ambassador website, <a href='" + internalUrls.project('forall-family') + "'>Forall Family</a>, using WordPress."
+                    `Built and maintained the <a href='${internalUrls.project("forall-family")}'>Forall Family</a> community and ambassador website in WordPress, shipping features, content updates, and usability fixes that kept the site reliable for ambassadors.`
                 ]
             }
         ]

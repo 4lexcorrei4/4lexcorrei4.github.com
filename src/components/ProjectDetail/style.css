@@ -1,0 +1,207 @@
+.is-fading .project-detail {
+    animation: project-detail-in 0.45s ease;
+}
+
+@keyframes project-detail-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.project-detail .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+    padding: 8px 48px 8px 8px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.project-detail .header-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: inherit;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.project-detail .header-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+.project-detail .header .logo {
+    height: 70px;
+    width: 70px;
+    flex: none;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+
+.project-detail .header .name {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.project-detail .header-copy {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-detail .header .info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    font-size: 80%;
+}
+
+.project-detail .header .info a,
+.project-detail .header .info span {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.project-detail .header .info svg {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    color: #000;
+}
+
+.project-detail .description p {
+    text-align: justify;
+    margin: 0;
+    padding: 0 0 0 10px;
+    text-indent: 10px;
+}
+
+.project-detail .carousel {
+    position: relative;
+    z-index: 1;
+    height: 470px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.project-detail .carousel .img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-detail .carousel img {
+    max-height: 470px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.project-detail .carousel .swiper-button-prev,
+.project-detail .carousel .swiper-button-next {
+    color: var(--main-color);
+}
+
+@media (max-width: 799px) {
+    .project-detail .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+
+    .project-detail .header .logo {
+        height: 60px;
+        width: 60px;
+        margin-bottom: 10px;
+        margin-right: 0;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .project-detail .header .name {
+        text-align: center;
+    }
+
+    .project-detail .header-copy {
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-detail .header .info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-detail .header .info a,
+    .project-detail .header .info span {
+        margin-right: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .project-detail .header .url {
+        justify-content: center;
+        text-align: center;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .project-detail .description p {
+        text-align: left;
+        padding: 0 0 0 10px;
+        text-indent: 10px;
+    }
+
+    .project-detail .carousel {
+        height: max-content;
+        overflow: hidden;
+    }
+
+    .project-detail .carousel .swiper-button-prev {
+        left: 4px;
+    }
+
+    .project-detail .carousel .swiper-button-next {
+        right: 4px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .is-fading .project-detail {
+        animation: none;
+    }
+}

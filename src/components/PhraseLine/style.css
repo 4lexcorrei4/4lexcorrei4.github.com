@@ -1,0 +1,10 @@
+.phrase-line {
+    margin: 0;
+    max-width: 100%;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.phrase-line-separator {
+    margin: 0 0.5em;
+}

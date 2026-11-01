@@ -1,0 +1,109 @@
+#me-page {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.me {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 80%;
+    max-width: min(900px, 100%);
+    min-width: 0;
+    margin: 0 auto;
+    gap: 24px;
+}
+
+.me-headline {
+    margin: 0;
+    font-family: 'Futura', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.me-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.me-tabs button {
+    margin: 0;
+    padding: 4px 2px 6px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: none;
+    color: #000;
+    font: inherit;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.45s ease, border-color 0.45s ease;
+}
+
+.me-tabs button[aria-selected="true"] {
+    color: var(--main-color);
+    border-bottom-color: var(--main-color);
+}
+
+.me-panels {
+    position: relative;
+    overflow: hidden;
+    transition: height 0.45s ease;
+}
+
+.me-panels [role="tabpanel"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.45s ease, visibility 0s linear 0.45s;
+}
+
+.me-panels [role="tabpanel"].is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.45s ease, visibility 0s;
+}
+
+.me-about,
+.me-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+}
+
+@media (max-width: 799px) {
+    .me {
+        width: 100%;
+    }
+
+    .me-headline {
+        letter-spacing: 0.5px;
+        overflow-wrap: break-word;
+    }
+
+    .me-tabs button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .me-panels,
+    .me-panels [role="tabpanel"],
+    .me-tabs button {
+        transition: none;
+    }
+}

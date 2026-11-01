@@ -1,6 +1,6 @@
-import { externalUrls, internalUrls } from "./urls";
+import { externalUrls } from "./urls";
 
-export type category = 'web-development' | 'machine-learning' | 'photography';
+export type category = 'web-development' | 'machine-learning' | 'photography' | 'video';
 export interface Category {
     icon: string,
     label: string
@@ -17,10 +17,35 @@ export const categories: Record<category, Category> = {
     'photography': {
         icon: "📷",
         label: "Photography"
+    },
+    'video': {
+        icon: "🎬",
+        label: "Video"
     }
 };
 
-interface Project {
+export type projectGroup = 'technology' | 'photography' | 'video';
+
+export const projectGroups: Record<projectGroup, { label: string }> = {
+    technology: {
+        label: 'Technology',
+    },
+    photography: {
+        label: 'Photography',
+    },
+    video: {
+        label: 'Video',
+    },
+};
+
+export const projectGroupFor = (projectCategories: category[]): projectGroup => {
+    if (projectCategories.includes('video')) {
+        return 'video';
+    }
+    return projectCategories.includes('photography') ? 'photography' : 'technology';
+};
+
+export interface Project {
     name: string,
     codename: string,
     dates: {
@@ -35,7 +60,164 @@ interface Project {
     screenshots?: string[],
 }
 
+const stills = (codename: string, count: number) =>
+    Array.from({ length: count }, (_, index) => `/assets/projects/${codename}/screenshot${index + 1}.png`);
+
 export const projects: Project[] = [
+    {
+        name: "Channel Manager",
+        codename: "channel-manager",
+        dates: {
+            start: Date.parse("2024-09")
+        },
+        logo: "/assets/projects/channel-manager/logo.png",
+        categories: [
+            'web-development',
+        ],
+        description: [
+            "The tool Sky uses to view, edit, and create channels and their lineups. I shipped the React editing flows against Spring and Kotlin services, with MongoDB holding the channel data and Kafka carrying updates to the rest of the platform."
+        ]
+    },
+    {
+        name: "Aqua2Value",
+        codename: "aqua2value",
+        dates: {
+            start: Date.parse("2026-10"),
+            end: Date.parse("2026-10")
+        },
+        url: externalUrls.projectAqua2Value(),
+        logo: "/assets/projects/aqua2value/logo.png",
+        categories: [
+            'web-development',
+        ],
+        description: [
+            "A web application where someone reviews a waste stream, sees the data, and records how that stream becomes a resource. I built the workflows and the charts for that decision. Built with React UI, Flask for serving and editing data, and Google Firebase for storing the data."
+        ],
+        screenshots: stills("aqua2value", 3)
+    },
+    {
+        name: "Taxonomy Feedback Loop Dashboard",
+        codename: "taxonomy-feedback-loop-dashboard",
+        dates: {
+            start: Date.parse("2026-07"),
+            end: Date.parse("2026-09")
+        },
+        logo: "/assets/projects/taxonomy-feedback-loop-dashboard/logo.png",
+        categories: [
+            'web-development',
+        ],
+        description: [
+            "A place to investigate the behaviour of automated tagging. Editors and model owners see accuracy per tag, notice when quality drifts, and tell a model error apart from a taxonomy or guideline problem, which is what decides the next change. Built with React UI, Spring and Kotlin services, and MongoDB and Kafka for carrying updates to the rest of the platform."
+        ]
+    },
+    {
+        name: "Clérigos Tower Hyperlapse",
+        codename: "clerigos-tower-hyperlapse",
+        dates: {
+            start: Date.parse("2026-07"),
+            end: Date.parse("2026-07")
+        },
+        url: "https://www.instagram.com/reel/DaPboO-sU_Z/",
+        urlLabel: "Video",
+        logo: "/assets/projects/clerigos-tower-hyperlapse/logo.png",
+        categories: [
+            'video',
+        ],
+        description: [
+            "A hyperlapse that lifts Porto's Clérigos Tower from the lawn and the trees out front all the way up to the clock and the bells, blending a garden full of life with stone that holds perfectly still."
+        ],
+        screenshots: stills("clerigos-tower-hyperlapse", 3)
+    },
+    {
+        name: "Dance Overboard Shortfilm",
+        codename: "dance-overboard-shortfilm",
+        dates: {
+            start: Date.parse("2026-06"),
+            end: Date.parse("2026-06")
+        },
+        url: "https://www.instagram.com/p/DaIPlGVKXoy/",
+        urlLabel: "Video",
+        logo: "/assets/projects/dance-overboard-shortfilm/logo.png",
+        categories: [
+            'video',
+        ],
+        description: [
+            "Filmed and photographed across the whole scene: a bachata danced overboard on a lagoon, blending the closeness of the partnership with the thrill of holding balance on a board in open water."
+        ],
+        screenshots: stills("dance-overboard-shortfilm", 3)
+    },
+    {
+        name: "Nomad Bar Ad",
+        codename: "nomad-bar-ad",
+        dates: {
+            start: Date.parse("2025-10"),
+            end: Date.parse("2025-10")
+        },
+        url: "https://www.instagram.com/p/DQcSoiCjSyU/",
+        urlLabel: "Video",
+        logo: "/assets/projects/nomad-bar-ad/logo.png",
+        categories: [
+            'video',
+        ],
+        description: [
+            "Cast in a short, lively ad for Nomad Ocean Bar, the mobile bar that comes straight to the gathering. In a park the party stalls over phones and unopened bottles until a bright yellow bar arrives, cocktails go out, and a quiet lawn turns into a toast."
+        ],
+        screenshots: stills("nomad-bar-ad", 3)
+    },
+    {
+        name: "Memory Shortfilm",
+        codename: "memory-shortfilm",
+        dates: {
+            start: Date.parse("2025-08"),
+            end: Date.parse("2025-08")
+        },
+        url: "https://www.instagram.com/p/DNi-INyNUnp/",
+        urlLabel: "Video",
+        logo: "/assets/projects/memory-shortfilm/logo.png",
+        categories: [
+            'video',
+        ],
+        description: [
+            "Cast in Nightsteel, a short film that forges memory into something you can feel, cold in one light and radiant in the next. Under a tree in a park a phone is taken and the afternoon breaks into a chase and a laugh, then that same spot returns at night with only the screen still glowing, blending the warmth of the company with the chill of remembering it alone."
+        ],
+        screenshots: stills("memory-shortfilm", 3)
+    },
+    {
+        name: "Remission Shortfilm",
+        codename: "remission-shortfilm",
+        dates: {
+            start: Date.parse("2025-02"),
+            end: Date.parse("2025-02")
+        },
+        url: "https://www.instagram.com/p/DGjHUODtl1H/",
+        urlLabel: "Video",
+        logo: "/assets/projects/remission-shortfilm/logo.png",
+        categories: [
+            'video',
+        ],
+        description: [
+            "Behind the scenes on the trailer for Remission, where a quiet conversation on a bench by the river suddenly turns charged. Under the 25 de Abril bridge a package is carried along the promenade, then dropped as someone runs and a gun is drawn, blending the calm of the water with a conflict ready to break."
+        ],
+        screenshots: stills("remission-shortfilm", 3)
+    },
+    {
+        name: "Fruitless Shortfilm",
+        codename: "fruitless-shortfilm",
+        dates: {
+            start: Date.parse("2024-11"),
+            end: Date.parse("2024-11")
+        },
+        url: "https://www.instagram.com/p/DCHonmoN81q/",
+        urlLabel: "Video",
+        logo: "/assets/projects/fruitless-shortfilm/logo.png",
+        categories: [
+            'video',
+        ],
+        description: [
+            "Production assistant on the teaser for Fruitless, a short film that leaves Faith surviving alone in a ruined, graffiti-covered passage until a stranger, Erik, steps in. She runs the wreckage as the title card promises the film is coming, blending her isolation with the jolt of someone she never expected."
+        ],
+        screenshots: stills("fruitless-shortfilm", 3)
+    },
     {
         name: "Avenue Statues Hyperlapse",
         codename: "avenue-statues-hyperlapse",
@@ -43,19 +225,47 @@ export const projects: Project[] = [
             start: Date.parse("2024-10"),
             end: Date.parse("2024-10")
         },
-        url: "/assets/projects/avenue-statues-hyperlapse/hyperlapses.mp4",
+        url: "https://www.instagram.com/reel/DCTdaOFo9ld/",
         urlLabel: "Video",
-        logo: "/assets/projects/avenue-statues-hyperlapse/screenshot1.png",
+        logo: "/assets/projects/avenue-statues-hyperlapse/logo.png",
         categories: [
-            'photography',
+            'video',
         ],
         description: [
-            "Hyperlapse highlighting the statues of Lisbon's Liberty Avenue, blending their artistic elegance with the vibrant energy of the city's streetscape."
+            "A hyperlapse that races the statues of Lisbon's Liberty Avenue, from the Marquês de Pombal column down to the monuments further along, including the Grande Guerra memorial, blending stone that holds still with traffic and people rushing past."
         ],
-        screenshots: [
-            "/assets/projects/avenue-statues-hyperlapse/screenshot1.png",
-            "/assets/projects/avenue-statues-hyperlapse/screenshot2.png",
-            "/assets/projects/avenue-statues-hyperlapse/screenshot3.png"
+        screenshots: stills("avenue-statues-hyperlapse", 3)
+    },
+    {
+        name: "Digitarq",
+        codename: "digitarq",
+        dates: {
+            start: Date.parse("2022-10"),
+            end: Date.parse("2024-08")
+        },
+        url: externalUrls.projectDigitarq(),
+        logo: "/assets/projects/digitarq/logo.png",
+        categories: [
+            'web-development',
+        ],
+        description: [
+            "Search over the Portuguese government archives, hundreds of thousands of documents. I built the React search experience on a Node API, with Python jobs feeding Neo4j and Elasticsearch so an archivist can find a record without knowing which collection holds it."
+        ],
+        screenshots: stills("digitarq", 3)
+    },
+    {
+        name: "CAP",
+        codename: "cap",
+        dates: {
+            start: Date.parse("2024-04"),
+            end: Date.parse("2024-05")
+        },
+        logo: "/assets/projects/cap/logo.png",
+        categories: [
+            'web-development',
+        ],
+        description: [
+            "Integration of a content platform into JPIK's content access point, so the team could see how far the technology reached in Kenya's schools and line that up with students' results. I owned compatibility between the existing AngularJS and Django platform and the new access-point version."
         ]
     },
     {
@@ -67,60 +277,14 @@ export const projects: Project[] = [
         },
         url: "/assets/projects/estuary-of-tejo/ocafédafoto-estuary-final.pdf",
         urlLabel: "Ebook",
-        logo: "/assets/projects/estuary-of-tejo/logo.png",
+        logo: "/assets/projects/estuary-of-tejo/screenshot2.png",
         categories: [
             'photography',
         ],
         description: [
-            "Three photowalks in the estuary of Tejo is the first in a series of ebooks or zines that show work done during activities organized by o café da fotografia, an informal community of cool and friendly humans interested in photography and photowalks in and around Lisbon. It presents images made during photowalks in April and May 2024: the first walk started in Vila Franca de Xira, the second in Póvoa de Santa Iria, and the third explored the Salinas do Samouco."
+            "The first zine from o café da fotografia: three photowalks on the Tejo estuary in April and May 2024, from Vila Franca de Xira, Póvoa de Santa Iria, and the Salinas do Samouco."
         ],
-        screenshots: [
-            "/assets/projects/estuary-of-tejo/logo.png"
-        ]
-    },
-    {
-        name: "Channel Manager",
-        codename: "channel-manager",
-        dates: {
-            start: Date.parse("2024-09")
-        },
-        logo: "/assets/projects/channel-manager/logo.svg",
-        categories: [
-            'web-development',
-        ],
-        description: [
-            `Development of a web platform to efficiently see, edit and create channels and its contents for <a href=\"${externalUrls.skyPortugal()}\" target=\"_blank\" rel=\"noopener noreferrer\">Sky</a>'s products, using a front-end with React, back-end with Spring and Kotlin, and database management with MongoDB and Kafka.`
-        ]
-    },
-    {
-        name: "Digitarq",
-        codename: "digitarq",
-        dates: {
-            start: Date.parse("2022-10"),
-            end: Date.parse("2024-08")
-        },
-        url: externalUrls.projectDigitarq(),
-        logo: "/assets/projects/digitarq/logo.ico",
-        categories: [
-            'web-development',
-        ],
-        description: [
-            "Development of a web platform to efficiently search through the hundreds of thousands of documents the Portuguese Government archives, using a front-end with React, a back-end with Node.js and database management with Python, Neo4J and Elasticsearch. My focus has been on the front-end."
-        ]
-    },
-    {
-        name: "CAP",
-        codename: "cap",
-        dates: {
-            start: Date.parse("2024-04"),
-            end: Date.parse("2024-05")
-        },
-        categories: [
-            'web-development',
-        ],
-        description: [
-            "Support and integration of a content management platform into a content access point in order to understand the effective reach of technology in Kenya's education system and correlate this data with the students academic performance, using a front-end with AngularJS and a back-end with Python and Django. My focus has been on supporting the whole compatibility of the content management platform with JPIK's new content access point version."
-        ]
+        screenshots: stills("estuary-of-tejo", 3)
     },
     {
         name: "Thesis",
@@ -130,17 +294,14 @@ export const projects: Project[] = [
             end: Date.parse("2022-09")
         },
         url: externalUrls.projectThesis(),
-        logo: "/assets/projects/thesis/logo.svg",
+        logo: "/assets/projects/thesis/logo.png",
         description: [
-            "In partnership with Farfetch, CMU Portugal and Técnico, Farfetch is developing its own conversational assistant with the goal of having a virtual assistant that can mimic the Farfetch's in-store experience, being the assistant able to offer a more natural and personalized experience than the traditional conversational assistants.",
-            "My thesis focused on efficiently retrieving the user's desired product, achieved by generating a sequence of clarifying questions and giving recommendations, using Python, PyTorch and PyTorch Lightning. The clarifying questions are chosen before each interaction with the user and are capable of narrowing down the search space in various directions: minimizing the number of interactions, minimizing the repetitiveness of used questions and minimizing the repetitiveness of used questions according to their feedback times.",
+            "A conversational shopping assistant for Farfetch, with Técnico and CMU Portugal, meant to feel closer to a guided in-store conversation. PyTorch models retrieve products and ask one clarifying question when the query is ambiguous, so the shopper reaches a relevant item in fewer turns."
         ],
         categories: [
             'machine-learning',
         ],
-        screenshots: [
-            "/assets/projects/thesis/screenshot1.png"
-        ]
+        screenshots: stills("thesis", 3)
     },
     {
         name: "Schedule Simulator",
@@ -151,7 +312,7 @@ export const projects: Project[] = [
         },
         logo: "/assets/projects/simulador-horarios/logo.png",
         description: [
-            `Development of a web platform that allows <a href=\"${externalUrls.fctNova()}\" target=\"_blank\" rel=\"noopener noreferrer\">FCT NOVA</a> students to easily check the available schedule options and build an optimized and personalized timetable, using a front-end with React and a back-end with Python and Flask, but also database management with MySQL and information extraction through crawling with Scrapy.`
+            "A timetable builder for FCT NOVA students. React and Flask on MySQL, with Scrapy pulling the real course offerings, so a student can compare feasible schedules and keep one that fits their constraints."
         ],
         categories: [
             'web-development',
@@ -168,9 +329,9 @@ export const projects: Project[] = [
             start: Date.parse("2022-03"),
             end: Date.parse("2022-06")
         },
-        logo: "/assets/projects/aquarium-management/logo.svg",
+        logo: "/assets/projects/aquarium-management/logo.png",
         description: [
-            "Development of a platform that provides the user an easy and intuitive way to, not only access each aquarium conditions in real-time, but also allows him to set, in real-time, some of the characteristics of the aquarium(s) either locally (same network) or remotely (different networks), using a physical simulator with ESP32 and C++, a mobile application for Android and data management with Firebase Realtime Database."
+            "Live view and control of one or more aquariums, on the same network or from outside it. An ESP32 simulator in C++ stands in for the tank, an Android app reads the conditions and changes them, and Firebase Realtime Database keeps the device and the app in sync."
         ],
         categories: [
             'web-development',
@@ -189,7 +350,7 @@ export const projects: Project[] = [
         },
         logo: "/assets/projects/clip-cadeiras/logo.png",
         description: [
-            `Development of a web platform that provides the students of <a href=\"${externalUrls.fctNova()}\" target=\"_blank\" rel=\"noopener noreferrer\">FCT NOVA</a> with easy access to all the relevant information about each of the curricular units of the courses they are enrolled in, using a front-end together with a back-end with PHP, and database management with MySQL.`
+            "A place for FCT NOVA students to open a course they are enrolled in and see the information that matters for that unit. PHP for the pages and the server, MySQL for the course data."
         ],
         categories: [
             'web-development',
@@ -212,8 +373,9 @@ export const projects: Project[] = [
             start: Date.parse("2021-03"),
             end: Date.parse("2021-06")
         },
+        logo: "/assets/projects/fashion-product-search/screenshot1.png",
         description: [
-            "Development of an efficient luxury product search using either a description or an image showing the desired characteristics, using a back-end to serve as an API of the developed machine learning model with Python, PyTorch and Faiss, and data management with Elasticsearch."
+            "Search for a luxury product from a written description or from a photo of the look you want. A Python API serves a PyTorch model, Faiss handles similarity, and Elasticsearch holds the catalogue."
         ],
         categories: [
             'machine-learning',
@@ -232,18 +394,12 @@ export const projects: Project[] = [
         url: externalUrls.projectSamucar(),
         logo: "/assets/projects/samucar-website/logo.png",
         description: [
-            "Development of a website for Samucar stand, allowing their costumers to easily and intuitively check for their next vehicle, with a redesigned website and with some new useful features (e.g. specifications comparison), using a front-end with HTML, CSS and JavaScript, and with information provided by Standvirtual's API (XML)."
+            "The site for the Samucar dealership, where a customer can look for their next car and compare specifications. Rebuilt in HTML, CSS, and JavaScript, with vehicle data from Standvirtual's XML API."
         ],
         categories: [
             'web-development',
         ],
-        screenshots: [
-            "/assets/projects/samucar-website/screenshot1.png",
-            "/assets/projects/samucar-website/screenshot2.png",
-            "/assets/projects/samucar-website/screenshot3.png",
-            "/assets/projects/samucar-website/screenshot4.png",
-            "/assets/projects/samucar-website/screenshot5.png"
-        ]
+        screenshots: stills("samucar-website", 3)
     },
     {
         name: "WordBucket",
@@ -252,10 +408,9 @@ export const projects: Project[] = [
             start: Date.parse("2020-03"),
             end: Date.parse("2020-07")
         },
-        url: externalUrls.projectWordbucket(),
-        logo: "/assets/projects/wordbucket/logo.ico",
+        logo: "/assets/projects/wordbucket/screenshot1.png",
         description: [
-            "Development of a content management platform, using a back-end with Python, a front-end with React, a command line interface with Node.js and database management using SQLite."
+            "A content management platform for editing and publishing site content. Python on the server, React for the interface, a Node.js command-line client, and SQLite for storage."
         ],
         categories: [
             'web-development',
@@ -274,9 +429,9 @@ export const projects: Project[] = [
             end: Date.parse("2018-06")
         },
         url: externalUrls.projectForallFamily(),
-        logo: "/assets/projects/forall-family/logo.ico",
+        logo: "/assets/projects/forall-family/logo.png",
         description: [
-            "Development of the company’s community/ambassador website, using WordPress."
+            "The community and ambassador site for Forall Phones, built in WordPress so ambassadors had one place to follow the company's community."
         ],
         categories: [
             'web-development',

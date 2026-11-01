@@ -1,0 +1,108 @@
+.pill-list {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pill-list li {
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 2px 17px;
+    height: 30px;
+    width: fit-content;
+    cursor: default;
+}
+
+.pill-list li:has(button) {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+}
+
+.pill-list button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 2px 17px;
+    height: 30px;
+    width: fit-content;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-wrap: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pill-icon {
+    display: flex;
+}
+
+.pill-list button svg {
+    width: 16px;
+    height: 16px;
+    flex: none;
+}
+
+.pill-list-filter {
+    position: relative;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.pill-list-filter li:has(.pill-clear) {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 20px);
+}
+
+.pill-list button.pill-clear {
+    width: 30px;
+    justify-content: center;
+    padding: 0;
+}
+
+.pill-list button.selected {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    color: #fff;
+}
+
+@media (hover: hover) {
+    .pill-list button:not(.selected):hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+@media (max-width: 500px) {
+    .pill-list {
+        padding-top: 10px;
+    }
+
+    .pill-list-filter li:has(.pill-clear) {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+    }
+}

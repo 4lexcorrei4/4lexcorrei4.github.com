@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import {IoLogoFacebook, IoLogoGithub, IoLogoInstagram, IoLogoLinkedin} from "react-icons/io5";
-import Head from "../../Head";
+import Head from "../../components/Head";
 
 const Home = () => {
     return <div id="home" className="page">

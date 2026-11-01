@@ -7,26 +7,14 @@ export const pages = [
     },
     {
         "name": "Me",
-        "link": undefined,
-        "subpages": [
-            {
-                "name": "About",
-                "link": internalUrls.about(),
-            },
-        ],
+        "link": internalUrls.me(),
     },
     {
-        "name": "Experience",
-        "link": undefined,
-        "subpages": [
-            {
-                "name": "Jobs",
-                "link": internalUrls.jobs()
-            },
-            {
-                "name": "Projects",
-                "link": internalUrls.projects()
-            }
-        ]
+        "name": "Jobs",
+        "link": internalUrls.jobs()
+    },
+    {
+        "name": "Projects",
+        "link": internalUrls.projects()
     },
 ];

@@ -1,7 +1,8 @@
 export const internalUrls = {
     home: () => "/",
+    me: () => "/me",
     about: () => "/about",
-    skills: () => "/skills",
+    profile: () => "/profile",
     jobs: () => "/jobs",
     projects: () => "/projects",
     project: (codename: string) => `${internalUrls.projects()}/${codename}`,
@@ -17,10 +18,8 @@ export const externalUrls = {
 
     projectHappyCode: () => "https://www.happycode.pt",
     projectForallFamily: () => "https://www.forallfamily.com",
-    projectWordbucket: () => "https://word-bucket.com",
     projectSamucar: () => "https://samucar.pt",
-    projectCLIPCadeiras: () => "https://clipcadeiras.bitsys.tech",
-    projectSimuladorHorarios: () => "https://horarios.bitsys.tech",
     projectThesis: () => "https://ifetch-chatbot.github.io",
-    projectDigitarq: () => "https://digitarq.arquivos.pt"
+    projectDigitarq: () => "https://digitarq.arquivos.pt",
+    projectAqua2Value: () => "https://waste-to-value-ui-szadzmna2a-ew.a.run.app"
 };

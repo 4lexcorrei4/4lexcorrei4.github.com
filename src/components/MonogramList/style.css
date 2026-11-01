@@ -1,0 +1,53 @@
+.monogram-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0 10%;
+    gap: 32px;
+}
+
+.monogram-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.monogram-list .short {
+    font-size: 32px;
+    font-family: "Kalam", cursive;
+}
+
+.monogram-list .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.monogram-list .level {
+    font-size: 12px;
+    text-align: left;
+}
+
+@media (max-width: 500px) {
+    .monogram-list {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 10%;
+        gap: 0;
+    }
+
+    .monogram-list li {
+        justify-content: flex-start;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .monogram-list li:last-child {
+        border-bottom: none;
+    }
+
+    .monogram-list .short {
+        width: 40px;
+    }
+}
